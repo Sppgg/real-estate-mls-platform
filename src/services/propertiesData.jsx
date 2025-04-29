@@ -1,17 +1,16 @@
-
-
 const properties = [
   {
     _id: "prop-assoc1-1", // ID único de la propiedad
-    company_id: "comp-assoc1",  // ID de la empresa/agencia
+    company_id: "comp-assoc1", // ID de la empresa/agencia
     extref: "REF-A1-001", // Referencia externa para conexión con otros sistemas
     active: true, // Indica si la propiedad está activa
     app: "external_feed_xxx", // Sistema o aplicación de origen
-    baths: "3",  // Número de baños
+    baths: "3", // Número de baños
     beds: "4", // Número de dormitorios
-    built: "201",  // Superficie construida en metros cuadrados
+    built: "201", // Superficie construida en metros cuadrados
     creation_date: "2024-01-01T00:00:00.000Z", // Fecha de creación del registro
-    description: { // Descripción en varios idiomas
+    description: {
+      // Descripción en varios idiomas
       en: "Example description in English for property A1-001.",
       es: "Ejemplo de descripción en español para propiedad A1-001.",
       de: "Beispielbeschreibung auf Deutsch für Objekt A1-001.",
@@ -20,9 +19,10 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [ // Características especiales (IDs de características)  Lista de características (ej. "feat2", "feat4", podría ser piscina, terraza, etc.).
+    features: [
+      // Características especiales (IDs de características)  Lista de características (ej. "feat2", "feat4", podría ser piscina, terraza, etc.).
       "piscina",
       "terraza",
       "garaje",
@@ -42,7 +42,7 @@ const properties = [
       "acceso para personas con movilidad reducida",
       "domótica",
       "doble acristalamiento",
-      "zona comunitaria con jardín o parque"
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true, //Indica si la propiedad es de un socio externo (true).
     partner_id: "assoc1", // ID del socio asociado ("assoc1").
@@ -52,7 +52,7 @@ const properties = [
     new_build: false, //¿Es una construcción nueva? (false = es de segunda mano).
     pics: [
       "https://media.istockphoto.com/id/2191685332/es/foto/3d-render-living-room.jpg?s=612x612&w=0&k=20&c=TZM28lQyMcqpau1pM6FDeXnZP4tVu8lcWlP1AsYQFPw=",
-      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0="
+      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0=",
     ],
     plot: "401", // Tamaño de la parcela de terreno (401 metros cuadrados).
     price: {
@@ -73,26 +73,29 @@ const properties = [
       comm_listing: 0, // Comisión de listado
       comm_listing_pct: 0, // % comisión de listado
       comm_selling_type: "%", // Tipo de comisión de venta
-      comm_selling_total: 50 // % comisión de venta
+      comm_selling_total: 50, // % comisión de venta
     },
     reference: "EX-A1-001", //Otra referencia pública ("EX-A1-001").
     terrace: "21", //Tamaño de la terraza (21 metros cuadrados).
     title: "Mock Property Title A1-001",
-    titles: { //Título principal de la propiedad.
+    titles: {
+      //Título principal de la propiedad.
       en: "Mock Title EN A1-001",
-      es: "Mock Título ES A1-001"
+      es: "Mock Título ES A1-001",
     },
-    type: [ //Tipo de propiedad (ej. residencial, comercial, etc.).
-      "Apartamento"
+    type: [
+      //Tipo de propiedad (ej. residencial, comercial, etc.).
+      "Apartamento",
     ],
-    address: { //Dirección de la propiedad:
+    address: {
+      //Dirección de la propiedad:
       street: "Mock Street 101", //Calle.
       area: "Mock Area A1", //Área.
       unit: "Unit 1", //Unidad.
       city: "Mock City A1", //Ciudad.
       region: "Mock Region A1", //Región.
       country: "Mockland", //País.
-      zipcode: "00001" //Código postal.
+      zipcode: "00001", //Código postal.
     },
     area: "area1", // Área general de agrupación (puede ser zona en un mapa interno).
     subarea: "subarea1", //Subzona más específica.
@@ -103,23 +106,25 @@ const properties = [
     consumoEnergia_letter: "A", //Calificación energética ("A" = muy eficiente).
     garbage_tax: 151, // Impuesto de basuras anual (151).
     ibi_tax: 1201, //Impuesto de bienes inmuebles anual (1201).
-    map: { //Coordenadas de ubicación:
+    map: {
+      //Coordenadas de ubicación:
       lat: "36.100001", //Latitud.
-      lng: "-4.100001" //Longitud.
+      lng: "-4.100001", //Longitud.
     },
     public_view_disabled: false, //Si la propiedad está oculta al público (false = visible).
     toilets: "2", //Número de aseos separados (2).
-    year: { //Año de construcción del edificio (2011).
-      construction: 2011
+    year: {
+      //Año de construcción del edificio (2011).
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false, //Permite uso comercial (false).
-      selected_companies: [] //Empresas autorizadas (vacío aquí).
+      selected_companies: [], //Empresas autorizadas (vacío aquí).
     },
     is_exclusive: false, //Indica si la agencia tiene exclusividad para vender esta propiedad (aquí false).
-    cadastral: "123456789ABC-A1-001" //Número de referencia catastral (registro legal del terreno).
+    cadastral: "123456789ABC-A1-001", //Número de referencia catastral (registro legal del terreno).
   },
-  
+
   {
     _id: "prop-assoc1-2",
     company_id: "comp-assoc1",
@@ -139,12 +144,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-002",
@@ -153,7 +155,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA=",
-      "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ="
+      "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ=",
     ],
     plot: "401",
     price: {
@@ -174,18 +176,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-002",
     terrace: "21",
     title: "Mock Property Title A1-002",
     titles: {
       en: "Mock Title EN A1-002",
-      es: "Mock Título ES A1-002"
+      es: "Mock Título ES A1-002",
     },
-    type: [
-      "Chalet"
-    ],
+    type: ["Chalet"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -193,7 +193,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -206,21 +206,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-002"
+    cadastral: "123456789ABC-A1-002",
   },
-  
+
   {
     _id: "prop-assoc1-3",
     company_id: "comp-assoc1",
@@ -240,12 +240,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-003",
@@ -254,7 +251,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ=",
-      "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU="
+      "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU=",
     ],
     plot: "401",
     price: {
@@ -275,18 +272,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-003",
     terrace: "21",
     title: "Mock Property Title A1-003",
     titles: {
       en: "Mock Title EN A1-003",
-      es: "Mock Título ES A1-003"
+      es: "Mock Título ES A1-003",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -294,7 +289,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -307,21 +302,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-003"
+    cadastral: "123456789ABC-A1-003",
   },
-  
+
   {
     _id: "prop-assoc1-4",
     company_id: "comp-assoc1",
@@ -341,12 +336,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-004",
@@ -355,7 +347,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU=",
-      "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU="
+      "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU=",
     ],
     plot: "401",
     price: {
@@ -376,18 +368,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-004",
     terrace: "21",
     title: "Mock Property Title A1-004",
     titles: {
       en: "Mock Title EN A1-004",
-      es: "Mock Título ES A1-004"
+      es: "Mock Título ES A1-004",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -395,7 +385,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -408,21 +398,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-004"
+    cadastral: "123456789ABC-A1-004",
   },
-  
+
   {
     _id: "prop-assoc1-5",
     company_id: "comp-assoc1",
@@ -442,12 +432,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-005",
@@ -456,7 +443,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2191685332/es/foto/3d-render-living-room.jpg?s=612x612&w=0&k=20&c=TZM28lQyMcqpau1pM6FDeXnZP4tVu8lcWlP1AsYQFPw=",
-      "https://media.istockphoto.com/id/2191685332/es/foto/3d-render-living-room.jpg?s=612x612&w=0&k=20&c=TZM28lQyMcqpau1pM6FDeXnZP4tVu8lcWlP1AsYQFPw="
+      "https://media.istockphoto.com/id/2191685332/es/foto/3d-render-living-room.jpg?s=612x612&w=0&k=20&c=TZM28lQyMcqpau1pM6FDeXnZP4tVu8lcWlP1AsYQFPw=",
     ],
     plot: "401",
     price: {
@@ -477,18 +464,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-005",
     terrace: "21",
     title: "Mock Property Title A1-005",
     titles: {
       en: "Mock Title EN A1-005",
-      es: "Mock Título ES A1-005"
+      es: "Mock Título ES A1-005",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -496,7 +481,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -509,21 +494,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-005"
+    cadastral: "123456789ABC-A1-005",
   },
-  
+
   {
     _id: "prop-assoc1-6",
     company_id: "comp-assoc1",
@@ -543,12 +528,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-006",
@@ -557,7 +539,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4=",
-      "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4="
+      "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4=",
     ],
     plot: "401",
     price: {
@@ -578,18 +560,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-006",
     terrace: "21",
     title: "Mock Property Title A1-006",
     titles: {
       en: "Mock Title EN A1-006",
-      es: "Mock Título ES A1-006"
+      es: "Mock Título ES A1-006",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -597,7 +577,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -610,21 +590,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-006"
+    cadastral: "123456789ABC-A1-006",
   },
-  
+
   {
     _id: "prop-assoc1-7",
     company_id: "comp-assoc1",
@@ -644,12 +624,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-007",
@@ -658,7 +635,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1454211620/es/foto/renderizado-3d-de-lujo-y-sala-de-estar-moderna-con-sof%C3%A1-de-cuero-y-l%C3%A1mpara.jpg?s=612x612&w=0&k=20&c=NHYEMkIbk-tzxiqEEGYmwOKx3W6oV2lrhvL3t4nd7m4=",
-      "https://media.istockphoto.com/id/1454211620/es/foto/renderizado-3d-de-lujo-y-sala-de-estar-moderna-con-sof%C3%A1-de-cuero-y-l%C3%A1mpara.jpg?s=612x612&w=0&k=20&c=NHYEMkIbk-tzxiqEEGYmwOKx3W6oV2lrhvL3t4nd7m4="
+      "https://media.istockphoto.com/id/1454211620/es/foto/renderizado-3d-de-lujo-y-sala-de-estar-moderna-con-sof%C3%A1-de-cuero-y-l%C3%A1mpara.jpg?s=612x612&w=0&k=20&c=NHYEMkIbk-tzxiqEEGYmwOKx3W6oV2lrhvL3t4nd7m4=",
     ],
     plot: "401",
     price: {
@@ -679,18 +656,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-007",
     terrace: "21",
     title: "Mock Property Title A1-007",
     titles: {
       en: "Mock Title EN A1-007",
-      es: "Mock Título ES A1-007"
+      es: "Mock Título ES A1-007",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -698,7 +673,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -711,21 +686,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-007"
+    cadastral: "123456789ABC-A1-007",
   },
-  
+
   {
     _id: "prop-assoc1-8",
     company_id: "comp-assoc1",
@@ -745,12 +720,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-008",
@@ -759,7 +731,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2184123769/es/foto/sal%C3%B3n-moderno-minimalista-con-tonos-neutros-y-luz-natural.jpg?s=612x612&w=0&k=20&c=1ECn7MK8evclB2lN97waTbCqplUXHV3scd-nADANOv0=",
-      "https://media.istockphoto.com/id/2184123769/es/foto/sal%C3%B3n-moderno-minimalista-con-tonos-neutros-y-luz-natural.jpg?s=612x612&w=0&k=20&c=1ECn7MK8evclB2lN97waTbCqplUXHV3scd-nADANOv0="
+      "https://media.istockphoto.com/id/2184123769/es/foto/sal%C3%B3n-moderno-minimalista-con-tonos-neutros-y-luz-natural.jpg?s=612x612&w=0&k=20&c=1ECn7MK8evclB2lN97waTbCqplUXHV3scd-nADANOv0=",
     ],
     plot: "401",
     price: {
@@ -780,18 +752,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-008",
     terrace: "21",
     title: "Mock Property Title A1-008",
     titles: {
       en: "Mock Title EN A1-008",
-      es: "Mock Título ES A1-008"
+      es: "Mock Título ES A1-008",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -799,7 +769,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -812,21 +782,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-008"
+    cadastral: "123456789ABC-A1-008",
   },
-  
+
   {
     _id: "prop-assoc1-9",
     company_id: "comp-assoc1",
@@ -846,12 +816,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-009",
@@ -860,7 +827,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1440180997/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-la-sala-de-estar-pared-de.jpg?s=612x612&w=0&k=20&c=BZSASAkGGrd1plHGUUzzpfiV6tRHebkEOF0-4Zk4KlU=",
-      "https://media.istockphoto.com/id/1440180997/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-la-sala-de-estar-pared-de.jpg?s=612x612&w=0&k=20&c=BZSASAkGGrd1plHGUUzzpfiV6tRHebkEOF0-4Zk4KlU="
+      "https://media.istockphoto.com/id/1440180997/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-la-sala-de-estar-pared-de.jpg?s=612x612&w=0&k=20&c=BZSASAkGGrd1plHGUUzzpfiV6tRHebkEOF0-4Zk4KlU=",
     ],
     plot: "401",
     price: {
@@ -881,18 +848,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-009",
     terrace: "21",
     title: "Mock Property Title A1-009",
     titles: {
       en: "Mock Title EN A1-009",
-      es: "Mock Título ES A1-009"
+      es: "Mock Título ES A1-009",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -900,7 +865,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -913,21 +878,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-009"
+    cadastral: "123456789ABC-A1-009",
   },
-  
+
   {
     _id: "prop-assoc1-10",
     company_id: "comp-assoc1",
@@ -947,12 +912,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-010",
@@ -961,7 +923,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1196118627/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo-y-sof%C3%A1-de-cuero.jpg?s=612x612&w=0&k=20&c=N379qiV5CtxfvKIy6-2OOw5Oin42pk6cjcbbt7mei1Q=",
-      "https://media.istockphoto.com/id/1196118627/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo-y-sof%C3%A1-de-cuero.jpg?s=612x612&w=0&k=20&c=N379qiV5CtxfvKIy6-2OOw5Oin42pk6cjcbbt7mei1Q="
+      "https://media.istockphoto.com/id/1196118627/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo-y-sof%C3%A1-de-cuero.jpg?s=612x612&w=0&k=20&c=N379qiV5CtxfvKIy6-2OOw5Oin42pk6cjcbbt7mei1Q=",
     ],
     plot: "401",
     price: {
@@ -982,18 +944,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-010",
     terrace: "21",
     title: "Mock Property Title A1-010",
     titles: {
       en: "Mock Title EN A1-010",
-      es: "Mock Título ES A1-010"
+      es: "Mock Título ES A1-010",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -1001,7 +961,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -1014,21 +974,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-010"
+    cadastral: "123456789ABC-A1-010",
   },
-  
+
   {
     _id: "prop-assoc1-11",
     company_id: "comp-assoc1",
@@ -1048,12 +1008,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-011",
@@ -1062,7 +1019,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70=",
-      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70="
+      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70=",
     ],
     plot: "401",
     price: {
@@ -1083,18 +1040,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-011",
     terrace: "21",
     title: "Mock Property Title A1-011",
     titles: {
       en: "Mock Title EN A1-011",
-      es: "Mock Título ES A1-011"
+      es: "Mock Título ES A1-011",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -1102,7 +1057,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -1115,21 +1070,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-011"
+    cadastral: "123456789ABC-A1-011",
   },
-  
+
   {
     _id: "prop-assoc1-12",
     company_id: "comp-assoc1",
@@ -1149,12 +1104,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-012",
@@ -1163,7 +1115,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2177915778/es/foto/dise%C3%B1o-de-interiores-esquina-de-la-sala-de-renderizado-3d-y-fondo-de-diferentes-esquinas-con.jpg?s=612x612&w=0&k=20&c=Bmx3kQA5CIesiMBIzJ5hvBb0ZX7OB0jGbWv8xLqJq7M=",
-      "https://media.istockphoto.com/id/2177915778/es/foto/dise%C3%B1o-de-interiores-esquina-de-la-sala-de-renderizado-3d-y-fondo-de-diferentes-esquinas-con.jpg?s=612x612&w=0&k=20&c=Bmx3kQA5CIesiMBIzJ5hvBb0ZX7OB0jGbWv8xLqJq7M="
+      "https://media.istockphoto.com/id/2177915778/es/foto/dise%C3%B1o-de-interiores-esquina-de-la-sala-de-renderizado-3d-y-fondo-de-diferentes-esquinas-con.jpg?s=612x612&w=0&k=20&c=Bmx3kQA5CIesiMBIzJ5hvBb0ZX7OB0jGbWv8xLqJq7M=",
     ],
     plot: "401",
     price: {
@@ -1184,18 +1136,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-012",
     terrace: "21",
     title: "Mock Property Title A1-012",
     titles: {
       en: "Mock Title EN A1-012",
-      es: "Mock Título ES A1-012"
+      es: "Mock Título ES A1-012",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -1203,7 +1153,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -1216,21 +1166,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-012"
+    cadastral: "123456789ABC-A1-012",
   },
-  
+
   {
     _id: "prop-assoc1-13",
     company_id: "comp-assoc1",
@@ -1250,12 +1200,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-013",
@@ -1264,7 +1211,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ=",
-      "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ="
+      "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ=",
     ],
     plot: "401",
     price: {
@@ -1285,18 +1232,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-013",
     terrace: "21",
     title: "Mock Property Title A1-013",
     titles: {
       en: "Mock Title EN A1-013",
-      es: "Mock Título ES A1-013"
+      es: "Mock Título ES A1-013",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -1304,7 +1249,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -1317,21 +1262,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-013"
+    cadastral: "123456789ABC-A1-013",
   },
-  
+
   {
     _id: "prop-assoc1-14",
     company_id: "comp-assoc1",
@@ -1351,12 +1296,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-014",
@@ -1365,7 +1307,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw=",
-      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw="
+      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw=",
     ],
     plot: "401",
     price: {
@@ -1386,18 +1328,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-014",
     terrace: "21",
     title: "Mock Property Title A1-014",
     titles: {
       en: "Mock Title EN A1-014",
-      es: "Mock Título ES A1-014"
+      es: "Mock Título ES A1-014",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -1405,7 +1345,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -1418,21 +1358,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-014"
+    cadastral: "123456789ABC-A1-014",
   },
-  
+
   {
     _id: "prop-assoc1-15",
     company_id: "comp-assoc1",
@@ -1452,12 +1392,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-015",
@@ -1466,7 +1403,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1332822077/es/foto/dise%C3%B1o-de-interiores-estilo-cl%C3%A1sico-moderno-de-la-sala-de-estar-con-m%C3%A1rmol-negro-y-textura-de.jpg?s=612x612&w=0&k=20&c=C-4gNOcRtwrPUJ_oReqoOe4gH1UmO5mKa0WGATZ6cBo=",
-      "https://media.istockphoto.com/id/1332822077/es/foto/dise%C3%B1o-de-interiores-estilo-cl%C3%A1sico-moderno-de-la-sala-de-estar-con-m%C3%A1rmol-negro-y-textura-de.jpg?s=612x612&w=0&k=20&c=C-4gNOcRtwrPUJ_oReqoOe4gH1UmO5mKa0WGATZ6cBo="
+      "https://media.istockphoto.com/id/1332822077/es/foto/dise%C3%B1o-de-interiores-estilo-cl%C3%A1sico-moderno-de-la-sala-de-estar-con-m%C3%A1rmol-negro-y-textura-de.jpg?s=612x612&w=0&k=20&c=C-4gNOcRtwrPUJ_oReqoOe4gH1UmO5mKa0WGATZ6cBo=",
     ],
     plot: "401",
     price: {
@@ -1487,18 +1424,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-015",
     terrace: "21",
     title: "Mock Property Title A1-015",
     titles: {
       en: "Mock Title EN A1-015",
-      es: "Mock Título ES A1-015"
+      es: "Mock Título ES A1-015",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -1506,7 +1441,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -1519,21 +1454,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-015"
+    cadastral: "123456789ABC-A1-015",
   },
-  
+
   {
     _id: "prop-assoc1-16",
     company_id: "comp-assoc1",
@@ -1553,12 +1488,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-016",
@@ -1567,7 +1499,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1404214673/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-papel-tapiz-de-patr%C3%B3n-decorado-de.jpg?s=612x612&w=0&k=20&c=U3uw9ra8YyTgMVAjazondMuQbppV7r-yCd2C281kSrI=",
-      "https://media.istockphoto.com/id/1404214673/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-papel-tapiz-de-patr%C3%B3n-decorado-de.jpg?s=612x612&w=0&k=20&c=U3uw9ra8YyTgMVAjazondMuQbppV7r-yCd2C281kSrI="
+      "https://media.istockphoto.com/id/1404214673/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-papel-tapiz-de-patr%C3%B3n-decorado-de.jpg?s=612x612&w=0&k=20&c=U3uw9ra8YyTgMVAjazondMuQbppV7r-yCd2C281kSrI=",
     ],
     plot: "401",
     price: {
@@ -1588,18 +1520,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-016",
     terrace: "21",
     title: "Mock Property Title A1-016",
     titles: {
       en: "Mock Title EN A1-016",
-      es: "Mock Título ES A1-016"
+      es: "Mock Título ES A1-016",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -1607,7 +1537,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -1620,21 +1550,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-016"
+    cadastral: "123456789ABC-A1-016",
   },
-  
+
   {
     _id: "prop-assoc1-17",
     company_id: "comp-assoc1",
@@ -1654,12 +1584,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-017",
@@ -1668,7 +1595,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1048006216/es/foto/interior-de-la-sala-de-estar-en-una-caja-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=ksLh15elgVkDhDKYGuHqNYpMENkb2mmV-6r2xorjh8Y=",
-      "https://media.istockphoto.com/id/1048006216/es/foto/interior-de-la-sala-de-estar-en-una-caja-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=ksLh15elgVkDhDKYGuHqNYpMENkb2mmV-6r2xorjh8Y="
+      "https://media.istockphoto.com/id/1048006216/es/foto/interior-de-la-sala-de-estar-en-una-caja-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=ksLh15elgVkDhDKYGuHqNYpMENkb2mmV-6r2xorjh8Y=",
     ],
     plot: "401",
     price: {
@@ -1689,18 +1616,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-017",
     terrace: "21",
     title: "Mock Property Title A1-017",
     titles: {
       en: "Mock Title EN A1-017",
-      es: "Mock Título ES A1-017"
+      es: "Mock Título ES A1-017",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -1708,7 +1633,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -1721,21 +1646,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-017"
+    cadastral: "123456789ABC-A1-017",
   },
-  
+
   {
     _id: "prop-assoc1-18",
     company_id: "comp-assoc1",
@@ -1755,12 +1680,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-018",
@@ -1769,7 +1691,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/855062934/es/foto/sala-de-estar-y-habitaci%C3%B3n-en-apartamento-o-hotel-dise%C3%B1o-de-interiores-3d-render.jpg?s=612x612&w=0&k=20&c=2wmGUKALng95XA404-5aU91OUpMRnTG2XkBaViWmVgI=",
-      "https://media.istockphoto.com/id/855062934/es/foto/sala-de-estar-y-habitaci%C3%B3n-en-apartamento-o-hotel-dise%C3%B1o-de-interiores-3d-render.jpg?s=612x612&w=0&k=20&c=2wmGUKALng95XA404-5aU91OUpMRnTG2XkBaViWmVgI="
+      "https://media.istockphoto.com/id/855062934/es/foto/sala-de-estar-y-habitaci%C3%B3n-en-apartamento-o-hotel-dise%C3%B1o-de-interiores-3d-render.jpg?s=612x612&w=0&k=20&c=2wmGUKALng95XA404-5aU91OUpMRnTG2XkBaViWmVgI=",
     ],
     plot: "401",
     price: {
@@ -1790,18 +1712,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-018",
     terrace: "21",
     title: "Mock Property Title A1-018",
     titles: {
       en: "Mock Title EN A1-018",
-      es: "Mock Título ES A1-018"
+      es: "Mock Título ES A1-018",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -1809,7 +1729,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -1822,21 +1742,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-018"
+    cadastral: "123456789ABC-A1-018",
   },
-  
+
   {
     _id: "prop-assoc1-19",
     company_id: "comp-assoc1",
@@ -1856,12 +1776,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-019",
@@ -1870,7 +1787,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2192761281/es/foto/gran-maqueta-de-sala-de-estar-interior-moderna-y-luminosa-de-lujo.jpg?s=612x612&w=0&k=20&c=iInqThy0RzQO82pji30cSy-6tENP9Lpqojyoq5BVsX4=",
-      "https://media.istockphoto.com/id/2192761281/es/foto/gran-maqueta-de-sala-de-estar-interior-moderna-y-luminosa-de-lujo.jpg?s=612x612&w=0&k=20&c=iInqThy0RzQO82pji30cSy-6tENP9Lpqojyoq5BVsX4="
+      "https://media.istockphoto.com/id/2192761281/es/foto/gran-maqueta-de-sala-de-estar-interior-moderna-y-luminosa-de-lujo.jpg?s=612x612&w=0&k=20&c=iInqThy0RzQO82pji30cSy-6tENP9Lpqojyoq5BVsX4=",
     ],
     plot: "401",
     price: {
@@ -1891,18 +1808,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-019",
     terrace: "21",
     title: "Mock Property Title A1-019",
     titles: {
       en: "Mock Title EN A1-019",
-      es: "Mock Título ES A1-019"
+      es: "Mock Título ES A1-019",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -1910,7 +1825,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -1923,21 +1838,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-019"
+    cadastral: "123456789ABC-A1-019",
   },
-  
+
   {
     _id: "prop-assoc1-20",
     company_id: "comp-assoc1",
@@ -1957,12 +1872,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-020",
@@ -1971,7 +1883,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2186732434/es/foto/sala-de-estar-contempor%C3%A1nea-con-planta-abierta-y-vista-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=0l2p0ig9O6Rvdwu0EYiSKC1vMaaMoNVethbwKzARlEs=",
-      "https://media.istockphoto.com/id/2186732434/es/foto/sala-de-estar-contempor%C3%A1nea-con-planta-abierta-y-vista-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=0l2p0ig9O6Rvdwu0EYiSKC1vMaaMoNVethbwKzARlEs="
+      "https://media.istockphoto.com/id/2186732434/es/foto/sala-de-estar-contempor%C3%A1nea-con-planta-abierta-y-vista-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=0l2p0ig9O6Rvdwu0EYiSKC1vMaaMoNVethbwKzARlEs=",
     ],
     plot: "401",
     price: {
@@ -1992,18 +1904,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-020",
     terrace: "21",
     title: "Mock Property Title A1-020",
     titles: {
       en: "Mock Title EN A1-020",
-      es: "Mock Título ES A1-020"
+      es: "Mock Título ES A1-020",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -2011,7 +1921,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -2024,21 +1934,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-020"
+    cadastral: "123456789ABC-A1-020",
   },
-  
+
   {
     _id: "prop-assoc1-21",
     company_id: "comp-assoc1",
@@ -2058,12 +1968,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-021",
@@ -2072,7 +1979,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1245798947/es/foto/interior-cartel-maqueta-sala-de-estar-con-sof%C3%A1-blanco-de-colores-renderizado-3d.jpg?s=612x612&w=0&k=20&c=K5pSLdTpRLLp4xPLT-WOcgXiPupVDqKWz71Ioh9XBjY=",
-      "https://media.istockphoto.com/id/1245798947/es/foto/interior-cartel-maqueta-sala-de-estar-con-sof%C3%A1-blanco-de-colores-renderizado-3d.jpg?s=612x612&w=0&k=20&c=K5pSLdTpRLLp4xPLT-WOcgXiPupVDqKWz71Ioh9XBjY="
+      "https://media.istockphoto.com/id/1245798947/es/foto/interior-cartel-maqueta-sala-de-estar-con-sof%C3%A1-blanco-de-colores-renderizado-3d.jpg?s=612x612&w=0&k=20&c=K5pSLdTpRLLp4xPLT-WOcgXiPupVDqKWz71Ioh9XBjY=",
     ],
     plot: "401",
     price: {
@@ -2093,18 +2000,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-021",
     terrace: "21",
     title: "Mock Property Title A1-021",
     titles: {
       en: "Mock Title EN A1-021",
-      es: "Mock Título ES A1-021"
+      es: "Mock Título ES A1-021",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -2112,7 +2017,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -2125,21 +2030,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-021"
+    cadastral: "123456789ABC-A1-021",
   },
-  
+
   {
     _id: "prop-assoc1-22",
     company_id: "comp-assoc1",
@@ -2159,12 +2064,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-022",
@@ -2173,7 +2075,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1372281882/es/foto/elegante-interior-de-sala-de-estar-con-muebles-de-dise%C3%B1o-y-accesorios-elegantes.jpg?s=612x612&w=0&k=20&c=-4ZJdAPmzbgCZyLZ9rBf-BE6TWJrvLv4Zc2-LNytEmQ=",
-      "https://media.istockphoto.com/id/1372281882/es/foto/elegante-interior-de-sala-de-estar-con-muebles-de-dise%C3%B1o-y-accesorios-elegantes.jpg?s=612x612&w=0&k=20&c=-4ZJdAPmzbgCZyLZ9rBf-BE6TWJrvLv4Zc2-LNytEmQ="
+      "https://media.istockphoto.com/id/1372281882/es/foto/elegante-interior-de-sala-de-estar-con-muebles-de-dise%C3%B1o-y-accesorios-elegantes.jpg?s=612x612&w=0&k=20&c=-4ZJdAPmzbgCZyLZ9rBf-BE6TWJrvLv4Zc2-LNytEmQ=",
     ],
     plot: "401",
     price: {
@@ -2194,18 +2096,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-022",
     terrace: "21",
     title: "Mock Property Title A1-022",
     titles: {
       en: "Mock Title EN A1-022",
-      es: "Mock Título ES A1-022"
+      es: "Mock Título ES A1-022",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -2213,7 +2113,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -2226,21 +2126,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-022"
+    cadastral: "123456789ABC-A1-022",
   },
-  
+
   {
     _id: "prop-assoc1-23",
     company_id: "comp-assoc1",
@@ -2260,12 +2160,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-023",
@@ -2274,7 +2171,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1347316198/es/foto/dise%C3%B1o-de-interiores-sala-de-estar-moderna-zen-estilo-japon%C3%A9s-3d-renderizado.jpg?s=612x612&w=0&k=20&c=NtSLY8yM6ZH8CrbX_s5tyrhieTyrtb-nEIsF6Oztugk=",
-      "https://media.istockphoto.com/id/1347316198/es/foto/dise%C3%B1o-de-interiores-sala-de-estar-moderna-zen-estilo-japon%C3%A9s-3d-renderizado.jpg?s=612x612&w=0&k=20&c=NtSLY8yM6ZH8CrbX_s5tyrhieTyrtb-nEIsF6Oztugk="
+      "https://media.istockphoto.com/id/1347316198/es/foto/dise%C3%B1o-de-interiores-sala-de-estar-moderna-zen-estilo-japon%C3%A9s-3d-renderizado.jpg?s=612x612&w=0&k=20&c=NtSLY8yM6ZH8CrbX_s5tyrhieTyrtb-nEIsF6Oztugk=",
     ],
     plot: "401",
     price: {
@@ -2295,18 +2192,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-023",
     terrace: "21",
     title: "Mock Property Title A1-023",
     titles: {
       en: "Mock Title EN A1-023",
-      es: "Mock Título ES A1-023"
+      es: "Mock Título ES A1-023",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -2314,7 +2209,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -2327,21 +2222,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-023"
+    cadastral: "123456789ABC-A1-023",
   },
-  
+
   {
     _id: "prop-assoc1-24",
     company_id: "comp-assoc1",
@@ -2361,12 +2256,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-024",
@@ -2375,7 +2267,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1473033787/es/foto/interior-de-una-sala-de-estar-con-muebles-m%C3%ADnimos.jpg?s=612x612&w=0&k=20&c=iFnvq49HyLLjzIL_Ik0O2fVCQ8ihZAcj75-NJ1T3OSo=",
-      "https://media.istockphoto.com/id/1473033787/es/foto/interior-de-una-sala-de-estar-con-muebles-m%C3%ADnimos.jpg?s=612x612&w=0&k=20&c=iFnvq49HyLLjzIL_Ik0O2fVCQ8ihZAcj75-NJ1T3OSo="
+      "https://media.istockphoto.com/id/1473033787/es/foto/interior-de-una-sala-de-estar-con-muebles-m%C3%ADnimos.jpg?s=612x612&w=0&k=20&c=iFnvq49HyLLjzIL_Ik0O2fVCQ8ihZAcj75-NJ1T3OSo=",
     ],
     plot: "401",
     price: {
@@ -2396,18 +2288,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-024",
     terrace: "21",
     title: "Mock Property Title A1-024",
     titles: {
       en: "Mock Title EN A1-024",
-      es: "Mock Título ES A1-024"
+      es: "Mock Título ES A1-024",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -2415,7 +2305,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -2428,21 +2318,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-024"
+    cadastral: "123456789ABC-A1-024",
   },
-  
+
   {
     _id: "prop-assoc1-25",
     company_id: "comp-assoc1",
@@ -2462,12 +2352,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-025",
@@ -2476,7 +2363,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1401308341/es/foto/el-dise%C3%B1o-interior-del-apartamento-en-tonos-oscuros-y-estilo-minimalista-con-materiales-de.jpg?s=612x612&w=0&k=20&c=zF7T7_DehoqaM_oBM8SDPRnxT98b4EiLXsgkjBimr44=",
-      "https://media.istockphoto.com/id/1401308341/es/foto/el-dise%C3%B1o-interior-del-apartamento-en-tonos-oscuros-y-estilo-minimalista-con-materiales-de.jpg?s=612x612&w=0&k=20&c=zF7T7_DehoqaM_oBM8SDPRnxT98b4EiLXsgkjBimr44="
+      "https://media.istockphoto.com/id/1401308341/es/foto/el-dise%C3%B1o-interior-del-apartamento-en-tonos-oscuros-y-estilo-minimalista-con-materiales-de.jpg?s=612x612&w=0&k=20&c=zF7T7_DehoqaM_oBM8SDPRnxT98b4EiLXsgkjBimr44=",
     ],
     plot: "401",
     price: {
@@ -2497,18 +2384,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-025",
     terrace: "21",
     title: "Mock Property Title A1-025",
     titles: {
       en: "Mock Title EN A1-025",
-      es: "Mock Título ES A1-025"
+      es: "Mock Título ES A1-025",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -2516,7 +2401,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -2529,21 +2414,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-025"
+    cadastral: "123456789ABC-A1-025",
   },
-  
+
   {
     _id: "prop-assoc1-26",
     company_id: "comp-assoc1",
@@ -2563,12 +2448,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-026",
@@ -2577,7 +2459,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2148960132/es/foto/interior-de-la-sala-de-estar-moderna-con-papel-tapiz-gris-piso-de-madera-catcondo-y-cama-para.jpg?s=612x612&w=0&k=20&c=pHdMnZ5wIl-ykFV67f_Oh44VrWDDx3TzlXL0UzaaPgA=",
-      "https://media.istockphoto.com/id/2148960132/es/foto/interior-de-la-sala-de-estar-moderna-con-papel-tapiz-gris-piso-de-madera-catcondo-y-cama-para.jpg?s=612x612&w=0&k=20&c=pHdMnZ5wIl-ykFV67f_Oh44VrWDDx3TzlXL0UzaaPgA="
+      "https://media.istockphoto.com/id/2148960132/es/foto/interior-de-la-sala-de-estar-moderna-con-papel-tapiz-gris-piso-de-madera-catcondo-y-cama-para.jpg?s=612x612&w=0&k=20&c=pHdMnZ5wIl-ykFV67f_Oh44VrWDDx3TzlXL0UzaaPgA=",
     ],
     plot: "401",
     price: {
@@ -2598,18 +2480,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-026",
     terrace: "21",
     title: "Mock Property Title A1-026",
     titles: {
       en: "Mock Title EN A1-026",
-      es: "Mock Título ES A1-026"
+      es: "Mock Título ES A1-026",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -2617,7 +2497,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -2630,21 +2510,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-026"
+    cadastral: "123456789ABC-A1-026",
   },
-  
+
   {
     _id: "prop-assoc1-27",
     company_id: "comp-assoc1",
@@ -2664,12 +2544,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-027",
@@ -2678,7 +2555,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1413337128/es/foto/moderno-sal%C3%B3n-amueblado-con-cocina.jpg?s=612x612&w=0&k=20&c=jNrkkytE2ZX7-ZjR61DO7JQxfCQ730FRi57pNizyM_4=",
-      "https://media.istockphoto.com/id/1413337128/es/foto/moderno-sal%C3%B3n-amueblado-con-cocina.jpg?s=612x612&w=0&k=20&c=jNrkkytE2ZX7-ZjR61DO7JQxfCQ730FRi57pNizyM_4="
+      "https://media.istockphoto.com/id/1413337128/es/foto/moderno-sal%C3%B3n-amueblado-con-cocina.jpg?s=612x612&w=0&k=20&c=jNrkkytE2ZX7-ZjR61DO7JQxfCQ730FRi57pNizyM_4=",
     ],
     plot: "401",
     price: {
@@ -2699,18 +2576,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-027",
     terrace: "21",
     title: "Mock Property Title A1-027",
     titles: {
       en: "Mock Title EN A1-027",
-      es: "Mock Título ES A1-027"
+      es: "Mock Título ES A1-027",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -2718,7 +2593,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -2731,21 +2606,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-027"
+    cadastral: "123456789ABC-A1-027",
   },
-  
+
   {
     _id: "prop-assoc1-28",
     company_id: "comp-assoc1",
@@ -2765,12 +2640,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-028",
@@ -2779,7 +2651,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1001121330/es/foto/dise%C3%B1o-de-interiores-moderno-sal%C3%B3n-blanco.jpg?s=612x612&w=0&k=20&c=wVrp1xDRR9LMVvWtNU46NmSjXnVrJSAIyqEQpmOwykI=",
-      "https://media.istockphoto.com/id/1001121330/es/foto/dise%C3%B1o-de-interiores-moderno-sal%C3%B3n-blanco.jpg?s=612x612&w=0&k=20&c=wVrp1xDRR9LMVvWtNU46NmSjXnVrJSAIyqEQpmOwykI="
+      "https://media.istockphoto.com/id/1001121330/es/foto/dise%C3%B1o-de-interiores-moderno-sal%C3%B3n-blanco.jpg?s=612x612&w=0&k=20&c=wVrp1xDRR9LMVvWtNU46NmSjXnVrJSAIyqEQpmOwykI=",
     ],
     plot: "401",
     price: {
@@ -2800,18 +2672,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-028",
     terrace: "21",
     title: "Mock Property Title A1-028",
     titles: {
       en: "Mock Title EN A1-028",
-      es: "Mock Título ES A1-028"
+      es: "Mock Título ES A1-028",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -2819,7 +2689,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -2832,21 +2702,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-028"
+    cadastral: "123456789ABC-A1-028",
   },
-  
+
   {
     _id: "prop-assoc1-29",
     company_id: "comp-assoc1",
@@ -2866,12 +2736,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-029",
@@ -2880,7 +2747,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1006669284/es/foto/interior-de-la-sala-de-estar-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=N7GmVLSCt3RdUKPF9ULrtYOH4A06gwrcAb42rMqw3Jg=",
-      "https://media.istockphoto.com/id/1006669284/es/foto/interior-de-la-sala-de-estar-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=N7GmVLSCt3RdUKPF9ULrtYOH4A06gwrcAb42rMqw3Jg="
+      "https://media.istockphoto.com/id/1006669284/es/foto/interior-de-la-sala-de-estar-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=N7GmVLSCt3RdUKPF9ULrtYOH4A06gwrcAb42rMqw3Jg=",
     ],
     plot: "401",
     price: {
@@ -2901,18 +2768,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-029",
     terrace: "21",
     title: "Mock Property Title A1-029",
     titles: {
       en: "Mock Title EN A1-029",
-      es: "Mock Título ES A1-029"
+      es: "Mock Título ES A1-029",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -2920,7 +2785,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -2933,21 +2798,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-029"
+    cadastral: "123456789ABC-A1-029",
   },
-  
+
   {
     _id: "prop-assoc1-30",
     company_id: "comp-assoc1",
@@ -2967,12 +2832,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-030",
@@ -2981,7 +2843,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1354768063/es/foto/render-3d-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=4B24teoBHqN9-u3UFxIOZUaqEgWOIxTQEdKU-6sZrKo=",
-      "https://media.istockphoto.com/id/1354768063/es/foto/render-3d-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=4B24teoBHqN9-u3UFxIOZUaqEgWOIxTQEdKU-6sZrKo="
+      "https://media.istockphoto.com/id/1354768063/es/foto/render-3d-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=4B24teoBHqN9-u3UFxIOZUaqEgWOIxTQEdKU-6sZrKo=",
     ],
     plot: "401",
     price: {
@@ -3002,18 +2864,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-030",
     terrace: "21",
     title: "Mock Property Title A1-030",
     titles: {
       en: "Mock Title EN A1-030",
-      es: "Mock Título ES A1-030"
+      es: "Mock Título ES A1-030",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -3021,7 +2881,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -3034,21 +2894,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-030"
+    cadastral: "123456789ABC-A1-030",
   },
-  
+
   {
     _id: "prop-assoc1-31",
     company_id: "comp-assoc1",
@@ -3068,12 +2928,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-031",
@@ -3082,7 +2939,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1408009103/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=_m2eye6E9yz91I3hCSgqlWh0pxktuhCrWonjz96anTI=",
-      "https://media.istockphoto.com/id/1408009103/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=_m2eye6E9yz91I3hCSgqlWh0pxktuhCrWonjz96anTI="
+      "https://media.istockphoto.com/id/1408009103/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=_m2eye6E9yz91I3hCSgqlWh0pxktuhCrWonjz96anTI=",
     ],
     plot: "401",
     price: {
@@ -3103,18 +2960,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-031",
     terrace: "21",
     title: "Mock Property Title A1-031",
     titles: {
       en: "Mock Title EN A1-031",
-      es: "Mock Título ES A1-031"
+      es: "Mock Título ES A1-031",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -3122,7 +2977,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -3135,21 +2990,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-031"
+    cadastral: "123456789ABC-A1-031",
   },
-  
+
   {
     _id: "prop-assoc1-32",
     company_id: "comp-assoc1",
@@ -3169,12 +3024,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-032",
@@ -3183,7 +3035,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1209929504/es/foto/esquina-de-la-sala-de-estar-escandinava-de-blanco-y-madera.jpg?s=612x612&w=0&k=20&c=KkwUl9mD6CJ1G1bMyk8XA8citXDGE6gRFWBxFwLakHs=",
-      "https://media.istockphoto.com/id/1209929504/es/foto/esquina-de-la-sala-de-estar-escandinava-de-blanco-y-madera.jpg?s=612x612&w=0&k=20&c=KkwUl9mD6CJ1G1bMyk8XA8citXDGE6gRFWBxFwLakHs="
+      "https://media.istockphoto.com/id/1209929504/es/foto/esquina-de-la-sala-de-estar-escandinava-de-blanco-y-madera.jpg?s=612x612&w=0&k=20&c=KkwUl9mD6CJ1G1bMyk8XA8citXDGE6gRFWBxFwLakHs=",
     ],
     plot: "401",
     price: {
@@ -3204,18 +3056,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-032",
     terrace: "21",
     title: "Mock Property Title A1-032",
     titles: {
       en: "Mock Title EN A1-032",
-      es: "Mock Título ES A1-032"
+      es: "Mock Título ES A1-032",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -3223,7 +3073,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -3236,21 +3086,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-032"
+    cadastral: "123456789ABC-A1-032",
   },
-  
+
   {
     _id: "prop-assoc1-33",
     company_id: "comp-assoc1",
@@ -3270,12 +3120,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-033",
@@ -3284,7 +3131,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2161329191/es/foto/acogedora-sala-de-estar-con-muebles-modernos-y-vista-a-la-ciudad-desde-la-ventana.jpg?s=612x612&w=0&k=20&c=trYfmrKI3nsRT5pQvZVNLq5Xr8zJBHuqOJb4Gx-9PIE=",
-      "https://media.istockphoto.com/id/2161329191/es/foto/acogedora-sala-de-estar-con-muebles-modernos-y-vista-a-la-ciudad-desde-la-ventana.jpg?s=612x612&w=0&k=20&c=trYfmrKI3nsRT5pQvZVNLq5Xr8zJBHuqOJb4Gx-9PIE="
+      "https://media.istockphoto.com/id/2161329191/es/foto/acogedora-sala-de-estar-con-muebles-modernos-y-vista-a-la-ciudad-desde-la-ventana.jpg?s=612x612&w=0&k=20&c=trYfmrKI3nsRT5pQvZVNLq5Xr8zJBHuqOJb4Gx-9PIE=",
     ],
     plot: "401",
     price: {
@@ -3305,18 +3152,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-033",
     terrace: "21",
     title: "Mock Property Title A1-033",
     titles: {
       en: "Mock Title EN A1-033",
-      es: "Mock Título ES A1-033"
+      es: "Mock Título ES A1-033",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -3324,7 +3169,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -3337,21 +3182,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-033"
+    cadastral: "123456789ABC-A1-033",
   },
-  
+
   {
     _id: "prop-assoc1-34",
     company_id: "comp-assoc1",
@@ -3371,12 +3216,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-034",
@@ -3385,7 +3227,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2183261630/es/foto/sala-de-estar-contempor%C3%A1nea-con-silla-decorativa-audaz-y-obras-de-arte-modernas.jpg?s=612x612&w=0&k=20&c=bXRc2pJuRxYzqVFlth7vTuf05vIL0M7mulW2uQiaW1M=",
-      "https://media.istockphoto.com/id/2183261630/es/foto/sala-de-estar-contempor%C3%A1nea-con-silla-decorativa-audaz-y-obras-de-arte-modernas.jpg?s=612x612&w=0&k=20&c=bXRc2pJuRxYzqVFlth7vTuf05vIL0M7mulW2uQiaW1M="
+      "https://media.istockphoto.com/id/2183261630/es/foto/sala-de-estar-contempor%C3%A1nea-con-silla-decorativa-audaz-y-obras-de-arte-modernas.jpg?s=612x612&w=0&k=20&c=bXRc2pJuRxYzqVFlth7vTuf05vIL0M7mulW2uQiaW1M=",
     ],
     plot: "401",
     price: {
@@ -3406,18 +3248,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-034",
     terrace: "21",
     title: "Mock Property Title A1-034",
     titles: {
       en: "Mock Title EN A1-034",
-      es: "Mock Título ES A1-034"
+      es: "Mock Título ES A1-034",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -3425,7 +3265,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -3438,21 +3278,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-034"
+    cadastral: "123456789ABC-A1-034",
   },
-  
+
   {
     _id: "prop-assoc1-35",
     company_id: "comp-assoc1",
@@ -3472,12 +3312,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-035",
@@ -3486,7 +3323,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2184733372/es/foto/elegante-dormitorio-creado-digitalmente-con-iluminaci%C3%B3n-suave.jpg?s=612x612&w=0&k=20&c=Io58BPk1PW56PddHcB8nGexdlGZ_x9tQ_US86eKA6Tg=",
-      "https://media.istockphoto.com/id/2184733372/es/foto/elegante-dormitorio-creado-digitalmente-con-iluminaci%C3%B3n-suave.jpg?s=612x612&w=0&k=20&c=Io58BPk1PW56PddHcB8nGexdlGZ_x9tQ_US86eKA6Tg="
+      "https://media.istockphoto.com/id/2184733372/es/foto/elegante-dormitorio-creado-digitalmente-con-iluminaci%C3%B3n-suave.jpg?s=612x612&w=0&k=20&c=Io58BPk1PW56PddHcB8nGexdlGZ_x9tQ_US86eKA6Tg=",
     ],
     plot: "401",
     price: {
@@ -3507,18 +3344,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-035",
     terrace: "21",
     title: "Mock Property Title A1-035",
     titles: {
       en: "Mock Title EN A1-035",
-      es: "Mock Título ES A1-035"
+      es: "Mock Título ES A1-035",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -3526,7 +3361,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -3539,21 +3374,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-035"
+    cadastral: "123456789ABC-A1-035",
   },
-  
+
   {
     _id: "prop-assoc1-36",
     company_id: "comp-assoc1",
@@ -3573,12 +3408,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-036",
@@ -3587,7 +3419,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1185172040/es/foto/interiores-dise%C3%B1o-de-escena-de-imagen-de-la-sala-de-estar-de-lujo-moderno-con-elemento-cl%C3%A1sico.jpg?s=612x612&w=0&k=20&c=keguyJf7noXBj5Eo9WuDSrK662MqccGoPYyy1dOVBQc=",
-      "https://media.istockphoto.com/id/1185172040/es/foto/interiores-dise%C3%B1o-de-escena-de-imagen-de-la-sala-de-estar-de-lujo-moderno-con-elemento-cl%C3%A1sico.jpg?s=612x612&w=0&k=20&c=keguyJf7noXBj5Eo9WuDSrK662MqccGoPYyy1dOVBQc="
+      "https://media.istockphoto.com/id/1185172040/es/foto/interiores-dise%C3%B1o-de-escena-de-imagen-de-la-sala-de-estar-de-lujo-moderno-con-elemento-cl%C3%A1sico.jpg?s=612x612&w=0&k=20&c=keguyJf7noXBj5Eo9WuDSrK662MqccGoPYyy1dOVBQc=",
     ],
     plot: "401",
     price: {
@@ -3608,18 +3440,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-036",
     terrace: "21",
     title: "Mock Property Title A1-036",
     titles: {
       en: "Mock Title EN A1-036",
-      es: "Mock Título ES A1-036"
+      es: "Mock Título ES A1-036",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -3627,7 +3457,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -3640,21 +3470,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-036"
+    cadastral: "123456789ABC-A1-036",
   },
-  
+
   {
     _id: "prop-assoc1-37",
     company_id: "comp-assoc1",
@@ -3674,12 +3504,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-037",
@@ -3688,7 +3515,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/489838730/es/foto/casa-moderna-interior-del-teatro-con-grandes-ventanas.jpg?s=612x612&w=0&k=20&c=BSPvtvc1TJftJx9u3jtyNbLBUCiOSuTjRnp3V2pXw0M=",
-      "https://media.istockphoto.com/id/489838730/es/foto/casa-moderna-interior-del-teatro-con-grandes-ventanas.jpg?s=612x612&w=0&k=20&c=BSPvtvc1TJftJx9u3jtyNbLBUCiOSuTjRnp3V2pXw0M="
+      "https://media.istockphoto.com/id/489838730/es/foto/casa-moderna-interior-del-teatro-con-grandes-ventanas.jpg?s=612x612&w=0&k=20&c=BSPvtvc1TJftJx9u3jtyNbLBUCiOSuTjRnp3V2pXw0M=",
     ],
     plot: "401",
     price: {
@@ -3709,18 +3536,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-037",
     terrace: "21",
     title: "Mock Property Title A1-037",
     titles: {
       en: "Mock Title EN A1-037",
-      es: "Mock Título ES A1-037"
+      es: "Mock Título ES A1-037",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -3728,7 +3553,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -3741,21 +3566,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-037"
+    cadastral: "123456789ABC-A1-037",
   },
-  
+
   {
     _id: "prop-assoc1-38",
     company_id: "comp-assoc1",
@@ -3775,12 +3600,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-038",
@@ -3789,7 +3611,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1177647525/es/foto/lujo-moderno-de-sala-de-estar-y-comedor-con-elemento-cl%C3%A1sico-y-muebles-renderizado-3d.jpg?s=612x612&w=0&k=20&c=qlXPqlYUF_0AhuXlTiAJNYsTBsFPa405lz7SUIPe038=",
-      "https://media.istockphoto.com/id/1177647525/es/foto/lujo-moderno-de-sala-de-estar-y-comedor-con-elemento-cl%C3%A1sico-y-muebles-renderizado-3d.jpg?s=612x612&w=0&k=20&c=qlXPqlYUF_0AhuXlTiAJNYsTBsFPa405lz7SUIPe038="
+      "https://media.istockphoto.com/id/1177647525/es/foto/lujo-moderno-de-sala-de-estar-y-comedor-con-elemento-cl%C3%A1sico-y-muebles-renderizado-3d.jpg?s=612x612&w=0&k=20&c=qlXPqlYUF_0AhuXlTiAJNYsTBsFPa405lz7SUIPe038=",
     ],
     plot: "401",
     price: {
@@ -3810,18 +3632,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-038",
     terrace: "21",
     title: "Mock Property Title A1-038",
     titles: {
       en: "Mock Title EN A1-038",
-      es: "Mock Título ES A1-038"
+      es: "Mock Título ES A1-038",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -3829,7 +3649,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -3842,21 +3662,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-038"
+    cadastral: "123456789ABC-A1-038",
   },
-  
+
   {
     _id: "prop-assoc1-39",
     company_id: "comp-assoc1",
@@ -3876,12 +3696,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-039",
@@ -3890,7 +3707,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2159500641/es/foto/creating-an-inviting-living-room-with-thoughtful-interior-design.jpg?s=612x612&w=0&k=20&c=xcg71zDZgrDubRyo_DMNUgvwMd_v_xoS4Ee_hIYaTWU=",
-      "https://media.istockphoto.com/id/2159500641/es/foto/creating-an-inviting-living-room-with-thoughtful-interior-design.jpg?s=612x612&w=0&k=20&c=xcg71zDZgrDubRyo_DMNUgvwMd_v_xoS4Ee_hIYaTWU="
+      "https://media.istockphoto.com/id/2159500641/es/foto/creating-an-inviting-living-room-with-thoughtful-interior-design.jpg?s=612x612&w=0&k=20&c=xcg71zDZgrDubRyo_DMNUgvwMd_v_xoS4Ee_hIYaTWU=",
     ],
     plot: "401",
     price: {
@@ -3911,18 +3728,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-039",
     terrace: "21",
     title: "Mock Property Title A1-039",
     titles: {
       en: "Mock Title EN A1-039",
-      es: "Mock Título ES A1-039"
+      es: "Mock Título ES A1-039",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -3930,7 +3745,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -3943,21 +3758,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-039"
+    cadastral: "123456789ABC-A1-039",
   },
-  
+
   {
     _id: "prop-assoc1-40",
     company_id: "comp-assoc1",
@@ -3977,12 +3792,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-040",
@@ -3991,7 +3803,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1087309820/es/foto/lof-lujoso-dise%C3%B1o-de-interiores-living-comedor-estilo-hipster-con-muebles-grises-y-paredes-y.jpg?s=612x612&w=0&k=20&c=qsru7K30XNkX9vZPGmIbsHmN07Kb7l333pWpD61i0I4=",
-      "https://media.istockphoto.com/id/1087309820/es/foto/lof-lujoso-dise%C3%B1o-de-interiores-living-comedor-estilo-hipster-con-muebles-grises-y-paredes-y.jpg?s=612x612&w=0&k=20&c=qsru7K30XNkX9vZPGmIbsHmN07Kb7l333pWpD61i0I4="
+      "https://media.istockphoto.com/id/1087309820/es/foto/lof-lujoso-dise%C3%B1o-de-interiores-living-comedor-estilo-hipster-con-muebles-grises-y-paredes-y.jpg?s=612x612&w=0&k=20&c=qsru7K30XNkX9vZPGmIbsHmN07Kb7l333pWpD61i0I4=",
     ],
     plot: "401",
     price: {
@@ -4012,18 +3824,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-040",
     terrace: "21",
     title: "Mock Property Title A1-040",
     titles: {
       en: "Mock Title EN A1-040",
-      es: "Mock Título ES A1-040"
+      es: "Mock Título ES A1-040",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -4031,7 +3841,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -4044,21 +3854,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-040"
+    cadastral: "123456789ABC-A1-040",
   },
-  
+
   {
     _id: "prop-assoc1-41",
     company_id: "comp-assoc1",
@@ -4078,12 +3888,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-041",
@@ -4092,7 +3899,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1072741908/es/foto/render-3d-de-sala-de-estar.jpg?s=612x612&w=0&k=20&c=Xejy55S7ZFXxQ7NQ3svEV9f_-T8rDKGaK6xcgI60Ilk=",
-      "https://media.istockphoto.com/id/1072741908/es/foto/render-3d-de-sala-de-estar.jpg?s=612x612&w=0&k=20&c=Xejy55S7ZFXxQ7NQ3svEV9f_-T8rDKGaK6xcgI60Ilk="
+      "https://media.istockphoto.com/id/1072741908/es/foto/render-3d-de-sala-de-estar.jpg?s=612x612&w=0&k=20&c=Xejy55S7ZFXxQ7NQ3svEV9f_-T8rDKGaK6xcgI60Ilk=",
     ],
     plot: "401",
     price: {
@@ -4113,18 +3920,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-041",
     terrace: "21",
     title: "Mock Property Title A1-041",
     titles: {
       en: "Mock Title EN A1-041",
-      es: "Mock Título ES A1-041"
+      es: "Mock Título ES A1-041",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -4132,7 +3937,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -4145,21 +3950,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-041"
+    cadastral: "123456789ABC-A1-041",
   },
-  
+
   {
     _id: "prop-assoc1-42",
     company_id: "comp-assoc1",
@@ -4179,12 +3984,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-042",
@@ -4193,7 +3995,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1445066841/es/foto/moderna-sala-de-estar-de-oficina-contempor%C3%A1nea-%C3%A1rea-de-relajaci%C3%B3n-con-sof%C3%A1-mesa-de-caf%C3%A9-y-sala.jpg?s=612x612&w=0&k=20&c=2ZbWV4HS3ieQomfV6F-AAB20v4r0hFiVl5gTARJTzyw=",
-      "https://media.istockphoto.com/id/1445066841/es/foto/moderna-sala-de-estar-de-oficina-contempor%C3%A1nea-%C3%A1rea-de-relajaci%C3%B3n-con-sof%C3%A1-mesa-de-caf%C3%A9-y-sala.jpg?s=612x612&w=0&k=20&c=2ZbWV4HS3ieQomfV6F-AAB20v4r0hFiVl5gTARJTzyw="
+      "https://media.istockphoto.com/id/1445066841/es/foto/moderna-sala-de-estar-de-oficina-contempor%C3%A1nea-%C3%A1rea-de-relajaci%C3%B3n-con-sof%C3%A1-mesa-de-caf%C3%A9-y-sala.jpg?s=612x612&w=0&k=20&c=2ZbWV4HS3ieQomfV6F-AAB20v4r0hFiVl5gTARJTzyw=",
     ],
     plot: "401",
     price: {
@@ -4214,18 +4016,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-042",
     terrace: "21",
     title: "Mock Property Title A1-042",
     titles: {
       en: "Mock Title EN A1-042",
-      es: "Mock Título ES A1-042"
+      es: "Mock Título ES A1-042",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -4233,7 +4033,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -4246,21 +4046,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-042"
+    cadastral: "123456789ABC-A1-042",
   },
-  
+
   {
     _id: "prop-assoc1-43",
     company_id: "comp-assoc1",
@@ -4280,12 +4080,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-043",
@@ -4294,7 +4091,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1421296577/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-pared-interior-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=gZKLUmNPH7BBhgJTRPdOaGnML5_VMTSw3--nwwCHFFo=",
-      "https://media.istockphoto.com/id/1421296577/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-pared-interior-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=gZKLUmNPH7BBhgJTRPdOaGnML5_VMTSw3--nwwCHFFo="
+      "https://media.istockphoto.com/id/1421296577/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-pared-interior-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=gZKLUmNPH7BBhgJTRPdOaGnML5_VMTSw3--nwwCHFFo=",
     ],
     plot: "401",
     price: {
@@ -4315,18 +4112,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-043",
     terrace: "21",
     title: "Mock Property Title A1-043",
     titles: {
       en: "Mock Title EN A1-043",
-      es: "Mock Título ES A1-043"
+      es: "Mock Título ES A1-043",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -4334,7 +4129,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -4347,21 +4142,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-043"
+    cadastral: "123456789ABC-A1-043",
   },
-  
+
   {
     _id: "prop-assoc1-44",
     company_id: "comp-assoc1",
@@ -4381,12 +4176,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-044",
@@ -4395,7 +4187,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1166844322/es/foto/dise%C3%B1o-interior-zen-vida-moderna-con-sill%C3%B3n-y-decoraci%C3%B3n-3d-renderizado.jpg?s=612x612&w=0&k=20&c=-671bfDKEDY_y6I9SRRHzWatln2A_HU8gQefzpTpjNY=",
-      "https://media.istockphoto.com/id/1166844322/es/foto/dise%C3%B1o-interior-zen-vida-moderna-con-sill%C3%B3n-y-decoraci%C3%B3n-3d-renderizado.jpg?s=612x612&w=0&k=20&c=-671bfDKEDY_y6I9SRRHzWatln2A_HU8gQefzpTpjNY="
+      "https://media.istockphoto.com/id/1166844322/es/foto/dise%C3%B1o-interior-zen-vida-moderna-con-sill%C3%B3n-y-decoraci%C3%B3n-3d-renderizado.jpg?s=612x612&w=0&k=20&c=-671bfDKEDY_y6I9SRRHzWatln2A_HU8gQefzpTpjNY=",
     ],
     plot: "401",
     price: {
@@ -4416,18 +4208,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-044",
     terrace: "21",
     title: "Mock Property Title A1-044",
     titles: {
       en: "Mock Title EN A1-044",
-      es: "Mock Título ES A1-044"
+      es: "Mock Título ES A1-044",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -4435,7 +4225,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -4448,21 +4238,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-044"
+    cadastral: "123456789ABC-A1-044",
   },
-  
+
   {
     _id: "prop-assoc1-45",
     company_id: "comp-assoc1",
@@ -4482,12 +4272,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-045",
@@ -4496,7 +4283,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2204341843/es/foto/3d-render-luxury-apartment-living-room.jpg?s=612x612&w=0&k=20&c=pN4JsUeTWM8YSNXJtJatVB7vJtj2l0Q0aURER-DeBR4=",
-      "https://media.istockphoto.com/id/2204341843/es/foto/3d-render-luxury-apartment-living-room.jpg?s=612x612&w=0&k=20&c=pN4JsUeTWM8YSNXJtJatVB7vJtj2l0Q0aURER-DeBR4="
+      "https://media.istockphoto.com/id/2204341843/es/foto/3d-render-luxury-apartment-living-room.jpg?s=612x612&w=0&k=20&c=pN4JsUeTWM8YSNXJtJatVB7vJtj2l0Q0aURER-DeBR4=",
     ],
     plot: "401",
     price: {
@@ -4517,18 +4304,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-045",
     terrace: "21",
     title: "Mock Property Title A1-045",
     titles: {
       en: "Mock Title EN A1-045",
-      es: "Mock Título ES A1-045"
+      es: "Mock Título ES A1-045",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -4536,7 +4321,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -4549,21 +4334,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-045"
+    cadastral: "123456789ABC-A1-045",
   },
-  
+
   {
     _id: "prop-assoc1-46",
     company_id: "comp-assoc1",
@@ -4583,12 +4368,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-046",
@@ -4597,7 +4379,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/972636394/es/foto/interior-sala-de-estar-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=2HUDjaho6UDSvWQpm9BGPddYLTYzWDQqwzkQQHwGzvc=",
-      "https://media.istockphoto.com/id/972636394/es/foto/interior-sala-de-estar-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=2HUDjaho6UDSvWQpm9BGPddYLTYzWDQqwzkQQHwGzvc="
+      "https://media.istockphoto.com/id/972636394/es/foto/interior-sala-de-estar-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=2HUDjaho6UDSvWQpm9BGPddYLTYzWDQqwzkQQHwGzvc=",
     ],
     plot: "401",
     price: {
@@ -4618,18 +4400,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-046",
     terrace: "21",
     title: "Mock Property Title A1-046",
     titles: {
       en: "Mock Title EN A1-046",
-      es: "Mock Título ES A1-046"
+      es: "Mock Título ES A1-046",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -4637,7 +4417,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -4650,21 +4430,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-046"
+    cadastral: "123456789ABC-A1-046",
   },
-  
+
   {
     _id: "prop-assoc1-47",
     company_id: "comp-assoc1",
@@ -4684,12 +4464,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-047",
@@ -4698,7 +4475,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1387778634/es/foto/dise%C3%B1o-interior-en-estilo-minimalista-vintage-en-la-zona-del-sal%C3%B3n-utilizando-material-de.jpg?s=612x612&w=0&k=20&c=VVuuJxYER5EJhYiJzPiXxHeYS4yqeuQJ5W23Z3VnzWM=",
-      "https://media.istockphoto.com/id/1387778634/es/foto/dise%C3%B1o-interior-en-estilo-minimalista-vintage-en-la-zona-del-sal%C3%B3n-utilizando-material-de.jpg?s=612x612&w=0&k=20&c=VVuuJxYER5EJhYiJzPiXxHeYS4yqeuQJ5W23Z3VnzWM="
+      "https://media.istockphoto.com/id/1387778634/es/foto/dise%C3%B1o-interior-en-estilo-minimalista-vintage-en-la-zona-del-sal%C3%B3n-utilizando-material-de.jpg?s=612x612&w=0&k=20&c=VVuuJxYER5EJhYiJzPiXxHeYS4yqeuQJ5W23Z3VnzWM=",
     ],
     plot: "401",
     price: {
@@ -4719,18 +4496,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-047",
     terrace: "21",
     title: "Mock Property Title A1-047",
     titles: {
       en: "Mock Title EN A1-047",
-      es: "Mock Título ES A1-047"
+      es: "Mock Título ES A1-047",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -4738,7 +4513,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -4751,21 +4526,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-047"
+    cadastral: "123456789ABC-A1-047",
   },
-  
+
   {
     _id: "prop-assoc1-48",
     company_id: "comp-assoc1",
@@ -4785,12 +4560,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-048",
@@ -4799,7 +4571,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1330399897/es/foto/interior-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=te3ZsJnC75szC4zLPggilgq45De1ZaaIv94QLa1OR8Y=",
-      "hhttps://media.istockphoto.com/id/1330399897/es/foto/interior-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=te3ZsJnC75szC4zLPggilgq45De1ZaaIv94QLa1OR8Y="
+      "hhttps://media.istockphoto.com/id/1330399897/es/foto/interior-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=te3ZsJnC75szC4zLPggilgq45De1ZaaIv94QLa1OR8Y=",
     ],
     plot: "401",
     price: {
@@ -4820,18 +4592,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-048",
     terrace: "21",
     title: "Mock Property Title A1-048",
     titles: {
       en: "Mock Title EN A1-048",
-      es: "Mock Título ES A1-048"
+      es: "Mock Título ES A1-048",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -4839,7 +4609,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -4852,21 +4622,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-048"
+    cadastral: "123456789ABC-A1-048",
   },
-  
+
   {
     _id: "prop-assoc1-49",
     company_id: "comp-assoc1",
@@ -4886,12 +4656,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-049",
@@ -4900,7 +4667,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2156753630/es/foto/interior-del-pasillo-de-lujo-en-una-elegante-casa-cl%C3%A1sica.jpg?s=612x612&w=0&k=20&c=Ekzm5-GE7v-qbOiDRqgESYRyA3dIP8mgyjw5T2LCFyw=",
-      "https://media.istockphoto.com/id/2156753630/es/foto/interior-del-pasillo-de-lujo-en-una-elegante-casa-cl%C3%A1sica.jpg?s=612x612&w=0&k=20&c=Ekzm5-GE7v-qbOiDRqgESYRyA3dIP8mgyjw5T2LCFyw="
+      "https://media.istockphoto.com/id/2156753630/es/foto/interior-del-pasillo-de-lujo-en-una-elegante-casa-cl%C3%A1sica.jpg?s=612x612&w=0&k=20&c=Ekzm5-GE7v-qbOiDRqgESYRyA3dIP8mgyjw5T2LCFyw=",
     ],
     plot: "401",
     price: {
@@ -4921,18 +4688,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-049",
     terrace: "21",
     title: "Mock Property Title A1-049",
     titles: {
       en: "Mock Title EN A1-049",
-      es: "Mock Título ES A1-049"
+      es: "Mock Título ES A1-049",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -4940,7 +4705,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -4953,21 +4718,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-049"
+    cadastral: "123456789ABC-A1-049",
   },
-  
+
   {
     _id: "prop-assoc1-50",
     company_id: "comp-assoc1",
@@ -4987,12 +4752,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-050",
@@ -5001,7 +4763,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1389386427/es/foto/3d-render-de-luxury-house-living.jpg?s=612x612&w=0&k=20&c=A8LrNZzMJjx93I2RE-KMEFAq4eBqfTGS6OBqVARgNhA=",
-      "https://media.istockphoto.com/id/1389386427/es/foto/3d-render-de-luxury-house-living.jpg?s=612x612&w=0&k=20&c=A8LrNZzMJjx93I2RE-KMEFAq4eBqfTGS6OBqVARgNhA="
+      "https://media.istockphoto.com/id/1389386427/es/foto/3d-render-de-luxury-house-living.jpg?s=612x612&w=0&k=20&c=A8LrNZzMJjx93I2RE-KMEFAq4eBqfTGS6OBqVARgNhA=",
     ],
     plot: "401",
     price: {
@@ -5022,18 +4784,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-050",
     terrace: "21",
     title: "Mock Property Title A1-050",
     titles: {
       en: "Mock Title EN A1-050",
-      es: "Mock Título ES A1-050"
+      es: "Mock Título ES A1-050",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -5041,7 +4801,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -5054,21 +4814,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-050"
+    cadastral: "123456789ABC-A1-050",
   },
-  
+
   {
     _id: "prop-assoc1-51",
     company_id: "comp-assoc1",
@@ -5088,12 +4848,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-051",
@@ -5102,7 +4859,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1538878209/es/foto/dise%C3%B1o-interior-de-un-sal%C3%B3n-de-oficinas-c%C3%B3modo-y-minimalista-en-un-edificio-de-oficinas.jpg?s=612x612&w=0&k=20&c=WjforA6GEGADsZiOiak5GLOnnsPgaz3hwW_EtlcAHzQ=",
-      "https://media.istockphoto.com/id/1538878209/es/foto/dise%C3%B1o-interior-de-un-sal%C3%B3n-de-oficinas-c%C3%B3modo-y-minimalista-en-un-edificio-de-oficinas.jpg?s=612x612&w=0&k=20&c=WjforA6GEGADsZiOiak5GLOnnsPgaz3hwW_EtlcAHzQ="
+      "https://media.istockphoto.com/id/1538878209/es/foto/dise%C3%B1o-interior-de-un-sal%C3%B3n-de-oficinas-c%C3%B3modo-y-minimalista-en-un-edificio-de-oficinas.jpg?s=612x612&w=0&k=20&c=WjforA6GEGADsZiOiak5GLOnnsPgaz3hwW_EtlcAHzQ=",
     ],
     plot: "401",
     price: {
@@ -5123,18 +4880,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-051",
     terrace: "21",
     title: "Mock Property Title A1-051",
     titles: {
       en: "Mock Title EN A1-051",
-      es: "Mock Título ES A1-051"
+      es: "Mock Título ES A1-051",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -5142,7 +4897,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -5155,21 +4910,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-051"
+    cadastral: "123456789ABC-A1-051",
   },
-  
+
   {
     _id: "prop-assoc1-52",
     company_id: "comp-assoc1",
@@ -5189,12 +4944,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-052",
@@ -5203,7 +4955,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2204653820/es/foto/interior-de-apartamento-moderno-con-detalles-de-dise%C3%B1ador-y-dise%C3%B1o-abierto.jpg?s=612x612&w=0&k=20&c=H2iH5aHpuuusK7ykXZNUca_Uh3t9DykiejDI3BHgUFc=",
-      "https://media.istockphoto.com/id/2204653820/es/foto/interior-de-apartamento-moderno-con-detalles-de-dise%C3%B1ador-y-dise%C3%B1o-abierto.jpg?s=612x612&w=0&k=20&c=H2iH5aHpuuusK7ykXZNUca_Uh3t9DykiejDI3BHgUFc="
+      "https://media.istockphoto.com/id/2204653820/es/foto/interior-de-apartamento-moderno-con-detalles-de-dise%C3%B1ador-y-dise%C3%B1o-abierto.jpg?s=612x612&w=0&k=20&c=H2iH5aHpuuusK7ykXZNUca_Uh3t9DykiejDI3BHgUFc=",
     ],
     plot: "401",
     price: {
@@ -5224,18 +4976,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-052",
     terrace: "21",
     title: "Mock Property Title A1-052",
     titles: {
       en: "Mock Title EN A1-052",
-      es: "Mock Título ES A1-052"
+      es: "Mock Título ES A1-052",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -5243,7 +4993,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -5256,21 +5006,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-052"
+    cadastral: "123456789ABC-A1-052",
   },
-  
+
   {
     _id: "prop-assoc1-53",
     company_id: "comp-assoc1",
@@ -5290,12 +5040,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-053",
@@ -5304,7 +5051,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1547776825/es/foto/sal%C3%B3n-interior-moderno-y-creativo-con-iluminaci%C3%B3n-c%C3%A1lida-mesa-redonda-de-piedra-y-gran-l%C3%A1mpara.jpg?s=612x612&w=0&k=20&c=2h40_Jnn3dg_u6qxc9oT9efreHQk767xHvAhQewKYFc=",
-      "https://media.istockphoto.com/id/1547776825/es/foto/sal%C3%B3n-interior-moderno-y-creativo-con-iluminaci%C3%B3n-c%C3%A1lida-mesa-redonda-de-piedra-y-gran-l%C3%A1mpara.jpg?s=612x612&w=0&k=20&c=2h40_Jnn3dg_u6qxc9oT9efreHQk767xHvAhQewKYFc="
+      "https://media.istockphoto.com/id/1547776825/es/foto/sal%C3%B3n-interior-moderno-y-creativo-con-iluminaci%C3%B3n-c%C3%A1lida-mesa-redonda-de-piedra-y-gran-l%C3%A1mpara.jpg?s=612x612&w=0&k=20&c=2h40_Jnn3dg_u6qxc9oT9efreHQk767xHvAhQewKYFc=",
     ],
     plot: "401",
     price: {
@@ -5325,18 +5072,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-053",
     terrace: "21",
     title: "Mock Property Title A1-053",
     titles: {
       en: "Mock Title EN A1-053",
-      es: "Mock Título ES A1-053"
+      es: "Mock Título ES A1-053",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -5344,7 +5089,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -5357,21 +5102,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-053"
+    cadastral: "123456789ABC-A1-053",
   },
-  
+
   {
     _id: "prop-assoc1-54",
     company_id: "comp-assoc1",
@@ -5391,12 +5136,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-054",
@@ -5405,7 +5147,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/928275670/es/foto/render-3d-de-sala-de-estar.jpg?s=612x612&w=0&k=20&c=yP8mGuIId71mpXZp-lurN3FGEPuZJ66YdshzDjxMvXA=",
-      "https://media.istockphoto.com/id/928275670/es/foto/render-3d-de-sala-de-estar.jpg?s=612x612&w=0&k=20&c=yP8mGuIId71mpXZp-lurN3FGEPuZJ66YdshzDjxMvXA="
+      "https://media.istockphoto.com/id/928275670/es/foto/render-3d-de-sala-de-estar.jpg?s=612x612&w=0&k=20&c=yP8mGuIId71mpXZp-lurN3FGEPuZJ66YdshzDjxMvXA=",
     ],
     plot: "401",
     price: {
@@ -5426,18 +5168,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-054",
     terrace: "21",
     title: "Mock Property Title A1-054",
     titles: {
       en: "Mock Title EN A1-054",
-      es: "Mock Título ES A1-054"
+      es: "Mock Título ES A1-054",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -5445,7 +5185,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -5458,21 +5198,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-054"
+    cadastral: "123456789ABC-A1-054",
   },
-  
+
   {
     _id: "prop-assoc1-55",
     company_id: "comp-assoc1",
@@ -5492,12 +5232,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-055",
@@ -5506,7 +5243,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2160382079/es/foto/creating-a-warm-and-inviting-space-stylish-living-room-interior-design-with-a-craft-wooden.jpg?s=612x612&w=0&k=20&c=SktBregR3Jdp-XePgJIaQ2smf7gsOhjKGtXPClMr4aQ=",
-      "https://media.istockphoto.com/id/2160382079/es/foto/creating-a-warm-and-inviting-space-stylish-living-room-interior-design-with-a-craft-wooden.jpg?s=612x612&w=0&k=20&c=SktBregR3Jdp-XePgJIaQ2smf7gsOhjKGtXPClMr4aQ="
+      "https://media.istockphoto.com/id/2160382079/es/foto/creating-a-warm-and-inviting-space-stylish-living-room-interior-design-with-a-craft-wooden.jpg?s=612x612&w=0&k=20&c=SktBregR3Jdp-XePgJIaQ2smf7gsOhjKGtXPClMr4aQ=",
     ],
     plot: "401",
     price: {
@@ -5527,18 +5264,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-055",
     terrace: "21",
     title: "Mock Property Title A1-055",
     titles: {
       en: "Mock Title EN A1-055",
-      es: "Mock Título ES A1-055"
+      es: "Mock Título ES A1-055",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -5546,7 +5281,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -5559,21 +5294,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-055"
+    cadastral: "123456789ABC-A1-055",
   },
-  
+
   {
     _id: "prop-assoc1-56",
     company_id: "comp-assoc1",
@@ -5593,12 +5328,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-056",
@@ -5607,7 +5339,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1422727080/es/foto/3d-renderizado-loft-sala-de-estar-escandinava-con-mesa-de-trabajo-y-estanter%C3%ADa.jpg?s=612x612&w=0&k=20&c=0pbD5ao0SDYtmGbKoBQ6BAYn9x_Przo6tc9ism5cyng=",
-      "https://media.istockphoto.com/id/1422727080/es/foto/3d-renderizado-loft-sala-de-estar-escandinava-con-mesa-de-trabajo-y-estanter%C3%ADa.jpg?s=612x612&w=0&k=20&c=0pbD5ao0SDYtmGbKoBQ6BAYn9x_Przo6tc9ism5cyng="
+      "https://media.istockphoto.com/id/1422727080/es/foto/3d-renderizado-loft-sala-de-estar-escandinava-con-mesa-de-trabajo-y-estanter%C3%ADa.jpg?s=612x612&w=0&k=20&c=0pbD5ao0SDYtmGbKoBQ6BAYn9x_Przo6tc9ism5cyng=",
     ],
     plot: "401",
     price: {
@@ -5628,18 +5360,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-056",
     terrace: "21",
     title: "Mock Property Title A1-056",
     titles: {
       en: "Mock Title EN A1-056",
-      es: "Mock Título ES A1-056"
+      es: "Mock Título ES A1-056",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -5647,7 +5377,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -5660,21 +5390,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-056"
+    cadastral: "123456789ABC-A1-056",
   },
-  
+
   {
     _id: "prop-assoc1-57",
     company_id: "comp-assoc1",
@@ -5694,12 +5424,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-057",
@@ -5708,7 +5435,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2195429725/es/foto/moderna-sala-de-estar-de-planta-abierta-con-techo-de-doble-altura-y-escalera-dram%C3%A1tica.jpg?s=612x612&w=0&k=20&c=MqGA7RloZ-1iLY0voDrGurK6dYzEpmoF77NT5GAfVqw=",
-      "https://media.istockphoto.com/id/2195429725/es/foto/moderna-sala-de-estar-de-planta-abierta-con-techo-de-doble-altura-y-escalera-dram%C3%A1tica.jpg?s=612x612&w=0&k=20&c=MqGA7RloZ-1iLY0voDrGurK6dYzEpmoF77NT5GAfVqw="
+      "https://media.istockphoto.com/id/2195429725/es/foto/moderna-sala-de-estar-de-planta-abierta-con-techo-de-doble-altura-y-escalera-dram%C3%A1tica.jpg?s=612x612&w=0&k=20&c=MqGA7RloZ-1iLY0voDrGurK6dYzEpmoF77NT5GAfVqw=",
     ],
     plot: "401",
     price: {
@@ -5729,18 +5456,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-057",
     terrace: "21",
     title: "Mock Property Title A1-057",
     titles: {
       en: "Mock Title EN A1-057",
-      es: "Mock Título ES A1-057"
+      es: "Mock Título ES A1-057",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -5748,7 +5473,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -5761,21 +5486,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-057"
+    cadastral: "123456789ABC-A1-057",
   },
-  
+
   {
     _id: "prop-assoc1-58",
     company_id: "comp-assoc1",
@@ -5795,12 +5520,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-058",
@@ -5809,7 +5531,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1153959306/es/foto/3d-de-renderizado-moderno-comedor-y-sala-de-estar-con-una-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=-D72P0B2v5jAxe24fOZpdKecESfLHC10NpIN3gRlWyw=",
-      "https://media.istockphoto.com/id/1153959306/es/foto/3d-de-renderizado-moderno-comedor-y-sala-de-estar-con-una-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=-D72P0B2v5jAxe24fOZpdKecESfLHC10NpIN3gRlWyw="
+      "https://media.istockphoto.com/id/1153959306/es/foto/3d-de-renderizado-moderno-comedor-y-sala-de-estar-con-una-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=-D72P0B2v5jAxe24fOZpdKecESfLHC10NpIN3gRlWyw=",
     ],
     plot: "401",
     price: {
@@ -5830,18 +5552,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-058",
     terrace: "21",
     title: "Mock Property Title A1-058",
     titles: {
       en: "Mock Title EN A1-058",
-      es: "Mock Título ES A1-058"
+      es: "Mock Título ES A1-058",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -5849,7 +5569,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -5862,21 +5582,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-058"
+    cadastral: "123456789ABC-A1-058",
   },
-  
+
   {
     _id: "prop-assoc1-59",
     company_id: "comp-assoc1",
@@ -5896,12 +5616,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-059",
@@ -5910,7 +5627,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/652523824/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=I5ko13vTKZgsWXN1G3Q2ZxHmeHnfXlBBhsi2mBAgVGI=",
-      "https://media.istockphoto.com/id/652523824/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=I5ko13vTKZgsWXN1G3Q2ZxHmeHnfXlBBhsi2mBAgVGI="
+      "https://media.istockphoto.com/id/652523824/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=I5ko13vTKZgsWXN1G3Q2ZxHmeHnfXlBBhsi2mBAgVGI=",
     ],
     plot: "401",
     price: {
@@ -5931,18 +5648,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-059",
     terrace: "21",
     title: "Mock Property Title A1-059",
     titles: {
       en: "Mock Title EN A1-059",
-      es: "Mock Título ES A1-059"
+      es: "Mock Título ES A1-059",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -5950,7 +5665,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -5963,21 +5678,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-059"
+    cadastral: "123456789ABC-A1-059",
   },
-  
+
   {
     _id: "prop-assoc1-60",
     company_id: "comp-assoc1",
@@ -5997,12 +5712,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc1",
     internal_ref: "INT-REF-A1-060",
@@ -6011,7 +5723,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1191719642/es/foto/renderizado-3d-moderno-sal%C3%B3n-interior.jpg?s=612x612&w=0&k=20&c=A3N6NuFmLmVG3NQ5-ZRADt3iUfpBcb50BWdNo8EzhcY=",
-      "https://media.istockphoto.com/id/1191719642/es/foto/renderizado-3d-moderno-sal%C3%B3n-interior.jpg?s=612x612&w=0&k=20&c=A3N6NuFmLmVG3NQ5-ZRADt3iUfpBcb50BWdNo8EzhcY="
+      "https://media.istockphoto.com/id/1191719642/es/foto/renderizado-3d-moderno-sal%C3%B3n-interior.jpg?s=612x612&w=0&k=20&c=A3N6NuFmLmVG3NQ5-ZRADt3iUfpBcb50BWdNo8EzhcY=",
     ],
     plot: "401",
     price: {
@@ -6032,18 +5744,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A1-060",
     terrace: "21",
     title: "Mock Property Title A1-060",
     titles: {
       en: "Mock Title EN A1-060",
-      es: "Mock Título ES A1-060"
+      es: "Mock Título ES A1-060",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A1",
@@ -6051,7 +5761,7 @@ const properties = [
       city: "Mock City A1",
       region: "Mock Region A1",
       country: "Mockland",
-      zipcode: "00001"
+      zipcode: "00001",
     },
     area: "area1",
     subarea: "subarea1",
@@ -6064,19 +5774,19 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.100001",
-      lng: "-4.100001"
+      lng: "-4.100001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2011
+      construction: 2011,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "123456789ABC-A1-060"
+    cadastral: "123456789ABC-A1-060",
   },
 
   {
@@ -6098,12 +5808,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-001",
@@ -6112,7 +5819,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1979144536/es/foto/the-modern-luxury-interior-of-the-living-room-is-bright-and-clean-3d-illustration.jpg?s=612x612&w=0&k=20&c=ClJn1Nob2CCeCF7sVdBvmdriAh5b_UVJbKJPmn-g3L8=",
-      "https://media.istockphoto.com/id/1979144536/es/foto/the-modern-luxury-interior-of-the-living-room-is-bright-and-clean-3d-illustration.jpg?s=612x612&w=0&k=20&c=ClJn1Nob2CCeCF7sVdBvmdriAh5b_UVJbKJPmn-g3L8="
+      "https://media.istockphoto.com/id/1979144536/es/foto/the-modern-luxury-interior-of-the-living-room-is-bright-and-clean-3d-illustration.jpg?s=612x612&w=0&k=20&c=ClJn1Nob2CCeCF7sVdBvmdriAh5b_UVJbKJPmn-g3L8=",
     ],
     plot: "401",
     price: {
@@ -6133,18 +5840,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-001",
     terrace: "21",
     title: "Mock Property Title A2-001",
     titles: {
       en: "Mock Title EN A2-001",
-      es: "Mock Título ES A2-001"
+      es: "Mock Título ES A2-001",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -6152,7 +5857,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -6165,21 +5870,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-001"
+    cadastral: "223456789ABC-A2-001",
   },
-  
+
   {
     _id: "prop-assoc2-2",
     company_id: "comp-assoc2",
@@ -6199,12 +5904,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-002",
@@ -6213,7 +5915,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1186078970/es/foto/3d-render-of-living-room.jpg?s=612x612&w=0&k=20&c=lX8jih3kzBQ_14BXVBjPWnKfcrZHEo6uGQMY1XzRIVM=",
-      "https://media.istockphoto.com/id/1186078970/es/foto/3d-render-of-living-room.jpg?s=612x612&w=0&k=20&c=lX8jih3kzBQ_14BXVBjPWnKfcrZHEo6uGQMY1XzRIVM="
+      "https://media.istockphoto.com/id/1186078970/es/foto/3d-render-of-living-room.jpg?s=612x612&w=0&k=20&c=lX8jih3kzBQ_14BXVBjPWnKfcrZHEo6uGQMY1XzRIVM=",
     ],
     plot: "401",
     price: {
@@ -6234,18 +5936,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-002",
     terrace: "21",
     title: "Mock Property Title A2-002",
     titles: {
       en: "Mock Title EN A2-002",
-      es: "Mock Título ES A2-002"
+      es: "Mock Título ES A2-002",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -6253,7 +5953,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -6266,21 +5966,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-002"
+    cadastral: "223456789ABC-A2-002",
   },
-  
+
   {
     _id: "prop-assoc2-3",
     company_id: "comp-assoc2",
@@ -6300,12 +6000,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-003",
@@ -6314,7 +6011,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1465742807/es/foto/renderizado-3d-m%C3%ADnimo-de-ideas-de-apartamentos-de-color-blanco-maqueta-moderna-de-dise%C3%B1o.jpg?s=612x612&w=0&k=20&c=N2NkOSHNErVpAPR0vvyIs5AHzrzse3ScBJsnn-E145o=",
-      "https://media.istockphoto.com/id/1465742807/es/foto/renderizado-3d-m%C3%ADnimo-de-ideas-de-apartamentos-de-color-blanco-maqueta-moderna-de-dise%C3%B1o.jpg?s=612x612&w=0&k=20&c=N2NkOSHNErVpAPR0vvyIs5AHzrzse3ScBJsnn-E145o="
+      "https://media.istockphoto.com/id/1465742807/es/foto/renderizado-3d-m%C3%ADnimo-de-ideas-de-apartamentos-de-color-blanco-maqueta-moderna-de-dise%C3%B1o.jpg?s=612x612&w=0&k=20&c=N2NkOSHNErVpAPR0vvyIs5AHzrzse3ScBJsnn-E145o=",
     ],
     plot: "401",
     price: {
@@ -6335,18 +6032,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-003",
     terrace: "21",
     title: "Mock Property Title A2-003",
     titles: {
       en: "Mock Title EN A2-003",
-      es: "Mock Título ES A2-003"
+      es: "Mock Título ES A2-003",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -6354,7 +6049,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -6367,21 +6062,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-003"
+    cadastral: "223456789ABC-A2-003",
   },
-  
+
   {
     _id: "prop-assoc2-4",
     company_id: "comp-assoc2",
@@ -6401,12 +6096,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-004",
@@ -6415,7 +6107,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2173294380/es/foto/sala-de-estar-contempor%C3%A1nea-con-tonos-neutros-luces-colgantes-escult%C3%B3ricas-asientos-beige-mesa.jpg?s=612x612&w=0&k=20&c=E4jwdD9GmN7KuOs7kYrCfADiGOesSpm9o9tIXnHe7qs=",
-      "https://media.istockphoto.com/id/2173294380/es/foto/sala-de-estar-contempor%C3%A1nea-con-tonos-neutros-luces-colgantes-escult%C3%B3ricas-asientos-beige-mesa.jpg?s=612x612&w=0&k=20&c=E4jwdD9GmN7KuOs7kYrCfADiGOesSpm9o9tIXnHe7qs="
+      "https://media.istockphoto.com/id/2173294380/es/foto/sala-de-estar-contempor%C3%A1nea-con-tonos-neutros-luces-colgantes-escult%C3%B3ricas-asientos-beige-mesa.jpg?s=612x612&w=0&k=20&c=E4jwdD9GmN7KuOs7kYrCfADiGOesSpm9o9tIXnHe7qs=",
     ],
     plot: "401",
     price: {
@@ -6436,18 +6128,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-004",
     terrace: "21",
     title: "Mock Property Title A2-004",
     titles: {
       en: "Mock Title EN A2-004",
-      es: "Mock Título ES A2-004"
+      es: "Mock Título ES A2-004",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -6455,7 +6145,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -6468,21 +6158,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-004"
+    cadastral: "223456789ABC-A2-004",
   },
-  
+
   {
     _id: "prop-assoc2-5",
     company_id: "comp-assoc2",
@@ -6502,12 +6192,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-005",
@@ -6516,7 +6203,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1363719375/es/foto/gran-interior-moderno-de-lujo-de-la-sala-de-estar-3d-la-ilustraci%C3%B3n.jpg?s=612x612&w=0&k=20&c=U7jvDUSmEpt3szarX1UIJSKnZOWubPaT0vLhngzY2UQ=",
-      "https://media.istockphoto.com/id/1363719375/es/foto/gran-interior-moderno-de-lujo-de-la-sala-de-estar-3d-la-ilustraci%C3%B3n.jpg?s=612x612&w=0&k=20&c=U7jvDUSmEpt3szarX1UIJSKnZOWubPaT0vLhngzY2UQ="
+      "https://media.istockphoto.com/id/1363719375/es/foto/gran-interior-moderno-de-lujo-de-la-sala-de-estar-3d-la-ilustraci%C3%B3n.jpg?s=612x612&w=0&k=20&c=U7jvDUSmEpt3szarX1UIJSKnZOWubPaT0vLhngzY2UQ=",
     ],
     plot: "401",
     price: {
@@ -6537,18 +6224,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-005",
     terrace: "21",
     title: "Mock Property Title A2-005",
     titles: {
       en: "Mock Title EN A2-005",
-      es: "Mock Título ES A2-005"
+      es: "Mock Título ES A2-005",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -6556,7 +6241,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -6569,21 +6254,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-005"
+    cadastral: "223456789ABC-A2-005",
   },
-  
+
   {
     _id: "prop-assoc2-6",
     company_id: "comp-assoc2",
@@ -6603,12 +6288,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-006",
@@ -6617,7 +6299,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2157977857/es/foto/large-luxury-modern-bright-interiors-living-room-mockup-illustration-3d-rendering-image.jpg?s=612x612&w=0&k=20&c=rbBnuw0awOHvua7y2IcKkoFQlFg4aJ0v_ZrV1cUFduY=",
-      "https://media.istockphoto.com/id/2157977857/es/foto/large-luxury-modern-bright-interiors-living-room-mockup-illustration-3d-rendering-image.jpg?s=612x612&w=0&k=20&c=rbBnuw0awOHvua7y2IcKkoFQlFg4aJ0v_ZrV1cUFduY="
+      "https://media.istockphoto.com/id/2157977857/es/foto/large-luxury-modern-bright-interiors-living-room-mockup-illustration-3d-rendering-image.jpg?s=612x612&w=0&k=20&c=rbBnuw0awOHvua7y2IcKkoFQlFg4aJ0v_ZrV1cUFduY=",
     ],
     plot: "401",
     price: {
@@ -6638,18 +6320,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-006",
     terrace: "21",
     title: "Mock Property Title A2-006",
     titles: {
       en: "Mock Title EN A2-006",
-      es: "Mock Título ES A2-006"
+      es: "Mock Título ES A2-006",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -6657,7 +6337,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -6670,21 +6350,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-006"
+    cadastral: "223456789ABC-A2-006",
   },
-  
+
   {
     _id: "prop-assoc2-7",
     company_id: "comp-assoc2",
@@ -6704,12 +6384,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-007",
@@ -6718,7 +6395,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1181275232/es/foto/renderizado-3d-moderno-sal%C3%B3n-interior.jpg?s=612x612&w=0&k=20&c=XIGg8r6Kg31_TznmfLlGJva8QoiD02L13h0RRIRqLqc=",
-      "https://media.istockphoto.com/id/1181275232/es/foto/renderizado-3d-moderno-sal%C3%B3n-interior.jpg?s=612x612&w=0&k=20&c=XIGg8r6Kg31_TznmfLlGJva8QoiD02L13h0RRIRqLqc="
+      "https://media.istockphoto.com/id/1181275232/es/foto/renderizado-3d-moderno-sal%C3%B3n-interior.jpg?s=612x612&w=0&k=20&c=XIGg8r6Kg31_TznmfLlGJva8QoiD02L13h0RRIRqLqc=",
     ],
     plot: "401",
     price: {
@@ -6739,18 +6416,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-007",
     terrace: "21",
     title: "Mock Property Title A2-007",
     titles: {
       en: "Mock Title EN A2-007",
-      es: "Mock Título ES A2-007"
+      es: "Mock Título ES A2-007",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -6758,7 +6433,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -6771,21 +6446,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-007"
+    cadastral: "223456789ABC-A2-007",
   },
-  
+
   {
     _id: "prop-assoc2-8",
     company_id: "comp-assoc2",
@@ -6805,12 +6480,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-008",
@@ -6819,7 +6491,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1367321828/es/foto/sala-de-estar-pared-amarilla.jpg?s=612x612&w=0&k=20&c=uKAbPJPN6CcqzXOuAAZO9jaLRMEGvfSoIn7PL3TbQ_8=",
-      "https://media.istockphoto.com/id/1367321828/es/foto/sala-de-estar-pared-amarilla.jpg?s=612x612&w=0&k=20&c=uKAbPJPN6CcqzXOuAAZO9jaLRMEGvfSoIn7PL3TbQ_8="
+      "https://media.istockphoto.com/id/1367321828/es/foto/sala-de-estar-pared-amarilla.jpg?s=612x612&w=0&k=20&c=uKAbPJPN6CcqzXOuAAZO9jaLRMEGvfSoIn7PL3TbQ_8=",
     ],
     plot: "401",
     price: {
@@ -6840,18 +6512,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-008",
     terrace: "21",
     title: "Mock Property Title A2-008",
     titles: {
       en: "Mock Title EN A2-008",
-      es: "Mock Título ES A2-008"
+      es: "Mock Título ES A2-008",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -6859,7 +6529,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -6872,21 +6542,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-008"
+    cadastral: "223456789ABC-A2-008",
   },
-  
+
   {
     _id: "prop-assoc2-9",
     company_id: "comp-assoc2",
@@ -6906,12 +6576,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-009",
@@ -6920,7 +6587,8 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2191685332/es/foto/3d-render-living-room.jpg?s=612x612&w=0&k=20&c=TZM28lQyMcqpau1pM6FDeXnZP4tVu8lcWlP1AsYQFPw=",
-      "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA=",    ],
+      "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA=",
+    ],
     plot: "401",
     price: {
       sale: 305000,
@@ -6940,18 +6608,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-009",
     terrace: "21",
     title: "Mock Property Title A2-009",
     titles: {
       en: "Mock Title EN A2-009",
-      es: "Mock Título ES A2-009"
+      es: "Mock Título ES A2-009",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -6959,7 +6625,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -6972,21 +6638,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-009"
+    cadastral: "223456789ABC-A2-009",
   },
-  
+
   {
     _id: "prop-assoc2-10",
     company_id: "comp-assoc2",
@@ -7006,12 +6672,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-010",
@@ -7020,7 +6683,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA=",
-      "https://media.istockphoto.com/id/2161329191/es/foto/acogedora-sala-de-estar-con-muebles-modernos-y-vista-a-la-ciudad-desde-la-ventana.jpg?s=612x612&w=0&k=20&c=trYfmrKI3nsRT5pQvZVNLq5Xr8zJBHuqOJb4Gx-9PIE="
+      "https://media.istockphoto.com/id/2161329191/es/foto/acogedora-sala-de-estar-con-muebles-modernos-y-vista-a-la-ciudad-desde-la-ventana.jpg?s=612x612&w=0&k=20&c=trYfmrKI3nsRT5pQvZVNLq5Xr8zJBHuqOJb4Gx-9PIE=",
     ],
     plot: "401",
     price: {
@@ -7041,18 +6704,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-010",
     terrace: "21",
     title: "Mock Property Title A2-010",
     titles: {
       en: "Mock Title EN A2-010",
-      es: "Mock Título ES A2-010"
+      es: "Mock Título ES A2-010",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -7060,7 +6721,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -7073,21 +6734,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-010"
+    cadastral: "223456789ABC-A2-010",
   },
-  
+
   {
     _id: "prop-assoc2-11",
     company_id: "comp-assoc2",
@@ -7107,12 +6768,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-011",
@@ -7121,7 +6779,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1440180997/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-la-sala-de-estar-pared-de.jpg?s=612x612&w=0&k=20&c=BZSASAkGGrd1plHGUUzzpfiV6tRHebkEOF0-4Zk4KlU=",
-      "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4="
+      "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4=",
     ],
     plot: "401",
     price: {
@@ -7142,18 +6800,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-011",
     terrace: "21",
     title: "Mock Property Title A2-011",
     titles: {
       en: "Mock Title EN A2-011",
-      es: "Mock Título ES A2-011"
+      es: "Mock Título ES A2-011",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -7161,7 +6817,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -7174,21 +6830,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-011"
+    cadastral: "223456789ABC-A2-011",
   },
-  
+
   {
     _id: "prop-assoc2-12",
     company_id: "comp-assoc2",
@@ -7208,12 +6864,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-012",
@@ -7222,7 +6875,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ=",
-      "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU="
+      "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU=",
     ],
     plot: "401",
     price: {
@@ -7243,18 +6896,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-012",
     terrace: "21",
     title: "Mock Property Title A2-012",
     titles: {
       en: "Mock Title EN A2-012",
-      es: "Mock Título ES A2-012"
+      es: "Mock Título ES A2-012",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -7262,7 +6913,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -7275,21 +6926,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-012"
+    cadastral: "223456789ABC-A2-012",
   },
-  
+
   {
     _id: "prop-assoc2-13",
     company_id: "comp-assoc2",
@@ -7309,12 +6960,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-013",
@@ -7323,7 +6971,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70=",
-      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0="
+      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0=",
     ],
     plot: "401",
     price: {
@@ -7344,18 +6992,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-013",
     terrace: "21",
     title: "Mock Property Title A2-013",
     titles: {
       en: "Mock Title EN A2-013",
-      es: "Mock Título ES A2-013"
+      es: "Mock Título ES A2-013",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -7363,7 +7009,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -7376,21 +7022,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-013"
+    cadastral: "223456789ABC-A2-013",
   },
-  
+
   {
     _id: "prop-assoc2-14",
     company_id: "comp-assoc2",
@@ -7410,12 +7056,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-014",
@@ -7424,7 +7067,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2184733372/es/foto/elegante-dormitorio-creado-digitalmente-con-iluminaci%C3%B3n-suave.jpg?s=612x612&w=0&k=20&c=Io58BPk1PW56PddHcB8nGexdlGZ_x9tQ_US86eKA6Tg=",
-      "https://media.istockphoto.com/id/1177647525/es/foto/lujo-moderno-de-sala-de-estar-y-comedor-con-elemento-cl%C3%A1sico-y-muebles-renderizado-3d.jpg?s=612x612&w=0&k=20&c=qlXPqlYUF_0AhuXlTiAJNYsTBsFPa405lz7SUIPe038="
+      "https://media.istockphoto.com/id/1177647525/es/foto/lujo-moderno-de-sala-de-estar-y-comedor-con-elemento-cl%C3%A1sico-y-muebles-renderizado-3d.jpg?s=612x612&w=0&k=20&c=qlXPqlYUF_0AhuXlTiAJNYsTBsFPa405lz7SUIPe038=",
     ],
     plot: "401",
     price: {
@@ -7445,18 +7088,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-014",
     terrace: "21",
     title: "Mock Property Title A2-014",
     titles: {
       en: "Mock Title EN A2-014",
-      es: "Mock Título ES A2-014"
+      es: "Mock Título ES A2-014",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -7464,7 +7105,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -7477,21 +7118,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-014"
+    cadastral: "223456789ABC-A2-014",
   },
-  
+
   {
     _id: "prop-assoc2-15",
     company_id: "comp-assoc2",
@@ -7511,12 +7152,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-015",
@@ -7525,7 +7163,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2191685332/es/foto/3d-render-living-room.jpg?s=612x612&w=0&k=20&c=TZM28lQyMcqpau1pM6FDeXnZP4tVu8lcWlP1AsYQFPw=",
-      "https://media.istockphoto.com/id/1001121330/es/foto/dise%C3%B1o-de-interiores-moderno-sal%C3%B3n-blanco.jpg?s=612x612&w=0&k=20&c=wVrp1xDRR9LMVvWtNU46NmSjXnVrJSAIyqEQpmOwykI="
+      "https://media.istockphoto.com/id/1001121330/es/foto/dise%C3%B1o-de-interiores-moderno-sal%C3%B3n-blanco.jpg?s=612x612&w=0&k=20&c=wVrp1xDRR9LMVvWtNU46NmSjXnVrJSAIyqEQpmOwykI=",
     ],
     plot: "401",
     price: {
@@ -7546,18 +7184,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-015",
     terrace: "21",
     title: "Mock Property Title A2-015",
     titles: {
       en: "Mock Title EN A2-015",
-      es: "Mock Título ES A2-015"
+      es: "Mock Título ES A2-015",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -7565,7 +7201,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -7578,21 +7214,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-015"
+    cadastral: "223456789ABC-A2-015",
   },
-  
+
   {
     _id: "prop-assoc2-16",
     company_id: "comp-assoc2",
@@ -7612,12 +7248,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-016",
@@ -7626,7 +7259,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0=",
-      "https://media.istockphoto.com/id/2184733372/es/foto/elegante-dormitorio-creado-digitalmente-con-iluminaci%C3%B3n-suave.jpg?s=612x612&w=0&k=20&c=Io58BPk1PW56PddHcB8nGexdlGZ_x9tQ_US86eKA6Tg="
+      "https://media.istockphoto.com/id/2184733372/es/foto/elegante-dormitorio-creado-digitalmente-con-iluminaci%C3%B3n-suave.jpg?s=612x612&w=0&k=20&c=Io58BPk1PW56PddHcB8nGexdlGZ_x9tQ_US86eKA6Tg=",
     ],
     plot: "401",
     price: {
@@ -7647,18 +7280,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-016",
     terrace: "21",
     title: "Mock Property Title A2-016",
     titles: {
       en: "Mock Title EN A2-016",
-      es: "Mock Título ES A2-016"
+      es: "Mock Título ES A2-016",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -7666,7 +7297,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -7679,21 +7310,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-016"
+    cadastral: "223456789ABC-A2-016",
   },
-  
+
   {
     _id: "prop-assoc2-17",
     company_id: "comp-assoc2",
@@ -7713,12 +7344,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-017",
@@ -7727,7 +7355,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70=",
-      "https://media.istockphoto.com/id/1177647525/es/foto/lujo-moderno-de-sala-de-estar-y-comedor-con-elemento-cl%C3%A1sico-y-muebles-renderizado-3d.jpg?s=612x612&w=0&k=20&c=qlXPqlYUF_0AhuXlTiAJNYsTBsFPa405lz7SUIPe038="
+      "https://media.istockphoto.com/id/1177647525/es/foto/lujo-moderno-de-sala-de-estar-y-comedor-con-elemento-cl%C3%A1sico-y-muebles-renderizado-3d.jpg?s=612x612&w=0&k=20&c=qlXPqlYUF_0AhuXlTiAJNYsTBsFPa405lz7SUIPe038=",
     ],
     plot: "401",
     price: {
@@ -7748,18 +7376,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-017",
     terrace: "21",
     title: "Mock Property Title A2-017",
     titles: {
       en: "Mock Title EN A2-017",
-      es: "Mock Título ES A2-017"
+      es: "Mock Título ES A2-017",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -7767,7 +7393,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -7780,21 +7406,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-017"
+    cadastral: "223456789ABC-A2-017",
   },
-  
+
   {
     _id: "prop-assoc2-18",
     company_id: "comp-assoc2",
@@ -7814,12 +7440,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-018",
@@ -7828,7 +7451,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU=",
-      "https://media.istockphoto.com/id/1440180997/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-la-sala-de-estar-pared-de.jpg?s=612x612&w=0&k=20&c=BZSASAkGGrd1plHGUUzzpfiV6tRHebkEOF0-4Zk4KlU="
+      "https://media.istockphoto.com/id/1440180997/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-la-sala-de-estar-pared-de.jpg?s=612x612&w=0&k=20&c=BZSASAkGGrd1plHGUUzzpfiV6tRHebkEOF0-4Zk4KlU=",
     ],
     plot: "401",
     price: {
@@ -7849,18 +7472,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-018",
     terrace: "21",
     title: "Mock Property Title A2-018",
     titles: {
       en: "Mock Title EN A2-018",
-      es: "Mock Título ES A2-018"
+      es: "Mock Título ES A2-018",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -7868,7 +7489,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -7881,21 +7502,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-018"
+    cadastral: "223456789ABC-A2-018",
   },
-  
+
   {
     _id: "prop-assoc2-19",
     company_id: "comp-assoc2",
@@ -7915,12 +7536,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-019",
@@ -7929,7 +7547,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU=",
-      "https://media.istockphoto.com/id/2191685332/es/foto/3d-render-living-room.jpg?s=612x612&w=0&k=20&c=TZM28lQyMcqpau1pM6FDeXnZP4tVu8lcWlP1AsYQFPw="
+      "https://media.istockphoto.com/id/2191685332/es/foto/3d-render-living-room.jpg?s=612x612&w=0&k=20&c=TZM28lQyMcqpau1pM6FDeXnZP4tVu8lcWlP1AsYQFPw=",
     ],
     plot: "401",
     price: {
@@ -7950,18 +7568,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-019",
     terrace: "21",
     title: "Mock Property Title A2-019",
     titles: {
       en: "Mock Title EN A2-019",
-      es: "Mock Título ES A2-019"
+      es: "Mock Título ES A2-019",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -7969,7 +7585,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -7982,21 +7598,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-019"
+    cadastral: "223456789ABC-A2-019",
   },
-  
+
   {
     _id: "prop-assoc2-20",
     company_id: "comp-assoc2",
@@ -8016,12 +7632,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-020",
@@ -8030,7 +7643,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU=",
-      "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4="
+      "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4=",
     ],
     plot: "401",
     price: {
@@ -8051,18 +7664,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-020",
     terrace: "21",
     title: "Mock Property Title A2-020",
     titles: {
       en: "Mock Title EN A2-020",
-      es: "Mock Título ES A2-020"
+      es: "Mock Título ES A2-020",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -8070,7 +7681,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -8083,21 +7694,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-020"
+    cadastral: "223456789ABC-A2-020",
   },
-  
+
   {
     _id: "prop-assoc2-21",
     company_id: "comp-assoc2",
@@ -8117,12 +7728,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-021",
@@ -8131,7 +7739,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1413337128/es/foto/moderno-sal%C3%B3n-amueblado-con-cocina.jpg?s=612x612&w=0&k=20&c=jNrkkytE2ZX7-ZjR61DO7JQxfCQ730FRi57pNizyM_4=",
-      "https://media.istockphoto.com/id/1006669284/es/foto/interior-de-la-sala-de-estar-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=N7GmVLSCt3RdUKPF9ULrtYOH4A06gwrcAb42rMqw3Jg="
+      "https://media.istockphoto.com/id/1006669284/es/foto/interior-de-la-sala-de-estar-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=N7GmVLSCt3RdUKPF9ULrtYOH4A06gwrcAb42rMqw3Jg=",
     ],
     plot: "401",
     price: {
@@ -8152,18 +7760,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-021",
     terrace: "21",
     title: "Mock Property Title A2-021",
     titles: {
       en: "Mock Title EN A2-021",
-      es: "Mock Título ES A2-021"
+      es: "Mock Título ES A2-021",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -8171,7 +7777,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -8184,21 +7790,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-021"
+    cadastral: "223456789ABC-A2-021",
   },
-  
+
   {
     _id: "prop-assoc2-22",
     company_id: "comp-assoc2",
@@ -8218,12 +7824,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-022",
@@ -8232,7 +7835,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU=",
-      "https://media.istockphoto.com/id/2184733372/es/foto/elegante-dormitorio-creado-digitalmente-con-iluminaci%C3%B3n-suave.jpg?s=612x612&w=0&k=20&c=Io58BPk1PW56PddHcB8nGexdlGZ_x9tQ_US86eKA6Tg="
+      "https://media.istockphoto.com/id/2184733372/es/foto/elegante-dormitorio-creado-digitalmente-con-iluminaci%C3%B3n-suave.jpg?s=612x612&w=0&k=20&c=Io58BPk1PW56PddHcB8nGexdlGZ_x9tQ_US86eKA6Tg=",
     ],
     plot: "401",
     price: {
@@ -8253,18 +7856,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-022",
     terrace: "21",
     title: "Mock Property Title A2-022",
     titles: {
       en: "Mock Title EN A2-022",
-      es: "Mock Título ES A2-022"
+      es: "Mock Título ES A2-022",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -8272,7 +7873,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -8285,21 +7886,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-022"
+    cadastral: "223456789ABC-A2-022",
   },
-  
+
   {
     _id: "prop-assoc2-23",
     company_id: "comp-assoc2",
@@ -8319,12 +7920,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-023",
@@ -8333,7 +7931,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2183261630/es/foto/sala-de-estar-contempor%C3%A1nea-con-silla-decorativa-audaz-y-obras-de-arte-modernas.jpg?s=612x612&w=0&k=20&c=bXRc2pJuRxYzqVFlth7vTuf05vIL0M7mulW2uQiaW1M=",
-      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0="
+      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0=",
     ],
     plot: "401",
     price: {
@@ -8354,18 +7952,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-023",
     terrace: "21",
     title: "Mock Property Title A2-023",
     titles: {
       en: "Mock Title EN A2-023",
-      es: "Mock Título ES A2-023"
+      es: "Mock Título ES A2-023",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -8373,7 +7969,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -8386,21 +7982,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-023"
+    cadastral: "223456789ABC-A2-023",
   },
-  
+
   {
     _id: "prop-assoc2-24",
     company_id: "comp-assoc2",
@@ -8420,12 +8016,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-024",
@@ -8434,7 +8027,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1440180997/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-la-sala-de-estar-pared-de.jpg?s=612x612&w=0&k=20&c=BZSASAkGGrd1plHGUUzzpfiV6tRHebkEOF0-4Zk4KlU=",
-      "https://media.istockphoto.com/id/2192761281/es/foto/gran-maqueta-de-sala-de-estar-interior-moderna-y-luminosa-de-lujo.jpg?s=612x612&w=0&k=20&c=iInqThy0RzQO82pji30cSy-6tENP9Lpqojyoq5BVsX4="
+      "https://media.istockphoto.com/id/2192761281/es/foto/gran-maqueta-de-sala-de-estar-interior-moderna-y-luminosa-de-lujo.jpg?s=612x612&w=0&k=20&c=iInqThy0RzQO82pji30cSy-6tENP9Lpqojyoq5BVsX4=",
     ],
     plot: "401",
     price: {
@@ -8455,18 +8048,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-024",
     terrace: "21",
     title: "Mock Property Title A2-024",
     titles: {
       en: "Mock Title EN A2-024",
-      es: "Mock Título ES A2-024"
+      es: "Mock Título ES A2-024",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -8474,7 +8065,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -8487,21 +8078,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-024"
+    cadastral: "223456789ABC-A2-024",
   },
-  
+
   {
     _id: "prop-assoc2-25",
     company_id: "comp-assoc2",
@@ -8521,12 +8112,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-025",
@@ -8535,7 +8123,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2161329191/es/foto/acogedora-sala-de-estar-con-muebles-modernos-y-vista-a-la-ciudad-desde-la-ventana.jpg?s=612x612&w=0&k=20&c=trYfmrKI3nsRT5pQvZVNLq5Xr8zJBHuqOJb4Gx-9PIE=",
-      "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ="
+      "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ=",
     ],
     plot: "401",
     price: {
@@ -8556,18 +8144,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-025",
     terrace: "21",
     title: "Mock Property Title A2-025",
     titles: {
       en: "Mock Title EN A2-025",
-      es: "Mock Título ES A2-025"
+      es: "Mock Título ES A2-025",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -8575,7 +8161,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -8588,21 +8174,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-025"
+    cadastral: "223456789ABC-A2-025",
   },
-  
+
   {
     _id: "prop-assoc2-26",
     company_id: "comp-assoc2",
@@ -8622,12 +8208,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-026",
@@ -8636,7 +8219,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ=",
-      "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA="
+      "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA=",
     ],
     plot: "401",
     price: {
@@ -8657,18 +8240,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-026",
     terrace: "21",
     title: "Mock Property Title A2-026",
     titles: {
       en: "Mock Title EN A2-026",
-      es: "Mock Título ES A2-026"
+      es: "Mock Título ES A2-026",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -8676,7 +8257,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -8689,21 +8270,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-026"
+    cadastral: "223456789ABC-A2-026",
   },
-  
+
   {
     _id: "prop-assoc2-27",
     company_id: "comp-assoc2",
@@ -8723,12 +8304,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-027",
@@ -8737,7 +8315,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70=",
-      "https://media.istockphoto.com/id/1354768063/es/foto/render-3d-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=4B24teoBHqN9-u3UFxIOZUaqEgWOIxTQEdKU-6sZrKo="
+      "https://media.istockphoto.com/id/1354768063/es/foto/render-3d-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=4B24teoBHqN9-u3UFxIOZUaqEgWOIxTQEdKU-6sZrKo=",
     ],
     plot: "401",
     price: {
@@ -8758,18 +8336,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-027",
     terrace: "21",
     title: "Mock Property Title A2-027",
     titles: {
       en: "Mock Title EN A2-027",
-      es: "Mock Título ES A2-027"
+      es: "Mock Título ES A2-027",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -8777,7 +8353,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -8790,21 +8366,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-027"
+    cadastral: "223456789ABC-A2-027",
   },
-  
+
   {
     _id: "prop-assoc2-28",
     company_id: "comp-assoc2",
@@ -8824,12 +8400,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-028",
@@ -8838,7 +8411,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1177647525/es/foto/lujo-moderno-de-sala-de-estar-y-comedor-con-elemento-cl%C3%A1sico-y-muebles-renderizado-3d.jpg?s=612x612&w=0&k=20&c=qlXPqlYUF_0AhuXlTiAJNYsTBsFPa405lz7SUIPe038=",
-      "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ="
+      "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ=",
     ],
     plot: "401",
     price: {
@@ -8859,18 +8432,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-028",
     terrace: "21",
     title: "Mock Property Title A2-028",
     titles: {
       en: "Mock Title EN A2-028",
-      es: "Mock Título ES A2-028"
+      es: "Mock Título ES A2-028",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -8878,7 +8449,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -8891,21 +8462,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-028"
+    cadastral: "223456789ABC-A2-028",
   },
-  
+
   {
     _id: "prop-assoc2-29",
     company_id: "comp-assoc2",
@@ -8925,12 +8496,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-029",
@@ -8939,7 +8507,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1245798947/es/foto/interior-cartel-maqueta-sala-de-estar-con-sof%C3%A1-blanco-de-colores-renderizado-3d.jpg?s=612x612&w=0&k=20&c=K5pSLdTpRLLp4xPLT-WOcgXiPupVDqKWz71Ioh9XBjY=",
-      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw="
+      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw=",
     ],
     plot: "401",
     price: {
@@ -8960,18 +8528,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-029",
     terrace: "21",
     title: "Mock Property Title A2-029",
     titles: {
       en: "Mock Title EN A2-029",
-      es: "Mock Título ES A2-029"
+      es: "Mock Título ES A2-029",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -8979,7 +8545,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -8992,21 +8558,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-029"
+    cadastral: "223456789ABC-A2-029",
   },
-  
+
   {
     _id: "prop-assoc2-30",
     company_id: "comp-assoc2",
@@ -9026,12 +8592,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-030",
@@ -9040,7 +8603,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1440180997/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-la-sala-de-estar-pared-de.jpg?s=612x612&w=0&k=20&c=BZSASAkGGrd1plHGUUzzpfiV6tRHebkEOF0-4Zk4KlU=",
-      "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU="
+      "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU=",
     ],
     plot: "401",
     price: {
@@ -9061,18 +8624,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-030",
     terrace: "21",
     title: "Mock Property Title A2-030",
     titles: {
       en: "Mock Title EN A2-030",
-      es: "Mock Título ES A2-030"
+      es: "Mock Título ES A2-030",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -9080,7 +8641,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -9093,21 +8654,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-030"
+    cadastral: "223456789ABC-A2-030",
   },
-  
+
   {
     _id: "prop-assoc2-31",
     company_id: "comp-assoc2",
@@ -9127,11 +8688,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -9141,7 +8720,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1413337128/es/foto/moderno-sal%C3%B3n-amueblado-con-cocina.jpg?s=612x612&w=0&k=20&c=jNrkkytE2ZX7-ZjR61DO7JQxfCQ730FRi57pNizyM_4=",
-      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0="
+      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0=",
     ],
     plot: "401",
     price: {
@@ -9162,18 +8741,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-031",
     terrace: "21",
     title: "Mock Property Title A2-031",
     titles: {
       en: "Mock Title EN A2-031",
-      es: "Mock Título ES A2-031"
+      es: "Mock Título ES A2-031",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Dúplex"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -9181,7 +8758,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -9194,21 +8771,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-031"
+    cadastral: "223456789ABC-A2-031",
   },
-  
+
   {
     _id: "prop-assoc2-32",
     company_id: "comp-assoc2",
@@ -9228,11 +8805,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -9242,7 +8837,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2184733372/es/foto/elegante-dormitorio-creado-digitalmente-con-iluminaci%C3%B3n-suave.jpg?s=612x612&w=0&k=20&c=Io58BPk1PW56PddHcB8nGexdlGZ_x9tQ_US86eKA6Tg=",
-      "https://media.istockphoto.com/id/2161329191/es/foto/acogedora-sala-de-estar-con-muebles-modernos-y-vista-a-la-ciudad-desde-la-ventana.jpg?s=612x612&w=0&k=20&c=trYfmrKI3nsRT5pQvZVNLq5Xr8zJBHuqOJb4Gx-9PIE="
+      "https://media.istockphoto.com/id/2161329191/es/foto/acogedora-sala-de-estar-con-muebles-modernos-y-vista-a-la-ciudad-desde-la-ventana.jpg?s=612x612&w=0&k=20&c=trYfmrKI3nsRT5pQvZVNLq5Xr8zJBHuqOJb4Gx-9PIE=",
     ],
     plot: "401",
     price: {
@@ -9263,18 +8858,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-032",
     terrace: "21",
     title: "Mock Property Title A2-032",
     titles: {
       en: "Mock Title EN A2-032",
-      es: "Mock Título ES A2-032"
+      es: "Mock Título ES A2-032",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Adosado"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -9282,7 +8875,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -9295,21 +8888,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-032"
+    cadastral: "223456789ABC-A2-032",
   },
-  
+
   {
     _id: "prop-assoc2-33",
     company_id: "comp-assoc2",
@@ -9329,11 +8922,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -9343,7 +8954,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2192761281/es/foto/gran-maqueta-de-sala-de-estar-interior-moderna-y-luminosa-de-lujo.jpg?s=612x612&w=0&k=20&c=iInqThy0RzQO82pji30cSy-6tENP9Lpqojyoq5BVsX4=",
-      "https://media.istockphoto.com/id/2183261630/es/foto/sala-de-estar-contempor%C3%A1nea-con-silla-decorativa-audaz-y-obras-de-arte-modernas.jpg?s=612x612&w=0&k=20&c=bXRc2pJuRxYzqVFlth7vTuf05vIL0M7mulW2uQiaW1M="
+      "https://media.istockphoto.com/id/2183261630/es/foto/sala-de-estar-contempor%C3%A1nea-con-silla-decorativa-audaz-y-obras-de-arte-modernas.jpg?s=612x612&w=0&k=20&c=bXRc2pJuRxYzqVFlth7vTuf05vIL0M7mulW2uQiaW1M=",
     ],
     plot: "401",
     price: {
@@ -9364,18 +8975,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-033",
     terrace: "21",
     title: "Mock Property Title A2-033",
     titles: {
       en: "Mock Title EN A2-033",
-      es: "Mock Título ES A2-033"
+      es: "Mock Título ES A2-033",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Almacén"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -9383,7 +8992,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -9396,21 +9005,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-033"
+    cadastral: "223456789ABC-A2-033",
   },
-  
+
   {
     _id: "prop-assoc2-34",
     company_id: "comp-assoc2",
@@ -9430,12 +9039,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["acceso para personas con movilidad reducida"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-034",
@@ -9444,7 +9050,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA=",
-      "https://media.istockphoto.com/id/1006669284/es/foto/interior-de-la-sala-de-estar-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=N7GmVLSCt3RdUKPF9ULrtYOH4A06gwrcAb42rMqw3Jg="
+      "https://media.istockphoto.com/id/1006669284/es/foto/interior-de-la-sala-de-estar-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=N7GmVLSCt3RdUKPF9ULrtYOH4A06gwrcAb42rMqw3Jg=",
     ],
     plot: "401",
     price: {
@@ -9465,18 +9071,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-034",
     terrace: "21",
     title: "Mock Property Title A2-034",
     titles: {
       en: "Mock Title EN A2-034",
-      es: "Mock Título ES A2-034"
+      es: "Mock Título ES A2-034",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Amarre"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -9484,7 +9088,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -9497,21 +9101,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-034"
+    cadastral: "223456789ABC-A2-034",
   },
-  
+
   {
     _id: "prop-assoc2-35",
     company_id: "comp-assoc2",
@@ -9531,11 +9135,20 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -9545,7 +9158,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70=",
-      "https://media.istockphoto.com/id/1354768063/es/foto/render-3d-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=4B24teoBHqN9-u3UFxIOZUaqEgWOIxTQEdKU-6sZrKo="
+      "https://media.istockphoto.com/id/1354768063/es/foto/render-3d-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=4B24teoBHqN9-u3UFxIOZUaqEgWOIxTQEdKU-6sZrKo=",
     ],
     plot: "401",
     price: {
@@ -9566,18 +9179,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-035",
     terrace: "21",
     title: "Mock Property Title A2-035",
     titles: {
       en: "Mock Title EN A2-035",
-      es: "Mock Título ES A2-035"
+      es: "Mock Título ES A2-035",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartahotel"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -9585,7 +9196,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -9598,21 +9209,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-035"
+    cadastral: "223456789ABC-A2-035",
   },
-  
+
   {
     _id: "prop-assoc2-36",
     company_id: "comp-assoc2",
@@ -9632,11 +9243,16 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -9646,7 +9262,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ=",
-      "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ="
+      "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ=",
     ],
     plot: "401",
     price: {
@@ -9667,18 +9283,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-036",
     terrace: "21",
     title: "Mock Property Title A2-036",
     titles: {
       en: "Mock Title EN A2-036",
-      es: "Mock Título ES A2-036"
+      es: "Mock Título ES A2-036",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -9686,7 +9300,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -9699,21 +9313,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-036"
+    cadastral: "223456789ABC-A2-036",
   },
-  
+
   {
     _id: "prop-assoc2-37",
     company_id: "comp-assoc2",
@@ -9733,11 +9347,20 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -9747,7 +9370,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1177647525/es/foto/lujo-moderno-de-sala-de-estar-y-comedor-con-elemento-cl%C3%A1sico-y-muebles-renderizado-3d.jpg?s=612x612&w=0&k=20&c=qlXPqlYUF_0AhuXlTiAJNYsTBsFPa405lz7SUIPe038=",
-      "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ="
+      "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ=",
     ],
     plot: "401",
     price: {
@@ -9768,18 +9391,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-037",
     terrace: "21",
     title: "Mock Property Title A2-037",
     titles: {
       en: "Mock Title EN A2-037",
-      es: "Mock Título ES A2-037"
+      es: "Mock Título ES A2-037",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento en Planta Baja"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -9787,7 +9408,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -9800,21 +9421,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-037"
+    cadastral: "223456789ABC-A2-037",
   },
-  
+
   {
     _id: "prop-assoc2-38",
     company_id: "comp-assoc2",
@@ -9834,11 +9455,22 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -9848,7 +9480,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1245798947/es/foto/interior-cartel-maqueta-sala-de-estar-con-sof%C3%A1-blanco-de-colores-renderizado-3d.jpg?s=612x612&w=0&k=20&c=K5pSLdTpRLLp4xPLT-WOcgXiPupVDqKWz71Ioh9XBjY=",
-      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw="
+      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw=",
     ],
     plot: "401",
     price: {
@@ -9869,18 +9501,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-038",
     terrace: "21",
     title: "Mock Property Title A2-038",
     titles: {
       en: "Mock Title EN A2-038",
-      es: "Mock Título ES A2-038"
+      es: "Mock Título ES A2-038",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento en Última Planta"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -9888,7 +9518,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -9901,21 +9531,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-038"
+    cadastral: "223456789ABC-A2-038",
   },
-  
+
   {
     _id: "prop-assoc2-39",
     company_id: "comp-assoc2",
@@ -9935,11 +9565,22 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "aire acondicionado",
+      "calefacción central",
+      "trastero",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -9949,7 +9590,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4=",
-      "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU="
+      "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU=",
     ],
     plot: "401",
     price: {
@@ -9970,18 +9611,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-039",
     terrace: "21",
     title: "Mock Property Title A2-039",
     titles: {
       en: "Mock Title EN A2-039",
-      es: "Mock Título ES A2-039"
+      es: "Mock Título ES A2-039",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Barco"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -9989,7 +9628,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -10002,21 +9641,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-039"
+    cadastral: "223456789ABC-A2-039",
   },
-  
+
   {
     _id: "prop-assoc2-40",
     company_id: "comp-assoc2",
@@ -10036,11 +9675,25 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -10050,7 +9703,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2191685332/es/foto/3d-render-living-room.jpg?s=612x612&w=0&k=20&c=TZM28lQyMcqpau1pM6FDeXnZP4tVu8lcWlP1AsYQFPw=",
-      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0="
+      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0=",
     ],
     plot: "401",
     price: {
@@ -10071,18 +9724,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-040",
     terrace: "21",
     title: "Mock Property Title A2-040",
     titles: {
       en: "Mock Title EN A2-040",
-      es: "Mock Título ES A2-040"
+      es: "Mock Título ES A2-040",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Finca"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -10090,7 +9741,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -10103,21 +9754,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-040"
+    cadastral: "223456789ABC-A2-040",
   },
-  
+
   {
     _id: "prop-assoc2-41",
     company_id: "comp-assoc2",
@@ -10137,11 +9788,20 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -10151,7 +9811,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA=",
-      "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ="
+      "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ=",
     ],
     plot: "401",
     price: {
@@ -10172,18 +9832,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-041",
     terrace: "21",
     title: "Mock Property Title A2-041",
     titles: {
       en: "Mock Title EN A2-041",
-      es: "Mock Título ES A2-041"
+      es: "Mock Título ES A2-041",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Estudio en Planta Baja"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -10191,7 +9849,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -10204,21 +9862,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-041"
+    cadastral: "223456789ABC-A2-041",
   },
-  
+
   {
     _id: "prop-assoc2-42",
     company_id: "comp-assoc2",
@@ -10238,11 +9896,21 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
+      "ascensor",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -10252,7 +9920,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ=",
-      "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU="
+      "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU=",
     ],
     plot: "401",
     price: {
@@ -10273,18 +9941,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-042",
     terrace: "21",
     title: "Mock Property Title A2-042",
     titles: {
       en: "Mock Title EN A2-042",
-      es: "Mock Título ES A2-042"
+      es: "Mock Título ES A2-042",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Estudio en Última Planta"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -10292,7 +9958,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -10305,21 +9971,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-042"
+    cadastral: "223456789ABC-A2-042",
   },
-  
+
   {
     _id: "prop-assoc2-43",
     company_id: "comp-assoc2",
@@ -10339,11 +10005,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -10353,7 +10037,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU=",
-      "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4="
+      "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4=",
     ],
     plot: "401",
     price: {
@@ -10374,18 +10058,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-043",
     terrace: "21",
     title: "Mock Property Title A2-043",
     titles: {
       en: "Mock Title EN A2-043",
-      es: "Mock Título ES A2-043"
+      es: "Mock Título ES A2-043",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -10393,7 +10075,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -10406,21 +10088,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-043"
+    cadastral: "223456789ABC-A2-043",
   },
-  
+
   {
     _id: "prop-assoc2-44",
     company_id: "comp-assoc2",
@@ -10440,11 +10122,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -10454,7 +10154,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1440180997/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-la-sala-de-estar-pared-de.jpg?s=612x612&w=0&k=20&c=BZSASAkGGrd1plHGUUzzpfiV6tRHebkEOF0-4Zk4KlU=",
-      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70="
+      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70=",
     ],
     plot: "401",
     price: {
@@ -10475,18 +10175,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-044",
     terrace: "21",
     title: "Mock Property Title A2-044",
     titles: {
       en: "Mock Title EN A2-044",
-      es: "Mock Título ES A2-044"
+      es: "Mock Título ES A2-044",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -10494,7 +10192,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -10507,21 +10205,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-044"
+    cadastral: "223456789ABC-A2-044",
   },
-  
+
   {
     _id: "prop-assoc2-45",
     company_id: "comp-assoc2",
@@ -10541,11 +10239,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -10555,7 +10271,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ=",
-      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw="
+      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw=",
     ],
     plot: "401",
     price: {
@@ -10576,18 +10292,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-045",
     terrace: "21",
     title: "Mock Property Title A2-045",
     titles: {
       en: "Mock Title EN A2-045",
-      es: "Mock Título ES A2-045"
+      es: "Mock Título ES A2-045",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -10595,7 +10309,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -10608,21 +10322,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-045"
+    cadastral: "223456789ABC-A2-045",
   },
-  
+
   {
     _id: "prop-assoc2-46",
     company_id: "comp-assoc2",
@@ -10642,11 +10356,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -10656,7 +10388,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1332822077/es/foto/dise%C3%B1o-de-interiores-estilo-cl%C3%A1sico-moderno-de-la-sala-de-estar-con-m%C3%A1rmol-negro-y-textura-de.jpg?s=612x612&w=0&k=20&c=C-4gNOcRtwrPUJ_oReqoOe4gH1UmO5mKa0WGATZ6cBo=",
-      "https://media.istockphoto.com/id/1404214673/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-papel-tapiz-de-patr%C3%B3n-decorado-de.jpg?s=612x612&w=0&k=20&c=U3uw9ra8YyTgMVAjazondMuQbppV7r-yCd2C281kSrI="
+      "https://media.istockphoto.com/id/1404214673/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-papel-tapiz-de-patr%C3%B3n-decorado-de.jpg?s=612x612&w=0&k=20&c=U3uw9ra8YyTgMVAjazondMuQbppV7r-yCd2C281kSrI=",
     ],
     plot: "401",
     price: {
@@ -10677,18 +10409,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-046",
     terrace: "21",
     title: "Mock Property Title A2-046",
     titles: {
       en: "Mock Title EN A2-046",
-      es: "Mock Título ES A2-046"
+      es: "Mock Título ES A2-046",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -10696,7 +10426,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -10709,21 +10439,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-046"
+    cadastral: "223456789ABC-A2-046",
   },
-  
+
   {
     _id: "prop-assoc2-47",
     company_id: "comp-assoc2",
@@ -10743,11 +10473,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -10757,7 +10505,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/855062934/es/foto/sala-de-estar-y-habitaci%C3%B3n-en-apartamento-o-hotel-dise%C3%B1o-de-interiores-3d-render.jpg?s=612x612&w=0&k=20&c=2wmGUKALng95XA404-5aU91OUpMRnTG2XkBaViWmVgI=",
-      "https://media.istockphoto.com/id/2192761281/es/foto/gran-maqueta-de-sala-de-estar-interior-moderna-y-luminosa-de-lujo.jpg?s=612x612&w=0&k=20&c=iInqThy0RzQO82pji30cSy-6tENP9Lpqojyoq5BVsX4="
+      "https://media.istockphoto.com/id/2192761281/es/foto/gran-maqueta-de-sala-de-estar-interior-moderna-y-luminosa-de-lujo.jpg?s=612x612&w=0&k=20&c=iInqThy0RzQO82pji30cSy-6tENP9Lpqojyoq5BVsX4=",
     ],
     plot: "401",
     price: {
@@ -10778,18 +10526,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-047",
     terrace: "21",
     title: "Mock Property Title A2-047",
     titles: {
       en: "Mock Title EN A2-047",
-      es: "Mock Título ES A2-047"
+      es: "Mock Título ES A2-047",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -10797,7 +10543,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -10810,21 +10556,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-047"
+    cadastral: "223456789ABC-A2-047",
   },
-  
+
   {
     _id: "prop-assoc2-48",
     company_id: "comp-assoc2",
@@ -10844,11 +10590,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -10858,7 +10622,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1245798947/es/foto/interior-cartel-maqueta-sala-de-estar-con-sof%C3%A1-blanco-de-colores-renderizado-3d.jpg?s=612x612&w=0&k=20&c=K5pSLdTpRLLp4xPLT-WOcgXiPupVDqKWz71Ioh9XBjY=",
-      "https://media.istockphoto.com/id/1473033787/es/foto/interior-de-una-sala-de-estar-con-muebles-m%C3%ADnimos.jpg?s=612x612&w=0&k=20&c=iFnvq49HyLLjzIL_Ik0O2fVCQ8ihZAcj75-NJ1T3OSo="
+      "https://media.istockphoto.com/id/1473033787/es/foto/interior-de-una-sala-de-estar-con-muebles-m%C3%ADnimos.jpg?s=612x612&w=0&k=20&c=iFnvq49HyLLjzIL_Ik0O2fVCQ8ihZAcj75-NJ1T3OSo=",
     ],
     plot: "401",
     price: {
@@ -10879,18 +10643,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-048",
     terrace: "21",
     title: "Mock Property Title A2-048",
     titles: {
       en: "Mock Title EN A2-048",
-      es: "Mock Título ES A2-048"
+      es: "Mock Título ES A2-048",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -10898,7 +10660,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -10911,21 +10673,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-048"
+    cadastral: "223456789ABC-A2-048",
   },
-  
+
   {
     _id: "prop-assoc2-49",
     company_id: "comp-assoc2",
@@ -10945,11 +10707,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -10959,7 +10739,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1413337128/es/foto/moderno-sal%C3%B3n-amueblado-con-cocina.jpg?s=612x612&w=0&k=20&c=jNrkkytE2ZX7-ZjR61DO7JQxfCQ730FRi57pNizyM_4=",
-      "https://media.istockphoto.com/id/1001121330/es/foto/dise%C3%B1o-de-interiores-moderno-sal%C3%B3n-blanco.jpg?s=612x612&w=0&k=20&c=wVrp1xDRR9LMVvWtNU46NmSjXnVrJSAIyqEQpmOwykI="
+      "https://media.istockphoto.com/id/1001121330/es/foto/dise%C3%B1o-de-interiores-moderno-sal%C3%B3n-blanco.jpg?s=612x612&w=0&k=20&c=wVrp1xDRR9LMVvWtNU46NmSjXnVrJSAIyqEQpmOwykI=",
     ],
     plot: "401",
     price: {
@@ -10980,18 +10760,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-049",
     terrace: "21",
     title: "Mock Property Title A2-049",
     titles: {
       en: "Mock Title EN A2-049",
-      es: "Mock Título ES A2-049"
+      es: "Mock Título ES A2-049",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -10999,7 +10777,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -11012,21 +10790,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-049"
+    cadastral: "223456789ABC-A2-049",
   },
-  
+
   {
     _id: "prop-assoc2-50",
     company_id: "comp-assoc2",
@@ -11046,11 +10824,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -11060,7 +10856,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1006669284/es/foto/interior-de-la-sala-de-estar-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=N7GmVLSCt3RdUKPF9ULrtYOH4A06gwrcAb42rMqw3Jg=",
-      "https://media.istockphoto.com/id/1354768063/es/foto/render-3d-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=4B24teoBHqN9-u3UFxIOZUaqEgWOIxTQEdKU-6sZrKo="
+      "https://media.istockphoto.com/id/1354768063/es/foto/render-3d-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=4B24teoBHqN9-u3UFxIOZUaqEgWOIxTQEdKU-6sZrKo=",
     ],
     plot: "401",
     price: {
@@ -11081,18 +10877,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-050",
     terrace: "21",
     title: "Mock Property Title A2-050",
     titles: {
       en: "Mock Title EN A2-050",
-      es: "Mock Título ES A2-050"
+      es: "Mock Título ES A2-050",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -11100,7 +10894,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -11113,21 +10907,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-050"
+    cadastral: "223456789ABC-A2-050",
   },
-  
+
   {
     _id: "prop-assoc2-51",
     company_id: "comp-assoc2",
@@ -11147,11 +10941,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -11161,7 +10973,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1209929504/es/foto/esquina-de-la-sala-de-estar-escandinava-de-blanco-y-madera.jpg?s=612x612&w=0&k=20&c=KkwUl9mD6CJ1G1bMyk8XA8citXDGE6gRFWBxFwLakHs=",
-      "https://media.istockphoto.com/id/2161329191/es/foto/acogedora-sala-de-estar-con-muebles-modernos-y-vista-a-la-ciudad-desde-la-ventana.jpg?s=612x612&w=0&k=20&c=trYfmrKI3nsRT5pQvZVNLq5Xr8zJBHuqOJb4Gx-9PIE="
+      "https://media.istockphoto.com/id/2161329191/es/foto/acogedora-sala-de-estar-con-muebles-modernos-y-vista-a-la-ciudad-desde-la-ventana.jpg?s=612x612&w=0&k=20&c=trYfmrKI3nsRT5pQvZVNLq5Xr8zJBHuqOJb4Gx-9PIE=",
     ],
     plot: "401",
     price: {
@@ -11182,18 +10994,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-051",
     terrace: "21",
     title: "Mock Property Title A2-051",
     titles: {
       en: "Mock Title EN A2-051",
-      es: "Mock Título ES A2-051"
+      es: "Mock Título ES A2-051",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -11201,7 +11011,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -11214,21 +11024,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-051"
+    cadastral: "223456789ABC-A2-051",
   },
-  
+
   {
     _id: "prop-assoc2-52",
     company_id: "comp-assoc2",
@@ -11248,11 +11058,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -11262,7 +11090,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2183261630/es/foto/sala-de-estar-contempor%C3%A1nea-con-silla-decorativa-audaz-y-obras-de-arte-modernas.jpg?s=612x612&w=0&k=20&c=bXRc2pJuRxYzqVFlth7vTuf05vIL0M7mulW2uQiaW1M=",
-      "https://media.istockphoto.com/id/2184733372/es/foto/elegante-dormitorio-creado-digitalmente-con-iluminaci%C3%B3n-suave.jpg?s=612x612&w=0&k=20&c=Io58BPk1PW56PddHcB8nGexdlGZ_x9tQ_US86eKA6Tg="
+      "https://media.istockphoto.com/id/2184733372/es/foto/elegante-dormitorio-creado-digitalmente-con-iluminaci%C3%B3n-suave.jpg?s=612x612&w=0&k=20&c=Io58BPk1PW56PddHcB8nGexdlGZ_x9tQ_US86eKA6Tg=",
     ],
     plot: "401",
     price: {
@@ -11283,18 +11111,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-052",
     terrace: "21",
     title: "Mock Property Title A2-052",
     titles: {
       en: "Mock Title EN A2-052",
-      es: "Mock Título ES A2-052"
+      es: "Mock Título ES A2-052",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -11302,7 +11128,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -11315,21 +11141,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-052"
+    cadastral: "223456789ABC-A2-052",
   },
-  
+
   {
     _id: "prop-assoc2-53",
     company_id: "comp-assoc2",
@@ -11349,11 +11175,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -11363,7 +11207,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1177647525/es/foto/lujo-moderno-de-sala-de-estar-y-comedor-con-elemento-cl%C3%A1sico-y-muebles-renderizado-3d.jpg?s=612x612&w=0&k=20&c=qlXPqlYUF_0AhuXlTiAJNYsTBsFPa405lz7SUIPe038=",
-      "https://media.istockphoto.com/id/2191685332/es/foto/3d-render-living-room.jpg?s=612x612&w=0&k=20&c=TZM28lQyMcqpau1pM6FDeXnZP4tVu8lcWlP1AsYQFPw="
+      "https://media.istockphoto.com/id/2191685332/es/foto/3d-render-living-room.jpg?s=612x612&w=0&k=20&c=TZM28lQyMcqpau1pM6FDeXnZP4tVu8lcWlP1AsYQFPw=",
     ],
     plot: "401",
     price: {
@@ -11384,18 +11228,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-053",
     terrace: "21",
     title: "Mock Property Title A2-053",
     titles: {
       en: "Mock Title EN A2-053",
-      es: "Mock Título ES A2-053"
+      es: "Mock Título ES A2-053",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -11403,7 +11245,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -11416,21 +11258,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-053"
+    cadastral: "223456789ABC-A2-053",
   },
-  
+
   {
     _id: "prop-assoc2-54",
     company_id: "comp-assoc2",
@@ -11450,11 +11292,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -11464,7 +11324,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0=",
-      "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA="
+      "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA=",
     ],
     plot: "401",
     price: {
@@ -11485,18 +11345,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-054",
     terrace: "21",
     title: "Mock Property Title A2-054",
     titles: {
       en: "Mock Title EN A2-054",
-      es: "Mock Título ES A2-054"
+      es: "Mock Título ES A2-054",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -11504,7 +11362,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -11517,21 +11375,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-054"
+    cadastral: "223456789ABC-A2-054",
   },
-  
+
   {
     _id: "prop-assoc2-55",
     company_id: "comp-assoc2",
@@ -11551,11 +11409,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -11565,7 +11441,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ=",
-      "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ="
+      "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ=",
     ],
     plot: "401",
     price: {
@@ -11586,18 +11462,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-055",
     terrace: "21",
     title: "Mock Property Title A2-055",
     titles: {
       en: "Mock Title EN A2-055",
-      es: "Mock Título ES A2-055"
+      es: "Mock Título ES A2-055",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -11605,7 +11479,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -11618,21 +11492,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-055"
+    cadastral: "223456789ABC-A2-055",
   },
-  
+
   {
     _id: "prop-assoc2-56",
     company_id: "comp-assoc2",
@@ -11652,12 +11526,9 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
-    features: [
-      "feat2",
-      "feat4"
-    ],
+    features: ["feat2", "feat4"],
     is_partner: true,
     partner_id: "assoc2",
     internal_ref: "INT-REF-A2-056",
@@ -11666,7 +11537,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU=",
-      "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU="
+      "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU=",
     ],
     plot: "401",
     price: {
@@ -11687,18 +11558,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-056",
     terrace: "21",
     title: "Mock Property Title A2-056",
     titles: {
       en: "Mock Title EN A2-056",
-      es: "Mock Título ES A2-056"
+      es: "Mock Título ES A2-056",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -11706,7 +11575,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -11719,21 +11588,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-056"
+    cadastral: "223456789ABC-A2-056",
   },
-  
+
   {
     _id: "prop-assoc2-57",
     company_id: "comp-assoc2",
@@ -11753,11 +11622,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -11767,7 +11654,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4=",
-      "https://media.istockphoto.com/id/1440180997/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-la-sala-de-estar-pared-de.jpg?s=612x612&w=0&k=20&c=BZSASAkGGrd1plHGUUzzpfiV6tRHebkEOF0-4Zk4KlU="
+      "https://media.istockphoto.com/id/1440180997/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-la-sala-de-estar-pared-de.jpg?s=612x612&w=0&k=20&c=BZSASAkGGrd1plHGUUzzpfiV6tRHebkEOF0-4Zk4KlU=",
     ],
     plot: "401",
     price: {
@@ -11788,18 +11675,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-057",
     terrace: "21",
     title: "Mock Property Title A2-057",
     titles: {
       en: "Mock Title EN A2-057",
-      es: "Mock Título ES A2-057"
+      es: "Mock Título ES A2-057",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -11807,7 +11692,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -11820,21 +11705,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-057"
+    cadastral: "223456789ABC-A2-057",
   },
-  
+
   {
     _id: "prop-assoc2-58",
     company_id: "comp-assoc2",
@@ -11854,11 +11739,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -11868,7 +11771,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70=",
-      "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ="
+      "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ=",
     ],
     plot: "401",
     price: {
@@ -11889,18 +11792,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-058",
     terrace: "21",
     title: "Mock Property Title A2-058",
     titles: {
       en: "Mock Title EN A2-058",
-      es: "Mock Título ES A2-058"
+      es: "Mock Título ES A2-058",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -11908,7 +11809,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -11921,21 +11822,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-058"
+    cadastral: "223456789ABC-A2-058",
   },
-  
+
   {
     _id: "prop-assoc2-59",
     company_id: "comp-assoc2",
@@ -11955,11 +11856,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -11969,7 +11888,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw=",
-      "https://media.istockphoto.com/id/1332822077/es/foto/dise%C3%B1o-de-interiores-estilo-cl%C3%A1sico-moderno-de-la-sala-de-estar-con-m%C3%A1rmol-negro-y-textura-de.jpg?s=612x612&w=0&k=20&c=C-4gNOcRtwrPUJ_oReqoOe4gH1UmO5mKa0WGATZ6cBo="
+      "https://media.istockphoto.com/id/1332822077/es/foto/dise%C3%B1o-de-interiores-estilo-cl%C3%A1sico-moderno-de-la-sala-de-estar-con-m%C3%A1rmol-negro-y-textura-de.jpg?s=612x612&w=0&k=20&c=C-4gNOcRtwrPUJ_oReqoOe4gH1UmO5mKa0WGATZ6cBo=",
     ],
     plot: "401",
     price: {
@@ -11990,18 +11909,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-059",
     terrace: "21",
     title: "Mock Property Title A2-059",
     titles: {
       en: "Mock Title EN A2-059",
-      es: "Mock Título ES A2-059"
+      es: "Mock Título ES A2-059",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -12009,7 +11926,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -12022,21 +11939,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-059"
+    cadastral: "223456789ABC-A2-059",
   },
-  
+
   {
     _id: "prop-assoc2-60",
     company_id: "comp-assoc2",
@@ -12056,11 +11973,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc2",
@@ -12069,9 +12004,9 @@ const properties = [
     listing_status: "status2",
     new_build: false,
     pics: [
-    "https://media.istockphoto.com/id/1404214673/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-papel-tapiz-de-patr%C3%B3n-decorado-de.jpg?s=612x612&w=0&k=20&c=U3uw9ra8YyTgMVAjazondMuQbppV7r-yCd2C281kSrI=",
-    "https://media.istockphoto.com/id/855062934/es/foto/sala-de-estar-y-habitaci%C3%B3n-en-apartamento-o-hotel-dise%C3%B1o-de-interiores-3d-render.jpg?s=612x612&w=0&k=20&c=2wmGUKALng95XA404-5aU91OUpMRnTG2XkBaViWmVgI="
-  ],
+      "https://media.istockphoto.com/id/1404214673/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-papel-tapiz-de-patr%C3%B3n-decorado-de.jpg?s=612x612&w=0&k=20&c=U3uw9ra8YyTgMVAjazondMuQbppV7r-yCd2C281kSrI=",
+      "https://media.istockphoto.com/id/855062934/es/foto/sala-de-estar-y-habitaci%C3%B3n-en-apartamento-o-hotel-dise%C3%B1o-de-interiores-3d-render.jpg?s=612x612&w=0&k=20&c=2wmGUKALng95XA404-5aU91OUpMRnTG2XkBaViWmVgI=",
+    ],
     plot: "401",
     price: {
       sale: 305000,
@@ -12091,18 +12026,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A2-060",
     terrace: "21",
     title: "Mock Property Title A2-060",
     titles: {
       en: "Mock Title EN A2-060",
-      es: "Mock Título ES A2-060"
+      es: "Mock Título ES A2-060",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A2",
@@ -12110,7 +12043,7 @@ const properties = [
       city: "Mock City A2",
       region: "Mock Region A2",
       country: "Mockland",
-      zipcode: "00002"
+      zipcode: "00002",
     },
     area: "area2",
     subarea: "subarea2",
@@ -12123,19 +12056,19 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.200001",
-      lng: "-4.200001"
+      lng: "-4.200001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2012
+      construction: 2012,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "223456789ABC-A2-060"
+    cadastral: "223456789ABC-A2-060",
   },
 
   {
@@ -12157,11 +12090,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -12192,18 +12143,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-001",
     terrace: "21",
     title: "Mock Property Title A3-001",
     titles: {
       en: "Mock Title EN A3-001",
-      es: "Mock Título ES A3-001"
+      es: "Mock Título ES A3-001",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -12211,7 +12160,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -12224,21 +12173,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-001"
+    cadastral: "323456789ABC-A3-001",
   },
-  
+
   {
     _id: "prop-assoc3-2",
     company_id: "comp-assoc3",
@@ -12258,11 +12207,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -12272,7 +12239,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70=",
-      "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ="
+      "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ=",
     ],
     plot: "401",
     price: {
@@ -12293,18 +12260,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-002",
     terrace: "21",
     title: "Mock Property Title A3-002",
     titles: {
       en: "Mock Title EN A3-002",
-      es: "Mock Título ES A3-002"
+      es: "Mock Título ES A3-002",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -12312,7 +12277,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -12325,21 +12290,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-002"
+    cadastral: "323456789ABC-A3-002",
   },
-  
+
   {
     _id: "prop-assoc3-3",
     company_id: "comp-assoc3",
@@ -12359,11 +12324,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -12373,7 +12356,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw=",
-      "https://media.istockphoto.com/id/1332822077/es/foto/dise%C3%B1o-de-interiores-estilo-cl%C3%A1sico-moderno-de-la-sala-de-estar-con-m%C3%A1rmol-negro-y-textura-de.jpg?s=612x612&w=0&k=20&c=C-4gNOcRtwrPUJ_oReqoOe4gH1UmO5mKa0WGATZ6cBo="
+      "https://media.istockphoto.com/id/1332822077/es/foto/dise%C3%B1o-de-interiores-estilo-cl%C3%A1sico-moderno-de-la-sala-de-estar-con-m%C3%A1rmol-negro-y-textura-de.jpg?s=612x612&w=0&k=20&c=C-4gNOcRtwrPUJ_oReqoOe4gH1UmO5mKa0WGATZ6cBo=",
     ],
     plot: "401",
     price: {
@@ -12394,18 +12377,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-003",
     terrace: "21",
     title: "Mock Property Title A3-003",
     titles: {
       en: "Mock Title EN A3-003",
-      es: "Mock Título ES A3-003"
+      es: "Mock Título ES A3-003",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -12413,7 +12394,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -12426,21 +12407,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-003"
+    cadastral: "323456789ABC-A3-003",
   },
-  
+
   {
     _id: "prop-assoc3-4",
     company_id: "comp-assoc3",
@@ -12460,11 +12441,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -12474,7 +12473,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ=",
-      "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ="
+      "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ=",
     ],
     plot: "401",
     price: {
@@ -12495,18 +12494,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-004",
     terrace: "21",
     title: "Mock Property Title A3-004",
     titles: {
       en: "Mock Title EN A3-004",
-      es: "Mock Título ES A3-004"
+      es: "Mock Título ES A3-004",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -12514,7 +12511,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -12527,21 +12524,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-004"
+    cadastral: "323456789ABC-A3-004",
   },
-  
+
   {
     _id: "prop-assoc3-5",
     company_id: "comp-assoc3",
@@ -12561,11 +12558,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -12575,7 +12590,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1440180997/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-la-sala-de-estar-pared-de.jpg?s=612x612&w=0&k=20&c=BZSASAkGGrd1plHGUUzzpfiV6tRHebkEOF0-4Zk4KlU=",
-      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70="
+      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70=",
     ],
     plot: "401",
     price: {
@@ -12596,18 +12611,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-005",
     terrace: "21",
     title: "Mock Property Title A3-005",
     titles: {
       en: "Mock Title EN A3-005",
-      es: "Mock Título ES A3-005"
+      es: "Mock Título ES A3-005",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -12615,7 +12628,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -12628,21 +12641,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-005"
+    cadastral: "323456789ABC-A3-005",
   },
-  
+
   {
     _id: "prop-assoc3-6",
     company_id: "comp-assoc3",
@@ -12662,11 +12675,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -12676,7 +12707,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU=",
-      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0="
+      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0=",
     ],
     plot: "401",
     price: {
@@ -12697,18 +12728,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-006",
     terrace: "21",
     title: "Mock Property Title A3-006",
     titles: {
       en: "Mock Title EN A3-006",
-      es: "Mock Título ES A3-006"
+      es: "Mock Título ES A3-006",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Finca con Ruinas"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -12716,7 +12745,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -12729,21 +12758,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-006"
+    cadastral: "323456789ABC-A3-006",
   },
-  
+
   {
     _id: "prop-assoc3-7",
     company_id: "comp-assoc3",
@@ -12763,11 +12792,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -12777,7 +12824,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ=",
-      "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ="
+      "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ=",
     ],
     plot: "401",
     price: {
@@ -12798,18 +12845,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-007",
     terrace: "21",
     title: "Mock Property Title A3-007",
     titles: {
       en: "Mock Title EN A3-007",
-      es: "Mock Título ES A3-007"
+      es: "Mock Título ES A3-007",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Bungalow"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -12817,7 +12862,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -12830,21 +12875,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-007"
+    cadastral: "323456789ABC-A3-007",
   },
-  
+
   {
     _id: "prop-assoc3-8",
     company_id: "comp-assoc3",
@@ -12864,11 +12909,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -12878,7 +12941,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2191685332/es/foto/3d-render-living-room.jpg?s=612x612&w=0&k=20&c=TZM28lQyMcqpau1pM6FDeXnZP4tVu8lcWlP1AsYQFPw=",
-      "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU="
+      "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU=",
     ],
     plot: "401",
     price: {
@@ -12899,18 +12962,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-008",
     terrace: "21",
     title: "Mock Property Title A3-008",
     titles: {
       en: "Mock Title EN A3-008",
-      es: "Mock Título ES A3-008"
+      es: "Mock Título ES A3-008",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Bungalow"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -12918,7 +12979,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -12931,21 +12992,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-008"
+    cadastral: "323456789ABC-A3-008",
   },
-  
+
   {
     _id: "prop-assoc3-9",
     company_id: "comp-assoc3",
@@ -12965,11 +13026,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -12979,7 +13058,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ=",
-      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw="
+      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw=",
     ],
     plot: "401",
     price: {
@@ -13000,18 +13079,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-009",
     terrace: "21",
     title: "Mock Property Title A3-009",
     titles: {
       en: "Mock Title EN A3-009",
-      es: "Mock Título ES A3-009"
+      es: "Mock Título ES A3-009",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Hostal"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -13019,7 +13096,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -13032,21 +13109,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-009"
+    cadastral: "323456789ABC-A3-009",
   },
-  
+
   {
     _id: "prop-assoc3-10",
     company_id: "comp-assoc3",
@@ -13066,11 +13143,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -13080,7 +13175,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1440180997/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-la-sala-de-estar-pared-de.jpg?s=612x612&w=0&k=20&c=BZSASAkGGrd1plHGUUzzpfiV6tRHebkEOF0-4Zk4KlU=",
-      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70="
+      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70=",
     ],
     plot: "401",
     price: {
@@ -13101,18 +13196,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-010",
     terrace: "21",
     title: "Mock Property Title A3-010",
     titles: {
       en: "Mock Title EN A3-010",
-      es: "Mock Título ES A3-010"
+      es: "Mock Título ES A3-010",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Hostal"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -13120,7 +13213,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -13133,21 +13226,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-010"
+    cadastral: "323456789ABC-A3-010",
   },
-  
+
   {
     _id: "prop-assoc3-11",
     company_id: "comp-assoc3",
@@ -13167,11 +13260,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -13181,7 +13292,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ=",
-      "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU="
+      "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU=",
     ],
     plot: "401",
     price: {
@@ -13202,18 +13313,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-011",
     terrace: "21",
     title: "Mock Property Title A3-011",
     titles: {
       en: "Mock Title EN A3-011",
-      es: "Mock Título ES A3-011"
+      es: "Mock Título ES A3-011",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Hostal"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -13221,7 +13330,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -13234,21 +13343,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-011"
+    cadastral: "323456789ABC-A3-011",
   },
-  
+
   {
     _id: "prop-assoc3-12",
     company_id: "comp-assoc3",
@@ -13268,11 +13377,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -13282,7 +13409,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ=",
-      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw="
+      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw=",
     ],
     plot: "401",
     price: {
@@ -13303,18 +13430,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-012",
     terrace: "21",
     title: "Mock Property Title A3-012",
     titles: {
       en: "Mock Title EN A3-012",
-      es: "Mock Título ES A3-012"
+      es: "Mock Título ES A3-012",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Hostal"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -13322,7 +13447,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -13335,21 +13460,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-012"
+    cadastral: "323456789ABC-A3-012",
   },
-  
+
   {
     _id: "prop-assoc3-13",
     company_id: "comp-assoc3",
@@ -13369,11 +13494,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -13383,7 +13526,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1440180997/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-la-sala-de-estar-pared-de.jpg?s=612x612&w=0&k=20&c=BZSASAkGGrd1plHGUUzzpfiV6tRHebkEOF0-4Zk4KlU=",
-      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70="
+      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70=",
     ],
     plot: "401",
     price: {
@@ -13404,18 +13547,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-013",
     terrace: "21",
     title: "Mock Property Title A3-013",
     titles: {
       en: "Mock Title EN A3-013",
-      es: "Mock Título ES A3-013"
+      es: "Mock Título ES A3-013",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Hostal"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -13423,7 +13564,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -13436,21 +13577,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-013"
+    cadastral: "323456789ABC-A3-013",
   },
-  
+
   {
     _id: "prop-assoc3-14",
     company_id: "comp-assoc3",
@@ -13470,11 +13611,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -13484,7 +13643,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0=",
-      "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA="
+      "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA=",
     ],
     plot: "401",
     price: {
@@ -13505,18 +13664,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-014",
     terrace: "21",
     title: "Mock Property Title A3-014",
     titles: {
       en: "Mock Title EN A3-014",
-      es: "Mock Título ES A3-014"
+      es: "Mock Título ES A3-014",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Hostal"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -13524,7 +13681,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -13537,21 +13694,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-014"
+    cadastral: "323456789ABC-A3-014",
   },
-  
+
   {
     _id: "prop-assoc3-15",
     company_id: "comp-assoc3",
@@ -13571,11 +13728,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -13606,18 +13781,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-015",
     terrace: "21",
     title: "Mock Property Title A3-015",
     titles: {
       en: "Mock Title EN A3-015",
-      es: "Mock Título ES A3-015"
+      es: "Mock Título ES A3-015",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Complejo de Apartamentos"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -13625,7 +13798,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -13638,21 +13811,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-015"
+    cadastral: "323456789ABC-A3-015",
   },
-  
+
   {
     _id: "prop-assoc3-16",
     company_id: "comp-assoc3",
@@ -13672,11 +13845,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -13686,7 +13877,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU=",
-      "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4="
+      "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4=",
     ],
     plot: "401",
     price: {
@@ -13707,18 +13898,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-016",
     terrace: "21",
     title: "Mock Property Title A3-016",
     titles: {
       en: "Mock Title EN A3-016",
-      es: "Mock Título ES A3-016"
+      es: "Mock Título ES A3-016",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Complejo de Apartamentos"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -13726,7 +13915,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -13739,21 +13928,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-016"
+    cadastral: "323456789ABC-A3-016",
   },
-  
+
   {
     _id: "prop-assoc3-17",
     company_id: "comp-assoc3",
@@ -13773,11 +13962,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -13787,7 +13994,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA=",
-      "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ="
+      "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ=",
     ],
     plot: "401",
     price: {
@@ -13808,18 +14015,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-017",
     terrace: "21",
     title: "Mock Property Title A3-017",
     titles: {
       en: "Mock Title EN A3-017",
-      es: "Mock Título ES A3-017"
+      es: "Mock Título ES A3-017",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -13827,7 +14032,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -13840,21 +14045,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-017"
+    cadastral: "323456789ABC-A3-017",
   },
-  
+
   {
     _id: "prop-assoc3-18",
     company_id: "comp-assoc3",
@@ -13874,11 +14079,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -13888,7 +14111,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ=",
-      "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU="
+      "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU=",
     ],
     plot: "401",
     price: {
@@ -13909,18 +14132,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-018",
     terrace: "21",
     title: "Mock Property Title A3-018",
     titles: {
       en: "Mock Title EN A3-018",
-      es: "Mock Título ES A3-018"
+      es: "Mock Título ES A3-018",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -13928,7 +14149,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -13941,21 +14162,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-018"
+    cadastral: "323456789ABC-A3-018",
   },
-  
+
   {
     _id: "prop-assoc3-19",
     company_id: "comp-assoc3",
@@ -13975,11 +14196,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -13989,7 +14228,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1332822077/es/foto/dise%C3%B1o-de-interiores-estilo-cl%C3%A1sico-moderno-de-la-sala-de-estar-con-m%C3%A1rmol-negro-y-textura-de.jpg?s=612x612&w=0&k=20&c=C-4gNOcRtwrPUJ_oReqoOe4gH1UmO5mKa0WGATZ6cBo=",
-      "https://media.istockphoto.com/id/1404214673/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-papel-tapiz-de-patr%C3%B3n-decorado-de.jpg?s=612x612&w=0&k=20&c=U3uw9ra8YyTgMVAjazondMuQbppV7r-yCd2C281kSrI="
+      "https://media.istockphoto.com/id/1404214673/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-papel-tapiz-de-patr%C3%B3n-decorado-de.jpg?s=612x612&w=0&k=20&c=U3uw9ra8YyTgMVAjazondMuQbppV7r-yCd2C281kSrI=",
     ],
     plot: "401",
     price: {
@@ -14010,18 +14249,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-019",
     terrace: "21",
     title: "Mock Property Title A3-019",
     titles: {
       en: "Mock Title EN A3-019",
-      es: "Mock Título ES A3-019"
+      es: "Mock Título ES A3-019",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -14029,7 +14266,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -14042,21 +14279,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-019"
+    cadastral: "323456789ABC-A3-019",
   },
-  
+
   {
     _id: "prop-assoc3-20",
     company_id: "comp-assoc3",
@@ -14076,11 +14313,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -14090,7 +14345,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU=",
-      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0="
+      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0=",
     ],
     plot: "401",
     price: {
@@ -14111,18 +14366,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-020",
     terrace: "21",
     title: "Mock Property Title A3-020",
     titles: {
       en: "Mock Title EN A3-020",
-      es: "Mock Título ES A3-020"
+      es: "Mock Título ES A3-020",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -14130,7 +14383,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -14143,21 +14396,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-020"
+    cadastral: "323456789ABC-A3-020",
   },
-  
+
   {
     _id: "prop-assoc3-21",
     company_id: "comp-assoc3",
@@ -14177,11 +14430,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -14191,7 +14462,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1332822077/es/foto/dise%C3%B1o-de-interiores-estilo-cl%C3%A1sico-moderno-de-la-sala-de-estar-con-m%C3%A1rmol-negro-y-textura-de.jpg?s=612x612&w=0&k=20&c=C-4gNOcRtwrPUJ_oReqoOe4gH1UmO5mKa0WGATZ6cBo=",
-      "https://media.istockphoto.com/id/1404214673/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-papel-tapiz-de-patr%C3%B3n-decorado-de.jpg?s=612x612&w=0&k=20&c=U3uw9ra8YyTgMVAjazondMuQbppV7r-yCd2C281kSrI="
+      "https://media.istockphoto.com/id/1404214673/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-papel-tapiz-de-patr%C3%B3n-decorado-de.jpg?s=612x612&w=0&k=20&c=U3uw9ra8YyTgMVAjazondMuQbppV7r-yCd2C281kSrI=",
     ],
     plot: "401",
     price: {
@@ -14212,18 +14483,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-021",
     terrace: "21",
     title: "Mock Property Title A3-021",
     titles: {
       en: "Mock Title EN A3-021",
-      es: "Mock Título ES A3-021"
+      es: "Mock Título ES A3-021",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -14231,7 +14500,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -14244,21 +14513,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-021"
+    cadastral: "323456789ABC-A3-021",
   },
-  
+
   {
     _id: "prop-assoc3-22",
     company_id: "comp-assoc3",
@@ -14278,11 +14547,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -14292,7 +14579,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ=",
-      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw="
+      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw=",
     ],
     plot: "401",
     price: {
@@ -14313,18 +14600,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-022",
     terrace: "21",
     title: "Mock Property Title A3-022",
     titles: {
       en: "Mock Title EN A3-022",
-      es: "Mock Título ES A3-022"
+      es: "Mock Título ES A3-022",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -14332,7 +14617,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -14345,21 +14630,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-022"
+    cadastral: "323456789ABC-A3-022",
   },
-  
+
   {
     _id: "prop-assoc3-23",
     company_id: "comp-assoc3",
@@ -14379,11 +14664,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -14414,18 +14717,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-023",
     terrace: "21",
     title: "Mock Property Title A3-023",
     titles: {
       en: "Mock Title EN A3-023",
-      es: "Mock Título ES A3-023"
+      es: "Mock Título ES A3-023",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -14433,7 +14734,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -14446,21 +14747,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-023"
+    cadastral: "323456789ABC-A3-023",
   },
-  
+
   {
     _id: "prop-assoc3-24",
     company_id: "comp-assoc3",
@@ -14480,11 +14781,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -14494,7 +14813,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ=",
-      "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ="
+      "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ=",
     ],
     plot: "401",
     price: {
@@ -14515,18 +14834,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-024",
     terrace: "21",
     title: "Mock Property Title A3-024",
     titles: {
       en: "Mock Title EN A3-024",
-      es: "Mock Título ES A3-024"
+      es: "Mock Título ES A3-024",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -14534,7 +14851,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -14547,21 +14864,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-024"
+    cadastral: "323456789ABC-A3-024",
   },
-  
+
   {
     _id: "prop-assoc3-25",
     company_id: "comp-assoc3",
@@ -14581,11 +14898,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -14595,7 +14930,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU=",
-      "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4="
+      "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4=",
     ],
     plot: "401",
     price: {
@@ -14616,18 +14951,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-025",
     terrace: "21",
     title: "Mock Property Title A3-025",
     titles: {
       en: "Mock Title EN A3-025",
-      es: "Mock Título ES A3-025"
+      es: "Mock Título ES A3-025",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -14635,7 +14968,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -14648,21 +14981,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-025"
+    cadastral: "323456789ABC-A3-025",
   },
-  
+
   {
     _id: "prop-assoc3-26",
     company_id: "comp-assoc3",
@@ -14682,11 +15015,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -14696,7 +15047,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1440180997/es/foto/renderizado-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-interior-de-la-sala-de-estar-pared-de.jpg?s=612x612&w=0&k=20&c=BZSASAkGGrd1plHGUUzzpfiV6tRHebkEOF0-4Zk4KlU=",
-      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70="
+      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70=",
     ],
     plot: "401",
     price: {
@@ -14717,18 +15068,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-026",
     terrace: "21",
     title: "Mock Property Title A3-026",
     titles: {
       en: "Mock Title EN A3-026",
-      es: "Mock Título ES A3-026"
+      es: "Mock Título ES A3-026",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -14736,7 +15085,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -14749,21 +15098,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-026"
+    cadastral: "323456789ABC-A3-026",
   },
-  
+
   {
     _id: "prop-assoc3-27",
     company_id: "comp-assoc3",
@@ -14783,11 +15132,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -14797,7 +15164,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ=",
-      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw="
+      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw=",
     ],
     plot: "401",
     price: {
@@ -14818,18 +15185,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-027",
     terrace: "21",
     title: "Mock Property Title A3-027",
     titles: {
       en: "Mock Title EN A3-027",
-      es: "Mock Título ES A3-027"
+      es: "Mock Título ES A3-027",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -14837,7 +15202,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -14850,21 +15215,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-027"
+    cadastral: "323456789ABC-A3-027",
   },
-  
+
   {
     _id: "prop-assoc3-28",
     company_id: "comp-assoc3",
@@ -14884,11 +15249,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -14898,7 +15281,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1332822077/es/foto/dise%C3%B1o-de-interiores-estilo-cl%C3%A1sico-moderno-de-la-sala-de-estar-con-m%C3%A1rmol-negro-y-textura-de.jpg?s=612x612&w=0&k=20&c=C-4gNOcRtwrPUJ_oReqoOe4gH1UmO5mKa0WGATZ6cBo=",
-      "https://media.istockphoto.com/id/1404214673/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-papel-tapiz-de-patr%C3%B3n-decorado-de.jpg?s=612x612&w=0&k=20&c=U3uw9ra8YyTgMVAjazondMuQbppV7r-yCd2C281kSrI="
+      "https://media.istockphoto.com/id/1404214673/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-papel-tapiz-de-patr%C3%B3n-decorado-de.jpg?s=612x612&w=0&k=20&c=U3uw9ra8YyTgMVAjazondMuQbppV7r-yCd2C281kSrI=",
     ],
     plot: "401",
     price: {
@@ -14919,18 +15302,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-028",
     terrace: "21",
     title: "Mock Property Title A3-028",
     titles: {
       en: "Mock Title EN A3-028",
-      es: "Mock Título ES A3-028"
+      es: "Mock Título ES A3-028",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -14938,7 +15319,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -14951,21 +15332,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-028"
+    cadastral: "323456789ABC-A3-028",
   },
-  
+
   {
     _id: "prop-assoc3-29",
     company_id: "comp-assoc3",
@@ -14985,11 +15366,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -14999,7 +15398,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2191685332/es/foto/3d-render-living-room.jpg?s=612x612&w=0&k=20&c=TZM28lQyMcqpau1pM6FDeXnZP4tVu8lcWlP1AsYQFPw=",
-      "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU="
+      "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU=",
     ],
     plot: "401",
     price: {
@@ -15020,18 +15419,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-029",
     terrace: "21",
     title: "Mock Property Title A3-029",
     titles: {
       en: "Mock Title EN A3-029",
-      es: "Mock Título ES A3-029"
+      es: "Mock Título ES A3-029",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -15039,7 +15436,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -15052,21 +15449,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-029"
+    cadastral: "323456789ABC-A3-029",
   },
-  
+
   {
     _id: "prop-assoc3-30",
     company_id: "comp-assoc3",
@@ -15086,11 +15483,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -15100,7 +15515,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU=",
-      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0="
+      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0=",
     ],
     plot: "401",
     price: {
@@ -15121,18 +15536,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-030",
     terrace: "21",
     title: "Mock Property Title A3-030",
     titles: {
       en: "Mock Title EN A3-030",
-      es: "Mock Título ES A3-030"
+      es: "Mock Título ES A3-030",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -15140,7 +15553,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -15153,21 +15566,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-030"
+    cadastral: "323456789ABC-A3-030",
   },
-  
+
   {
     _id: "prop-assoc3-31",
     company_id: "comp-assoc3",
@@ -15187,11 +15600,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -15201,7 +15632,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA=",
-      "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ="
+      "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ=",
     ],
     plot: "401",
     price: {
@@ -15222,18 +15653,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-031",
     terrace: "21",
     title: "Mock Property Title A3-031",
     titles: {
       en: "Mock Title EN A3-031",
-      es: "Mock Título ES A3-031"
+      es: "Mock Título ES A3-031",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Apartamento"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -15241,7 +15670,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -15254,21 +15683,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-031"
+    cadastral: "323456789ABC-A3-031",
   },
-  
+
   {
     _id: "prop-assoc3-32",
     company_id: "comp-assoc3",
@@ -15288,11 +15717,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -15302,7 +15749,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ=",
-      "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU="
+      "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU=",
     ],
     plot: "401",
     price: {
@@ -15323,18 +15770,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-032",
     terrace: "21",
     title: "Mock Property Title A3-032",
     titles: {
       en: "Mock Title EN A3-032",
-      es: "Mock Título ES A3-032"
+      es: "Mock Título ES A3-032",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Chalet"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -15342,7 +15787,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -15355,21 +15800,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-032"
+    cadastral: "323456789ABC-A3-032",
   },
-  
+
   {
     _id: "prop-assoc3-33",
     company_id: "comp-assoc3",
@@ -15389,11 +15834,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -15403,7 +15866,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4=",
-      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70="
+      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70=",
     ],
     plot: "401",
     price: {
@@ -15424,18 +15887,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-033",
     terrace: "21",
     title: "Mock Property Title A3-033",
     titles: {
       en: "Mock Title EN A3-033",
-      es: "Mock Título ES A3-033"
+      es: "Mock Título ES A3-033",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Chalet"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -15443,7 +15904,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -15456,21 +15917,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-033"
+    cadastral: "323456789ABC-A3-033",
   },
-  
+
   {
     _id: "prop-assoc3-34",
     company_id: "comp-assoc3",
@@ -15490,11 +15951,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -15504,7 +15983,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ=",
-      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw="
+      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw=",
     ],
     plot: "401",
     price: {
@@ -15525,18 +16004,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-034",
     terrace: "21",
     title: "Mock Property Title A3-034",
     titles: {
       en: "Mock Title EN A3-034",
-      es: "Mock Título ES A3-034"
+      es: "Mock Título ES A3-034",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Chalet"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -15544,7 +16021,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -15557,21 +16034,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-034"
+    cadastral: "323456789ABC-A3-034",
   },
-  
+
   {
     _id: "prop-assoc3-35",
     company_id: "comp-assoc3",
@@ -15591,11 +16068,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -15605,7 +16100,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1332822077/es/foto/dise%C3%B1o-de-interiores-estilo-cl%C3%A1sico-moderno-de-la-sala-de-estar-con-m%C3%A1rmol-negro-y-textura-de.jpg?s=612x612&w=0&k=20&c=C-4gNOcRtwrPUJ_oReqoOe4gH1UmO5mKa0WGATZ6cBo=",
-      "https://media.istockphoto.com/id/1404214673/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-papel-tapiz-de-patr%C3%B3n-decorado-de.jpg?s=612x612&w=0&k=20&c=U3uw9ra8YyTgMVAjazondMuQbppV7r-yCd2C281kSrI="
+      "https://media.istockphoto.com/id/1404214673/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-papel-tapiz-de-patr%C3%B3n-decorado-de.jpg?s=612x612&w=0&k=20&c=U3uw9ra8YyTgMVAjazondMuQbppV7r-yCd2C281kSrI=",
     ],
     plot: "401",
     price: {
@@ -15626,18 +16121,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-035",
     terrace: "21",
     title: "Mock Property Title A3-035",
     titles: {
       en: "Mock Title EN A3-035",
-      es: "Mock Título ES A3-035"
+      es: "Mock Título ES A3-035",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Chalet"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -15645,7 +16138,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -15658,21 +16151,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-035"
+    cadastral: "323456789ABC-A3-035",
   },
-  
+
   {
     _id: "prop-assoc3-36",
     company_id: "comp-assoc3",
@@ -15692,11 +16185,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -15706,7 +16217,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/855062934/es/foto/sala-de-estar-y-habitaci%C3%B3n-en-apartamento-o-hotel-dise%C3%B1o-de-interiores-3d-render.jpg?s=612x612&w=0&k=20&c=2wmGUKALng95XA404-5aU91OUpMRnTG2XkBaViWmVgI=",
-      "https://media.istockphoto.com/id/2192761281/es/foto/gran-maqueta-de-sala-de-estar-interior-moderna-y-luminosa-de-lujo.jpg?s=612x612&w=0&k=20&c=iInqThy0RzQO82pji30cSy-6tENP9Lpqojyoq5BVsX4="
+      "https://media.istockphoto.com/id/2192761281/es/foto/gran-maqueta-de-sala-de-estar-interior-moderna-y-luminosa-de-lujo.jpg?s=612x612&w=0&k=20&c=iInqThy0RzQO82pji30cSy-6tENP9Lpqojyoq5BVsX4=",
     ],
     plot: "401",
     price: {
@@ -15727,18 +16238,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-036",
     terrace: "21",
     title: "Mock Property Title A3-036",
     titles: {
       en: "Mock Title EN A3-036",
-      es: "Mock Título ES A3-036"
+      es: "Mock Título ES A3-036",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Chalet"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -15746,7 +16255,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -15759,21 +16268,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-036"
+    cadastral: "323456789ABC-A3-036",
   },
-  
+
   {
     _id: "prop-assoc3-37",
     company_id: "comp-assoc3",
@@ -15793,11 +16302,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -15807,7 +16334,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1245798947/es/foto/interior-cartel-maqueta-sala-de-estar-con-sof%C3%A1-blanco-de-colores-renderizado-3d.jpg?s=612x612&w=0&k=20&c=K5pSLdTpRLLp4xPLT-WOcgXiPupVDqKWz71Ioh9XBjY=",
-      "https://media.istockphoto.com/id/1473033787/es/foto/interior-de-una-sala-de-estar-con-muebles-m%C3%ADnimos.jpg?s=612x612&w=0&k=20&c=iFnvq49HyLLjzIL_Ik0O2fVCQ8ihZAcj75-NJ1T3OSo="
+      "https://media.istockphoto.com/id/1473033787/es/foto/interior-de-una-sala-de-estar-con-muebles-m%C3%ADnimos.jpg?s=612x612&w=0&k=20&c=iFnvq49HyLLjzIL_Ik0O2fVCQ8ihZAcj75-NJ1T3OSo=",
     ],
     plot: "401",
     price: {
@@ -15828,18 +16355,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-037",
     terrace: "21",
     title: "Mock Property Title A3-037",
     titles: {
       en: "Mock Title EN A3-037",
-      es: "Mock Título ES A3-037"
+      es: "Mock Título ES A3-037",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Chalet"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -15847,7 +16372,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -15860,21 +16385,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-037"
+    cadastral: "323456789ABC-A3-037",
   },
-  
+
   {
     _id: "prop-assoc3-38",
     company_id: "comp-assoc3",
@@ -15894,11 +16419,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -15908,7 +16451,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1413337128/es/foto/moderno-sal%C3%B3n-amueblado-con-cocina.jpg?s=612x612&w=0&k=20&c=jNrkkytE2ZX7-ZjR61DO7JQxfCQ730FRi57pNizyM_4=",
-      "https://media.istockphoto.com/id/1001121330/es/foto/dise%C3%B1o-de-interiores-moderno-sal%C3%B3n-blanco.jpg?s=612x612&w=0&k=20&c=wVrp1xDRR9LMVvWtNU46NmSjXnVrJSAIyqEQpmOwykI="
+      "https://media.istockphoto.com/id/1001121330/es/foto/dise%C3%B1o-de-interiores-moderno-sal%C3%B3n-blanco.jpg?s=612x612&w=0&k=20&c=wVrp1xDRR9LMVvWtNU46NmSjXnVrJSAIyqEQpmOwykI=",
     ],
     plot: "401",
     price: {
@@ -15929,18 +16472,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-038",
     terrace: "21",
     title: "Mock Property Title A3-038",
     titles: {
       en: "Mock Title EN A3-038",
-      es: "Mock Título ES A3-038"
+      es: "Mock Título ES A3-038",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Chalet"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -15948,7 +16489,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -15961,21 +16502,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-038"
+    cadastral: "323456789ABC-A3-038",
   },
-  
+
   {
     _id: "prop-assoc3-39",
     company_id: "comp-assoc3",
@@ -15995,11 +16536,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -16009,7 +16568,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1006669284/es/foto/interior-de-la-sala-de-estar-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=N7GmVLSCt3RdUKPF9ULrtYOH4A06gwrcAb42rMqw3Jg=",
-      "https://media.istockphoto.com/id/1354768063/es/foto/render-3d-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=4B24teoBHqN9-u3UFxIOZUaqEgWOIxTQEdKU-6sZrKo="
+      "https://media.istockphoto.com/id/1354768063/es/foto/render-3d-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=4B24teoBHqN9-u3UFxIOZUaqEgWOIxTQEdKU-6sZrKo=",
     ],
     plot: "401",
     price: {
@@ -16030,18 +16589,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-039",
     terrace: "21",
     title: "Mock Property Title A3-039",
     titles: {
       en: "Mock Title EN A3-039",
-      es: "Mock Título ES A3-039"
+      es: "Mock Título ES A3-039",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Chalet"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -16049,7 +16606,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -16062,21 +16619,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-039"
+    cadastral: "323456789ABC-A3-039",
   },
-  
+
   {
     _id: "prop-assoc3-40",
     company_id: "comp-assoc3",
@@ -16096,11 +16653,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -16110,7 +16685,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1209929504/es/foto/esquina-de-la-sala-de-estar-escandinava-de-blanco-y-madera.jpg?s=612x612&w=0&k=20&c=KkwUl9mD6CJ1G1bMyk8XA8citXDGE6gRFWBxFwLakHs=",
-      "https://media.istockphoto.com/id/2161329191/es/foto/acogedora-sala-de-estar-con-muebles-modernos-y-vista-a-la-ciudad-desde-la-ventana.jpg?s=612x612&w=0&k=20&c=trYfmrKI3nsRT5pQvZVNLq5Xr8zJBHuqOJb4Gx-9PIE="
+      "https://media.istockphoto.com/id/2161329191/es/foto/acogedora-sala-de-estar-con-muebles-modernos-y-vista-a-la-ciudad-desde-la-ventana.jpg?s=612x612&w=0&k=20&c=trYfmrKI3nsRT5pQvZVNLq5Xr8zJBHuqOJb4Gx-9PIE=",
     ],
     plot: "401",
     price: {
@@ -16131,18 +16706,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-040",
     terrace: "21",
     title: "Mock Property Title A3-040",
     titles: {
       en: "Mock Title EN A3-040",
-      es: "Mock Título ES A3-040"
+      es: "Mock Título ES A3-040",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Chalet"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -16150,7 +16723,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -16163,21 +16736,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-040"
+    cadastral: "323456789ABC-A3-040",
   },
-  
+
   {
     _id: "prop-assoc3-41",
     company_id: "comp-assoc3",
@@ -16197,11 +16770,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -16211,7 +16802,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2183261630/es/foto/sala-de-estar-contempor%C3%A1nea-con-silla-decorativa-audaz-y-obras-de-arte-modernas.jpg?s=612x612&w=0&k=20&c=bXRc2pJuRxYzqVFlth7vTuf05vIL0M7mulW2uQiaW1M=",
-      "https://media.istockphoto.com/id/2184733372/es/foto/elegante-dormitorio-creado-digitalmente-con-iluminaci%C3%B3n-suave.jpg?s=612x612&w=0&k=20&c=Io58BPk1PW56PddHcB8nGexdlGZ_x9tQ_US86eKA6Tg="
+      "https://media.istockphoto.com/id/2184733372/es/foto/elegante-dormitorio-creado-digitalmente-con-iluminaci%C3%B3n-suave.jpg?s=612x612&w=0&k=20&c=Io58BPk1PW56PddHcB8nGexdlGZ_x9tQ_US86eKA6Tg=",
     ],
     plot: "401",
     price: {
@@ -16232,18 +16823,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-041",
     terrace: "21",
     title: "Mock Property Title A3-041",
     titles: {
       en: "Mock Title EN A3-041",
-      es: "Mock Título ES A3-041"
+      es: "Mock Título ES A3-041",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Chalet"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -16251,7 +16840,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -16264,21 +16853,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-041"
+    cadastral: "323456789ABC-A3-041",
   },
-  
+
   {
     _id: "prop-assoc3-42",
     company_id: "comp-assoc3",
@@ -16298,11 +16887,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -16312,7 +16919,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1177647525/es/foto/lujo-moderno-de-sala-de-estar-y-comedor-con-elemento-cl%C3%A1sico-y-muebles-renderizado-3d.jpg?s=612x612&w=0&k=20&c=qlXPqlYUF_0AhuXlTiAJNYsTBsFPa405lz7SUIPe038=",
-      "https://media.istockphoto.com/id/2191685332/es/foto/3d-render-living-room.jpg?s=612x612&w=0&k=20&c=TZM28lQyMcqpau1pM6FDeXnZP4tVu8lcWlP1AsYQFPw="
+      "https://media.istockphoto.com/id/2191685332/es/foto/3d-render-living-room.jpg?s=612x612&w=0&k=20&c=TZM28lQyMcqpau1pM6FDeXnZP4tVu8lcWlP1AsYQFPw=",
     ],
     plot: "401",
     price: {
@@ -16333,18 +16940,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-042",
     terrace: "21",
     title: "Mock Property Title A3-042",
     titles: {
       en: "Mock Title EN A3-042",
-      es: "Mock Título ES A3-042"
+      es: "Mock Título ES A3-042",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Dúplex"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -16352,7 +16957,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -16365,21 +16970,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-042"
+    cadastral: "323456789ABC-A3-042",
   },
-  
+
   {
     _id: "prop-assoc3-43",
     company_id: "comp-assoc3",
@@ -16399,11 +17004,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -16413,7 +17036,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0=",
-      "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA="
+      "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA=",
     ],
     plot: "401",
     price: {
@@ -16434,18 +17057,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-043",
     terrace: "21",
     title: "Mock Property Title A3-043",
     titles: {
       en: "Mock Title EN A3-043",
-      es: "Mock Título ES A3-043"
+      es: "Mock Título ES A3-043",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Bungalow"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -16453,7 +17074,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -16466,21 +17087,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-043"
+    cadastral: "323456789ABC-A3-043",
   },
-  
+
   {
     _id: "prop-assoc3-44",
     company_id: "comp-assoc3",
@@ -16500,11 +17121,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -16514,7 +17153,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ=",
-      "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ="
+      "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ=",
     ],
     plot: "401",
     price: {
@@ -16535,18 +17174,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-044",
     terrace: "21",
     title: "Mock Property Title A3-044",
     titles: {
       en: "Mock Title EN A3-044",
-      es: "Mock Título ES A3-044"
+      es: "Mock Título ES A3-044",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa de Madera"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -16554,7 +17191,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -16567,21 +17204,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-044"
+    cadastral: "323456789ABC-A3-044",
   },
-  
+
   {
     _id: "prop-assoc3-45",
     company_id: "comp-assoc3",
@@ -16601,11 +17238,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -16615,7 +17270,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU=",
-      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0="
+      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0=",
     ],
     plot: "401",
     price: {
@@ -16636,18 +17291,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-045",
     terrace: "21",
     title: "Mock Property Title A3-045",
     titles: {
       en: "Mock Title EN A3-045",
-      es: "Mock Título ES A3-045"
+      es: "Mock Título ES A3-045",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Edificio"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -16655,7 +17308,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -16668,21 +17321,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-045"
+    cadastral: "323456789ABC-A3-045",
   },
-  
+
   {
     _id: "prop-assoc3-46",
     company_id: "comp-assoc3",
@@ -16702,11 +17355,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -16716,7 +17387,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA=",
-      "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ="
+      "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ=",
     ],
     plot: "401",
     price: {
@@ -16737,18 +17408,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-046",
     terrace: "21",
     title: "Mock Property Title A3-046",
     titles: {
       en: "Mock Title EN A3-046",
-      es: "Mock Título ES A3-046"
+      es: "Mock Título ES A3-046",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -16756,7 +17425,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -16769,21 +17438,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-046"
+    cadastral: "323456789ABC-A3-046",
   },
-  
+
   {
     _id: "prop-assoc3-47",
     company_id: "comp-assoc3",
@@ -16803,11 +17472,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -16817,7 +17504,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ=",
-      "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU="
+      "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU=",
     ],
     plot: "401",
     price: {
@@ -16838,18 +17525,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-047",
     terrace: "21",
     title: "Mock Property Title A3-047",
     titles: {
       en: "Mock Title EN A3-047",
-      es: "Mock Título ES A3-047"
+      es: "Mock Título ES A3-047",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -16857,7 +17542,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -16870,21 +17555,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-047"
+    cadastral: "323456789ABC-A3-047",
   },
-  
+
   {
     _id: "prop-assoc3-48",
     company_id: "comp-assoc3",
@@ -16904,11 +17589,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -16918,7 +17621,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4=",
-      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70="
+      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70=",
     ],
     plot: "401",
     price: {
@@ -16939,18 +17642,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-048",
     terrace: "21",
     title: "Mock Property Title A3-048",
     titles: {
       en: "Mock Title EN A3-048",
-      es: "Mock Título ES A3-048"
+      es: "Mock Título ES A3-048",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -16958,7 +17659,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -16971,21 +17672,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-048"
+    cadastral: "323456789ABC-A3-048",
   },
-  
+
   {
     _id: "prop-assoc3-49",
     company_id: "comp-assoc3",
@@ -17005,11 +17706,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -17019,7 +17738,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ=",
-      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw="
+      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw=",
     ],
     plot: "401",
     price: {
@@ -17040,18 +17759,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-049",
     terrace: "21",
     title: "Mock Property Title A3-049",
     titles: {
       en: "Mock Title EN A3-049",
-      es: "Mock Título ES A3-049"
+      es: "Mock Título ES A3-049",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Casa"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -17059,7 +17776,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -17072,21 +17789,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-049"
+    cadastral: "323456789ABC-A3-049",
   },
-  
+
   {
     _id: "prop-assoc3-50",
     company_id: "comp-assoc3",
@@ -17106,11 +17823,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -17120,7 +17855,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1332822077/es/foto/dise%C3%B1o-de-interiores-estilo-cl%C3%A1sico-moderno-de-la-sala-de-estar-con-m%C3%A1rmol-negro-y-textura-de.jpg?s=612x612&w=0&k=20&c=C-4gNOcRtwrPUJ_oReqoOe4gH1UmO5mKa0WGATZ6cBo=",
-      "https://media.istockphoto.com/id/1404214673/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-papel-tapiz-de-patr%C3%B3n-decorado-de.jpg?s=612x612&w=0&k=20&c=U3uw9ra8YyTgMVAjazondMuQbppV7r-yCd2C281kSrI="
+      "https://media.istockphoto.com/id/1404214673/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-papel-tapiz-de-patr%C3%B3n-decorado-de.jpg?s=612x612&w=0&k=20&c=U3uw9ra8YyTgMVAjazondMuQbppV7r-yCd2C281kSrI=",
     ],
     plot: "401",
     price: {
@@ -17141,18 +17876,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-050",
     terrace: "21",
     title: "Mock Property Title A3-050",
     titles: {
       en: "Mock Title EN A3-050",
-      es: "Mock Título ES A3-050"
+      es: "Mock Título ES A3-050",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Edificio"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -17160,7 +17893,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -17173,21 +17906,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-050"
+    cadastral: "323456789ABC-A3-050",
   },
-  
+
   {
     _id: "prop-assoc3-51",
     company_id: "comp-assoc3",
@@ -17207,11 +17940,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -17221,7 +17972,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/855062934/es/foto/sala-de-estar-y-habitaci%C3%B3n-en-apartamento-o-hotel-dise%C3%B1o-de-interiores-3d-render.jpg?s=612x612&w=0&k=20&c=2wmGUKALng95XA404-5aU91OUpMRnTG2XkBaViWmVgI=",
-      "https://media.istockphoto.com/id/2192761281/es/foto/gran-maqueta-de-sala-de-estar-interior-moderna-y-luminosa-de-lujo.jpg?s=612x612&w=0&k=20&c=iInqThy0RzQO82pji30cSy-6tENP9Lpqojyoq5BVsX4="
+      "https://media.istockphoto.com/id/2192761281/es/foto/gran-maqueta-de-sala-de-estar-interior-moderna-y-luminosa-de-lujo.jpg?s=612x612&w=0&k=20&c=iInqThy0RzQO82pji30cSy-6tENP9Lpqojyoq5BVsX4=",
     ],
     plot: "401",
     price: {
@@ -17242,18 +17993,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-051",
     terrace: "21",
     title: "Mock Property Title A3-051",
     titles: {
       en: "Mock Title EN A3-051",
-      es: "Mock Título ES A3-051"
+      es: "Mock Título ES A3-051",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Parcela"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -17261,7 +18010,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -17274,21 +18023,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-051"
+    cadastral: "323456789ABC-A3-051",
   },
-  
+
   {
     _id: "prop-assoc3-52",
     company_id: "comp-assoc3",
@@ -17308,11 +18057,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -17322,7 +18089,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1245798947/es/foto/interior-cartel-maqueta-sala-de-estar-con-sof%C3%A1-blanco-de-colores-renderizado-3d.jpg?s=612x612&w=0&k=20&c=K5pSLdTpRLLp4xPLT-WOcgXiPupVDqKWz71Ioh9XBjY=",
-      "https://media.istockphoto.com/id/1473033787/es/foto/interior-de-una-sala-de-estar-con-muebles-m%C3%ADnimos.jpg?s=612x612&w=0&k=20&c=iFnvq49HyLLjzIL_Ik0O2fVCQ8ihZAcj75-NJ1T3OSo="
+      "https://media.istockphoto.com/id/1473033787/es/foto/interior-de-una-sala-de-estar-con-muebles-m%C3%ADnimos.jpg?s=612x612&w=0&k=20&c=iFnvq49HyLLjzIL_Ik0O2fVCQ8ihZAcj75-NJ1T3OSo=",
     ],
     plot: "401",
     price: {
@@ -17343,18 +18110,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-052",
     terrace: "21",
     title: "Mock Property Title A3-052",
     titles: {
       en: "Mock Title EN A3-052",
-      es: "Mock Título ES A3-052"
+      es: "Mock Título ES A3-052",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Palacio"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -17362,7 +18127,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -17375,21 +18140,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-052"
+    cadastral: "323456789ABC-A3-052",
   },
-  
+
   {
     _id: "prop-assoc3-53",
     company_id: "comp-assoc3",
@@ -17409,11 +18174,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -17423,7 +18206,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1413337128/es/foto/moderno-sal%C3%B3n-amueblado-con-cocina.jpg?s=612x612&w=0&k=20&c=jNrkkytE2ZX7-ZjR61DO7JQxfCQ730FRi57pNizyM_4=",
-      "https://media.istockphoto.com/id/1001121330/es/foto/dise%C3%B1o-de-interiores-moderno-sal%C3%B3n-blanco.jpg?s=612x612&w=0&k=20&c=wVrp1xDRR9LMVvWtNU46NmSjXnVrJSAIyqEQpmOwykI="
+      "https://media.istockphoto.com/id/1001121330/es/foto/dise%C3%B1o-de-interiores-moderno-sal%C3%B3n-blanco.jpg?s=612x612&w=0&k=20&c=wVrp1xDRR9LMVvWtNU46NmSjXnVrJSAIyqEQpmOwykI=",
     ],
     plot: "401",
     price: {
@@ -17444,18 +18227,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-053",
     terrace: "21",
     title: "Mock Property Title A3-053",
     titles: {
       en: "Mock Title EN A3-053",
-      es: "Mock Título ES A3-053"
+      es: "Mock Título ES A3-053",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Granja"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -17463,7 +18244,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -17476,21 +18257,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-053"
+    cadastral: "323456789ABC-A3-053",
   },
-  
+
   {
     _id: "prop-assoc3-54",
     company_id: "comp-assoc3",
@@ -17510,11 +18291,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -17524,7 +18323,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1006669284/es/foto/interior-de-la-sala-de-estar-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=N7GmVLSCt3RdUKPF9ULrtYOH4A06gwrcAb42rMqw3Jg=",
-      "https://media.istockphoto.com/id/1354768063/es/foto/render-3d-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=4B24teoBHqN9-u3UFxIOZUaqEgWOIxTQEdKU-6sZrKo="
+      "https://media.istockphoto.com/id/1354768063/es/foto/render-3d-de-la-sala-de-estar.jpg?s=612x612&w=0&k=20&c=4B24teoBHqN9-u3UFxIOZUaqEgWOIxTQEdKU-6sZrKo=",
     ],
     plot: "401",
     price: {
@@ -17545,18 +18344,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-054",
     terrace: "21",
     title: "Mock Property Title A3-054",
     titles: {
       en: "Mock Title EN A3-054",
-      es: "Mock Título ES A3-054"
+      es: "Mock Título ES A3-054",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Estudio"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -17564,7 +18361,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -17577,21 +18374,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-054"
+    cadastral: "323456789ABC-A3-054",
   },
-  
+
   {
     _id: "prop-assoc3-55",
     company_id: "comp-assoc3",
@@ -17611,11 +18408,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -17625,7 +18440,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2162976943/es/foto/moderno-interior-de-estudio-plano-con-mesa-de-comedor-y-sof%C3%A1-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=O5L8DyHZM-DqGUhI9snQjEumM0R_LdV56zfM2iSaQFU=",
-      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0="
+      "https://media.istockphoto.com/id/1163760173/es/foto/3d-renderizado-moderno-comedor-y-sala-de-estar-con-decoraci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=XAEzZ4ucIdEkL74-XDDj7z8XuKVdCafbdPkgFwPG_-0=",
     ],
     plot: "401",
     price: {
@@ -17646,18 +18461,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-055",
     terrace: "21",
     title: "Mock Property Title A3-055",
     titles: {
       en: "Mock Title EN A3-055",
-      es: "Mock Título ES A3-055"
+      es: "Mock Título ES A3-055",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Negocio"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -17665,7 +18478,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -17678,21 +18491,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-055"
+    cadastral: "323456789ABC-A3-055",
   },
-  
+
   {
     _id: "prop-assoc3-56",
     company_id: "comp-assoc3",
@@ -17712,11 +18525,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -17726,7 +18557,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1402804502/es/foto/representaci%C3%B3n-3d-ilustraci%C3%B3n-3d-escena-interior-y-maqueta-sala-de-estar-de-estilo-moderno.jpg?s=612x612&w=0&k=20&c=8bIZJngjKfEgAVne__W-4NIFlmZBRMumnkkOM57OuiA=",
-      "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ="
+      "https://media.istockphoto.com/id/1125001772/es/foto/3d-render-lujo-y-moderna-sala-de-estar-con-sof%C3%A1-de-la-tela.jpg?s=612x612&w=0&k=20&c=8AKHSHCokhKrT3Yur3TtB_jarvi6kqSqnN6VDDUywYQ=",
     ],
     plot: "401",
     price: {
@@ -17747,18 +18578,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-056",
     terrace: "21",
     title: "Mock Property Title A3-056",
     titles: {
       en: "Mock Title EN A3-056",
-      es: "Mock Título ES A3-056"
+      es: "Mock Título ES A3-056",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Finca"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -17766,7 +18595,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -17779,21 +18608,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-056"
+    cadastral: "323456789ABC-A3-056",
   },
-  
+
   {
     _id: "prop-assoc3-57",
     company_id: "comp-assoc3",
@@ -17813,11 +18642,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -17827,7 +18674,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1088702586/es/foto/3d-rendering-lujo-y-moderna-sala-de-estar-y-comedor.jpg?s=612x612&w=0&k=20&c=nR5679uMAN4mTCDU1vrxPMzAELdcqbPFY6lH7U7toxQ=",
-      "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU="
+      "https://media.istockphoto.com/id/1404496431/es/foto/minimalismo-interior-moderno-dise%C3%B1o-escandinavo-luminoso-estudio-sal%C3%B3n-cocina-y-comedor.jpg?s=612x612&w=0&k=20&c=r2bXhKYO1PE0wDd1euDK1aHjbL3RVKDi9OfKTBN5ejU=",
     ],
     plot: "401",
     price: {
@@ -17848,18 +18695,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-057",
     terrace: "21",
     title: "Mock Property Title A3-057",
     titles: {
       en: "Mock Title EN A3-057",
-      es: "Mock Título ES A3-057"
+      es: "Mock Título ES A3-057",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Dúplex"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -17867,7 +18712,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -17880,21 +18725,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-057"
+    cadastral: "323456789ABC-A3-057",
   },
-  
+
   {
     _id: "prop-assoc3-58",
     company_id: "comp-assoc3",
@@ -17914,11 +18759,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -17928,7 +18791,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/2163016238/es/foto/sill%C3%B3n-sof%C3%A1-minimalista-de-dise%C3%B1o-interior-sala-de-estar-moderna-estilo-contempor%C3%A1neo.jpg?s=612x612&w=0&k=20&c=OmI8bz8TW1vJhSgbOQsbELOEv_4sdOG6rbylleQIIh4=",
-      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70="
+      "https://media.istockphoto.com/id/2184124302/es/foto/sala-de-estar-escandinava-moderna-con-detalles-en-madera-y-ventana-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=T0iiSctvcQ6_rJH-Nn4CVXID7Gy45Hv8psz4UW4ny70=",
     ],
     plot: "401",
     price: {
@@ -17949,18 +18812,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-058",
     terrace: "21",
     title: "Mock Property Title A3-058",
     titles: {
       en: "Mock Title EN A3-058",
-      es: "Mock Título ES A3-058"
+      es: "Mock Título ES A3-058",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Dúplex"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -17968,7 +18829,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -17981,21 +18842,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-058"
+    cadastral: "323456789ABC-A3-058",
   },
-  
+
   {
     _id: "prop-assoc3-59",
     company_id: "comp-assoc3",
@@ -18015,11 +18876,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -18029,7 +18908,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/687213546/es/foto/oficina-interior-3-d-procesamiento.jpg?s=612x612&w=0&k=20&c=q1SRy_brkWaOSEPGhW7CzXmQLbCwfTwkRwmuvuIXDSQ=",
-      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw="
+      "https://media.istockphoto.com/id/651349530/es/foto/interior-con-sof%C3%A1-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=l-B_F9xo0_phx4F1G-TLed9bn_egTGdUcqrlStdXmSw=",
     ],
     plot: "401",
     price: {
@@ -18050,18 +18929,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-059",
     terrace: "21",
     title: "Mock Property Title A3-059",
     titles: {
       en: "Mock Title EN A3-059",
-      es: "Mock Título ES A3-059"
+      es: "Mock Título ES A3-059",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Dúplex"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -18069,7 +18946,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -18082,21 +18959,21 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-059"
+    cadastral: "323456789ABC-A3-059",
   },
-  
+
   {
     _id: "prop-assoc3-60",
     company_id: "comp-assoc3",
@@ -18116,11 +18993,29 @@ const properties = [
       da: "",
       nl: "",
       no: "",
-      ru: ""
+      ru: "",
     },
     features: [
-      "feat2",
-      "feat4"
+      "piscina",
+      "terraza",
+      "garaje",
+      "jardín",
+      "aire acondicionado",
+      "calefacción central",
+      "ascensor",
+      "trastero",
+      "balcón",
+      "cocina equipada",
+      "chimenea",
+      "suelos de madera",
+      "vistas al mar",
+      "cerca de transporte público",
+      "paneles solares",
+      "alarma de seguridad",
+      "acceso para personas con movilidad reducida",
+      "domótica",
+      "doble acristalamiento",
+      "zona comunitaria con jardín o parque",
     ],
     is_partner: true,
     partner_id: "assoc3",
@@ -18130,7 +19025,7 @@ const properties = [
     new_build: false,
     pics: [
       "https://media.istockphoto.com/id/1332822077/es/foto/dise%C3%B1o-de-interiores-estilo-cl%C3%A1sico-moderno-de-la-sala-de-estar-con-m%C3%A1rmol-negro-y-textura-de.jpg?s=612x612&w=0&k=20&c=C-4gNOcRtwrPUJ_oReqoOe4gH1UmO5mKa0WGATZ6cBo=",
-      "https://media.istockphoto.com/id/2192761281/es/foto/gran-maqueta-de-sala-de-estar-interior-moderna-y-luminosa-de-lujo.jpg?s=612x612&w=0&k=20&c=iInqThy0RzQO82pji30cSy-6tENP9Lpqojyoq5BVsX4="
+      "https://media.istockphoto.com/id/2192761281/es/foto/gran-maqueta-de-sala-de-estar-interior-moderna-y-luminosa-de-lujo.jpg?s=612x612&w=0&k=20&c=iInqThy0RzQO82pji30cSy-6tENP9Lpqojyoq5BVsX4=",
     ],
     plot: "401",
     price: {
@@ -18151,18 +19046,16 @@ const properties = [
       comm_listing: 0,
       comm_listing_pct: 0,
       comm_selling_type: "%",
-      comm_selling_total: 50
+      comm_selling_total: 50,
     },
     reference: "EX-A3-060",
     terrace: "21",
     title: "Mock Property Title A3-060",
     titles: {
       en: "Mock Title EN A3-060",
-      es: "Mock Título ES A3-060"
+      es: "Mock Título ES A3-060",
     },
-    type: [
-      "residential"
-    ],
+    type: ["Otros"],
     address: {
       street: "Mock Street 101",
       area: "Mock Area A3",
@@ -18170,7 +19063,7 @@ const properties = [
       city: "Mock City A3",
       region: "Mock Region A3",
       country: "Mockland",
-      zipcode: "00003"
+      zipcode: "00003",
     },
     area: "area3",
     subarea: "subarea3",
@@ -18183,26 +19076,22 @@ const properties = [
     ibi_tax: 1201,
     map: {
       lat: "36.300001",
-      lng: "-4.300001"
+      lng: "-4.300001",
     },
     public_view_disabled: false,
     toilets: "2",
     year: {
-      construction: 2013
+      construction: 2013,
     },
     allow_commercial_uses: {
       commercial_uses: false,
-      selected_companies: []
+      selected_companies: [],
     },
     is_exclusive: false,
-    cadastral: "323456789ABC-A3-060"
-  }
-]
+    cadastral: "323456789ABC-A3-060",
+  },
+];
 
 export const GetAllProperties = () => {
-    return properties;
-}
-
-
-
-
+  return properties;
+};
