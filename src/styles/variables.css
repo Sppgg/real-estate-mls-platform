@@ -2,26 +2,29 @@
 
 /*typography*/
 
---font-heading: 'Poppins', sans-serif;
---font-body: 'Inter', sans-serif;
+--font-heading: 'Playfair Display', serif; /*títulos y encabezados*/
+--font-body: 'Open Sans', sans-serif; /*texto general y navegación */
 
 /*font-size*/
 
 /*Inputs Colors*/
 
+/*Paleta principal*/
+
+--color-principal:#264653; /* Branding principal: logos, encabezados, navbar */
+--color-secondary: #E9C46A;  /* Toques cálidos en fondos o badges destacados */
+--color-accent: #E76F51;   /* Elementos llamativos: botones secundarios, etiquetas */
+--color-light-grey: #F5F5F5; /*Inactivo*/
+
 /*Text Colors*/
-
---Zoddak-green-principal: #00B48C; /* Primario (CTAs, enlaces activos) */
---Zoddak-drak-green: #007F65; /* Hover, contraste oscuro */
---Zoddak-soft-teal:  #B3E2D3; /* Fondos suaves, cards */
---Zoddak-black: #1B1B1B; /* Texto principal */
---Zoddak-white: #FFFFFF;  /* Fondo general */
---Zoddak-light-grey: #F5F5F5; /* Fondos alternos, elementos inactivos */
-
+--color-text-black: #1B1B1B; /* Texto */
+--color-text-white: #FFFFFF;  
+--color-text: #2A2A2A; /* Texto principal: títulos, párrafos importantes */
+--color-text-muted: #6E6E6E;   /* Texto secundario o descripciones */
 
 /*Shadows*/ 
---Zoddak-shadow-card: 0 2px 6px rgba(0, 0, 0, 0.06);
---Zoddak-shadow-hover: 0 4px 12px rgba(0, 180, 140, 0.2);
+--shadow-card: 0 2px 6px rgba(0, 0, 0, 0.06);
+--shadow-hover: 0 4px 12px rgba(0, 180, 140, 0.2);
 
 /*Spacing & Border Radius*/ 
 
@@ -33,16 +36,13 @@
 --border-radius-lg: 12px; /*redondeo grande*/
 
 
-/*Ejemplo de botón y tarjeta*/
+/*Fondo*/
+--color-bg: #F4F4F4; /*Fondo general de la página */
+--color-surface: #FFFFFF; /*Fondo de tarjetas, secciones o contenedores*/
 
---Zoddak-button-background: #00B48C;
---Zoddak-button--hover: #007F65;
-
---Zoddak-card-background: #FFFFFF;
---Zoddak-card-border: #B3E2D3;
---Zoddak-card-title: #1B1B1B;
---Zoddak-card-color-price: #00B48C;
-
+/*Detalles UI*/
+--color-border: #DDDDDD; /*Líneas divisorias, bordes de tarjetas o inputs*/
+--color-cta: #2A9D8F;  /*Llamadas a la acción: botones principales*/
 
 }
 
