@@ -1,0 +1,48 @@
+:root{
+
+/*typography*/
+
+--font-heading: 'Poppins', sans-serif;
+--font-body: 'Inter', sans-serif;
+
+/*font-size*/
+
+/*Inputs Colors*/
+
+/*Text Colors*/
+
+--Zoddak-green-principal: #00B48C; /* Primario (CTAs, enlaces activos) */
+--Zoddak-drak-green: #007F65; /* Hover, contraste oscuro */
+--Zoddak-soft-teal:  #B3E2D3; /* Fondos suaves, cards */
+--Zoddak-black: #1B1B1B; /* Texto principal */
+--Zoddak-white: #FFFFFF;  /* Fondo general */
+--Zoddak-light-grey: #F5F5F5; /* Fondos alternos, elementos inactivos */
+
+
+/*Shadows*/ 
+--Zoddak-shadow-card: 0 2px 6px rgba(0, 0, 0, 0.06);
+--Zoddak-shadow-hover: 0 4px 12px rgba(0, 180, 140, 0.2);
+
+/*Spacing & Border Radius*/ 
+
+--spacing-unit: 1rem; /*controla distancias*/
+
+/*controla curvatura de bordes.*/
+--border-radius-sm: 4px;  /*pequeño redondeo*/
+--border-radius-md: 8px;  /*mediano redondeo*/
+--border-radius-lg: 12px; /*redondeo grande*/
+
+
+/*Ejemplo de botón y tarjeta*/
+
+--Zoddak-button-background: #00B48C;
+--Zoddak-button--hover: #007F65;
+
+--Zoddak-card-background: #FFFFFF;
+--Zoddak-card-border: #B3E2D3;
+--Zoddak-card-title: #1B1B1B;
+--Zoddak-card-color-price: #00B48C;
+
+
+}
+
