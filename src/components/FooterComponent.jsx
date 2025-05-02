@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./../styles/FooterStyle.css";
+import { Link } from "react-router-dom";
 
-const Footer = () => {
+const FooterComponent = () => {
   // Estados para el formulario de contacto
   const [formData, setFormData] = useState({
     name: "",
@@ -91,6 +92,32 @@ const Footer = () => {
         </form>
       </div>
 
+      {/* Sección de redes sociales (placeholder) */}
+      <div className="footer__social">
+        <ul className="footer__social-list">
+          <li className="footer__social-item">
+            <a className="footer__social-link" href="#">
+              Facebook
+            </a>
+          </li>
+          <li className="footer__social-item">
+            <a className="footer__social-link" href="#">
+              Twitter
+            </a>
+          </li>
+          <li className="footer__social-item">
+            <a className="footer__social-link" href="#">
+              Instagram
+            </a>
+          </li>
+          <li className="footer__social-item">
+            <a className="footer__social-link" href="#">
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
+
       {/* Sección inferior: Información legal y selector de idioma */}
       <div className="footer__bottom">
         <div className="footer__legal">
@@ -102,19 +129,19 @@ const Footer = () => {
           <div className="footer__legal-row">
             <ul className="footer__links">
               <li className="footer__link-item">
-                <a className="footer__link" href="/aviso-legal">
+                <Link className="footer__link" to="/aviso-legal">
                   Aviso legal
-                </a>
+                </Link>
               </li>
               <li className="footer__link-item">
-                <a className="footer__link" href="/proteccion-datos">
+                <Link className="footer__link" to="/proteccion-de-datos">
                   Protección de datos
-                </a>
+                </Link>
               </li>
               <li className="footer__link-item">
-                <a className="footer__link" href="/politica-cookies">
+                <Link className="footer__link" to="/politica-de-cookies">
                   Política de cookies
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -131,4 +158,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterComponent;

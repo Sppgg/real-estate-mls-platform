@@ -74,6 +74,40 @@
   background-color: var(--color-accent);
 }
 
+/* Redes sociales en el footer */
+.footer__social {
+  margin-top: 15px;
+}
+
+.footer__social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.footer__social-item {
+  margin: 0;
+}
+.footer__social-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--color-surface); /* Asegura buen contraste */
+  transition: fill 0.3s ease;
+}
+
+.footer__social-link {
+  color: var(--color-text); /* Asegura buen contraste */
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer__social-link:hover {
+  color: var(--color-accent);
+}
+
 /* Sección inferior: Información legal y selector de idioma */
 .footer__bottom {
   margin-top: 20px;
