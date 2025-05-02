@@ -1,4 +1,3 @@
-// src/components/Footer.jsx
 import React, { useState } from "react";
 import "./../styles/FooterStyle.css";
 
@@ -97,8 +96,7 @@ const Footer = () => {
         <div className="footer__legal">
           <div className="footer__legal-row">
             <p className="footer__copyright">
-              &copy; 2025 Zoddak Real Estate, 3.0.0. Todos los derechos
-              reservados.
+              &copy; 2025 Zoddak Real Estate, 3.0 Todos los derechos reservados.
             </p>
           </div>
           <div className="footer__legal-row">
