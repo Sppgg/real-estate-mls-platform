@@ -1,17 +1,22 @@
 import React from 'react';
 import { AssociationProvider, useAssociation } from '../../context/AssociationContext';
-
+import { PropertiesProvider, useProperties } from '../../context/PropertiesContext';
 //funcion para crear el Layout
-function LayouContent(){
+function LayoutContent(){
 
     //Se accede a los datos de las asociaciones a través de la funcion 
     const association = useAssociation();
 
+    //Se accede a las propiedades solo si lo necesita el header o footer si no va en los componentes
+    const propertiesByAssoc = useProperties();
+
   return (
     //ver si <></> o div (Si no ponemos div hay que dar estilos a App)
     <>
-    {/*HEADER*/}
-    {/*MAIN OUTLET*/}
+    {/*<Header/>*/}
+    {/*<Main>
+      <Outlet/>
+    <Main/>*/}
     {/*FOOTER*/}
     </>
   )
@@ -22,8 +27,9 @@ function LayouContent(){
 export default function MainLayout() {
   return (
     <AssociationProvider>
-      {/*Provider del contexto de las propiedades tendría que ir aquí para que tengan acceso */}
-      <LayouContent/>
+      <PropertiesProvider>
+        <LayoutContent/>
+      </PropertiesProvider>
     </AssociationProvider>
   )
 }

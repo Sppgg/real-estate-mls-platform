@@ -24,6 +24,11 @@ function App() {
         {/* <Route path='properties' element={<Properties/>}/> */}
         {/* <Route path='properties/:propertId' element={<PropertyDetails/>}/> */}
         {/* <Route path='presentation' element={<PresentationAssociation/>}/> */}
+
+        {/* <Route path="/aviso-legal" element={<LegalNoticePage />} />
+        <Route path="/politica-de-cookies" element={<CookiesPolicyPage />} />
+        <Route path="/proteccion-de-datos" element={<DataProtectionPage />} /> */}
+        
       </Route>  
 
       {/* <Route path='*' element={<NotFound/>}/>   */}

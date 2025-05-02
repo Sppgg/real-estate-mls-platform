@@ -11,9 +11,9 @@ import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <Router>
-    <StrictMode>
+    {/* <StrictMode> */}
       <App />
-    </StrictMode>
+    {/* </StrictMode> */}
   </Router>
   
 )
