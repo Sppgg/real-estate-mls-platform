@@ -1,0 +1,172 @@
+/* Estilos base para el footer */
+/* Contenedor principal del footer */
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  padding: 20px;
+  font-family: var(--font-body);
+}
+
+/* Contenedor principal */
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Sección de contacto */
+.footer__contact {
+  text-align: center;
+}
+.footer__heading {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--color-surface);
+}
+.footer__description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: var(--color-surface);
+}
+
+/* Formulario de contacto */
+.footer__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer__form-group {
+  display: flex;
+  flex-direction: column;
+}
+.footer__label {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: var(--color-surface);
+}
+.footer__input,
+.footer__textarea {
+  padding: 10px;
+  font-size: 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+}
+.footer__textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+.footer__submit {
+  background-color: var(--color-cta);
+  color: var(--color-surface);
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+.footer__submit:hover {
+  background-color: var(--color-accent);
+}
+
+/* Sección inferior: Información legal y selector de idioma */
+.footer__bottom {
+  margin-top: 20px;
+  background-color: var(--color-surface);
+  padding: 15px 20px;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.8rem;
+}
+
+/* Organización en filas para el contenido legal */
+.footer__legal {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.footer__legal-row {
+  width: 100%;
+  text-align: center;
+  margin: 5px 0;
+}
+.footer__copyright {
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* Lista de enlaces legales */
+.footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.footer__link-item {
+  margin: 0;
+}
+.footer__link {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+/* Selector de idioma */
+.footer__language-button {
+  background: none;
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+.footer__language-icon {
+  margin-left: 5px;
+}
+
+/* Responsive: ajustes para pantallas grandes */
+@media (min-width: 768px) {
+  .footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer__contact {
+    flex: 1;
+    text-align: left;
+  }
+
+  .footer__form {
+    flex: 1;
+    max-width: 400px;
+  }
+
+  .footer__bottom {
+    text-align: left;
+  }
+
+  .footer__legal {
+    align-items: flex-start;
+  }
+
+  .footer__legal-row {
+    text-align: left;
+  }
+
+  .footer__links {
+    justify-content: flex-start;
+  }
+}

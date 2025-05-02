@@ -1,13 +1,12 @@
-
-import './App.css';
+import "./App.css";
+import Footer from "./components/Footer";
 
 function App() {
-  
-
   return (
-    <>
-    </>
-  )
+    <div>
+      <Footer></Footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
