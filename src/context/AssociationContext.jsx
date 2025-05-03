@@ -9,6 +9,7 @@ const AssociationContext = createContext();
 export function AssociationProvider({children}){
     //id de la url 
     const {id} = useParams();
+
     //almacenamos los datos que traemos de la data associationData
     const [association, setAssociation] = useState(null);
 

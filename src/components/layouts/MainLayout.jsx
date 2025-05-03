@@ -1,6 +1,8 @@
 import React from 'react';
 import { AssociationProvider, useAssociation } from '../../context/AssociationContext';
 import { PropertiesProvider, useProperties } from '../../context/PropertiesContext';
+import HeaderComponent from '../header/HeaderComponent';
+
 //funcion para crear el Layout
 function LayoutContent(){
 
@@ -13,7 +15,7 @@ function LayoutContent(){
   return (
     //ver si <></> o div (Si no ponemos div hay que dar estilos a App)
     <>
-    {/*<Header/>*/}
+    <HeaderComponent/>
     {/*<Main>
       <Outlet/>
     <Main/>*/}
