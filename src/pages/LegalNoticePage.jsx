@@ -1,48 +1,37 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "../styles/LegalNoticeStyle.css";
 
 const LegalNoticePage = () => {
+  const { t } = useTranslation();
+
   return (
     <main className="legal-notice">
-      <h1 className="legal-notice__title">Aviso legal</h1>
-      <p className="legal-notice__intro">
-        Bienvenido a nuestro sitio web. Este Aviso Legal regula el uso del
-        sitio, la responsabilidad sobre la información contenida en el mismo y
-        los derechos de propiedad intelectual.
-      </p>
+      <h1 className="legal-notice__title">{t("legalNotice.title")}</h1>
+      <p className="legal-notice__intro">{t("legalNotice.intro")}</p>
       <section className="legal-notice__section">
-        <h2 className="legal-notice__subtitle">1. Información general</h2>
-        <p className="legal-notice__intro">
-          El sitio web es operado por Zoddak Real Estate, con domicilio en
-          [Dirección de la empresa], y CIF [Número de identificación fiscal].
-        </p>
-      </section>
-      <section className="legal-notice__section">
-        <h2 className="legal-notice__subtitle">2. Propiedad intelectual</h2>
-        <p className="legal-notice__intro">
-          Todos los contenidos del sitio web, incluyendo textos, imágenes,
-          gráficos, logotipos y software, están protegidos por derechos de
-          propiedad intelectual. Queda prohibida su reproducción total o parcial
-          sin autorización previa.
-        </p>
-      </section>
-      <section className="legal-notice__section">
-        <h2 className="legal-notice__subtitle">3. Uso del sitio web</h2>
-        <p className="legal-notice__intro">
-          El usuario se compromete a utilizar el sitio web de conformidad con la
-          ley y a no realizar actividades que puedan dañar la imagen, intereses
-          o derechos de Zoddak Real Estate o de terceros.
-        </p>
+        <h2 className="legal-notice__subtitle">
+          {t("legalNotice.section1_title")}
+        </h2>
+        <p className="legal-notice__intro">{t("legalNotice.section1_text")}</p>
       </section>
       <section className="legal-notice__section">
         <h2 className="legal-notice__subtitle">
-          4. Limitación de responsabilidad
+          {t("legalNotice.section2_title")}
         </h2>
-        <p className="legal-notice__intro">
-          Zoddak Real Estate no se hace responsable de los daños y perjuicios
-          que puedan derivarse del uso indebido del sitio web o de la
-          información contenida en el mismo.
-        </p>
+        <p className="legal-notice__intro">{t("legalNotice.section2_text")}</p>
+      </section>
+      <section className="legal-notice__section">
+        <h2 className="legal-notice__subtitle">
+          {t("legalNotice.section3_title")}
+        </h2>
+        <p className="legal-notice__intro">{t("legalNotice.section3_text")}</p>
+      </section>
+      <section className="legal-notice__section">
+        <h2 className="legal-notice__subtitle">
+          {t("legalNotice.section4_title")}
+        </h2>
+        <p className="legal-notice__intro">{t("legalNotice.section4_text")}</p>
       </section>
     </main>
   );
