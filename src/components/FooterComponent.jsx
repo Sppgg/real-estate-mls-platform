@@ -2,8 +2,8 @@ import React, { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import "./../styles/FooterStyle.css";
 import { useTranslation } from "react-i18next";
-import LanguageSelector from "./LanguageSelector";
-import ScrollToTop from "./ScrollToTop";
+import LanguageSelector from "./LanguageSelectorComponent";
+import ScrollToTop from "./ScrollToTopComponent";
 
 const socialLinks = [
   {
