@@ -75,8 +75,12 @@ const HeaderMobileComponent = () => {
         </div>
 
         {/*Selector de idioma*/}
-        <div>
-          {/*<LenguajeSelector/>*/}
+        <div className='header-language-selector'>
+          <select>
+            <option value="es">Español</option>
+            <option value="en">Inglés</option>
+          </select>
+          {/*<LanguajeSelector/>*/}
         </div>
 
       </div>
