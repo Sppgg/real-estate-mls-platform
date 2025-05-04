@@ -1,60 +1,79 @@
+/* headerMobile.css */
+
 .header-mobile {
-    position: relative;
-    z-index: 50;
-    width: 100%;
-  
-    &-container-topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem;
-      background-color: #ffffff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-  
-    &-logo img {
-      height: 40px;
-      object-fit: contain;
-    }
-  
-    .button-menu-mobile {
-      background: none;
-      border: none;
-      cursor: pointer;
-      z-index: 60;
-    }
-  
+  width: 100%;
+  position: relative;
+  z-index: 50;
+
+  .header-mobile-container-topbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #ffffff; /*Mirar colores*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);/*Mirar la sombra*/
+  }
+
+  .button-menu-mobile {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 60;
+    
+
     .menu-icon-close,
     .menu-icon-open {
       width: 24px;
       height: 24px;
     }
-  
-    &-container-menu {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%; /* Ocupa todo el ancho */
-      height: 100vh; /* Altura total de la pantalla */
-      background-color: #ffffff;
-      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      transition: transform 0.3s ease-in-out;
-      transform: translateX(0); /* Aparece desde la izquierda */
-      z-index: 40;
+  }
+
+  .header-mobile-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+
+    img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
     }
-  
-    &-nav {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-      padding: 2rem;
+  }
+
+  /*Revisar este problema*/
+  &-container-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+
+    &.open {
+      transform: translateX(0);
     }
-  
-    &-nav-li {
+  }
+
+  &-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+
+    &-li {
       list-style: none;
       font-size: 1.2rem;
       padding: 0.5rem 0;
@@ -63,9 +82,10 @@
       cursor: pointer;
       border-bottom: 1px solid #eee;
       transition: background-color 0.2s ease;
-    }
-  
-    &-nav-li:hover {
-      background-color: #f5f5f5;
+
+      &:hover {
+        background-color: #f5f5f5;
+      }
     }
   }
+}

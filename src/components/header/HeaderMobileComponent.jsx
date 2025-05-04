@@ -12,6 +12,8 @@ const HeaderMobileComponent = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   //useRef para detectar clics fuera de el 
   const menuRef = useRef(); 
+  //useRef para detectar clics en el botón
+  const buttonRef = useRef();
   //isMobile para saber en que pantalla estamos y cerrar el menu 
   const isMobile = useIsMobile();
   //Traer los datos de la asociación seleccionada
@@ -22,11 +24,15 @@ const HeaderMobileComponent = () => {
     setMenuOpen(!menuOpen);
   }
 
-  //Renderizado del menu si cambia la pantalla en la que se visualiza 
+  //Función para cerrar el menú
+  const closeMenu = () => {
+    setMenuOpen(false);
+  }
+
+  //Cierra el menú si cambia a modo escritorio
   useEffect(() => {
-    //distinto a movil y el menú abierto
     if(!isMobile && menuOpen){
-      setMenuOpen(false);
+      closeMenu();
     }
 
   }, [isMobile, menuOpen]);
@@ -35,8 +41,9 @@ const HeaderMobileComponent = () => {
   useEffect(() => {
     //función para cerrar el menu 
     const handleClickOutside = (e) => {
-      if (menuRef.current && !menuRef.current.contains(e.target)) {
-        setMenuOpen(false);
+      if (menuRef.current && !menuRef.current.contains(e.target) 
+        && buttonRef.current && !buttonRef.current.contains(e.target)) {
+        closeMenu();
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -50,7 +57,7 @@ const HeaderMobileComponent = () => {
 
         {/*Botón del menú*/}
 
-        <button className='button-menu-mobile' onClick={toggleMenu}>
+        <button className='button-menu-mobile' ref={buttonRef} onClick={toggleMenu}>
           {menuOpen ? (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="menu-icon-close">
               <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -78,10 +85,12 @@ const HeaderMobileComponent = () => {
       {menuOpen && (
         <div ref={menuRef} className="header-mobile-container-menu">
           <nav className="header-mobile-nav">
-            {/* Cada ítem cierra el menú al hacer clic */}
-            <li onClick={() => setMenuOpen(false)} className="header-mobile-nav-li">Inicio</li>
-            <li onClick={() => setMenuOpen(false)} className="header-mobile-nav-li">Nosotros</li>
-            <li onClick={() => setMenuOpen(false)} className="header-mobile-nav-li">Contacto</li>
+            <ul>
+              {/* Cada ítem cierra el menú al hacer clic */}
+              <li onClick={closeMenu} className="header-mobile-nav-li">Inicio</li>
+              <li onClick={closeMenu} className="header-mobile-nav-li">Nosotros</li>
+              <li onClick={closeMenu} className="header-mobile-nav-li">Contacto</li>
+            </ul>
           </nav>
         </div>
       )}
