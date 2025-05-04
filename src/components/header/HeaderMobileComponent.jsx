@@ -2,6 +2,8 @@ import React from 'react';
 import { useRef, useEffect, useState } from 'react';
 import useIsMobile from '../../customHook/useIsMobile';
 import { useAssociation } from '../../context/AssociationContext';
+import { Link } from 'react-router-dom';
+
 //importacion del css (debo crearlo) y del componente de seleccion de idiomas
 import '../../styles/headerMobile.css';
 
@@ -50,6 +52,7 @@ const HeaderMobileComponent = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   },[])
 
+  
   return (
     <header className='header-mobile'>
 
@@ -71,10 +74,10 @@ const HeaderMobileComponent = () => {
 
         {/*Logo de la asociación*/}
         <div  className='header-mobile-logo'>
-          <img src={association.image} alt={association.business_name}/>
+          <Link to="/association/:id"><img src={association.image} alt={association.business_name}/></Link>
         </div>
 
-        {/*Selector de idioma*/}
+        {/*Selector de idioma TODO*/}
         <div className='header-language-selector'>
           <select>
             <option value="es">Español</option>
@@ -91,9 +94,9 @@ const HeaderMobileComponent = () => {
           <nav className="header-mobile-nav">
             <ul>
               {/* Cada ítem cierra el menú al hacer clic */}
-              <li onClick={closeMenu} className="header-mobile-nav-li">Inicio</li>
-              <li onClick={closeMenu} className="header-mobile-nav-li">Nosotros</li>
-              <li onClick={closeMenu} className="header-mobile-nav-li">Contacto</li>
+              <Link to="/association/:id"><li onClick={closeMenu} className="header-mobile-nav-li">Inicio</li></Link>
+              <Link to="presentation"><li onClick={closeMenu} className="header-mobile-nav-li">Nosotros</li></Link>
+              <Link to="#footer" ><li onClick={closeMenu} className="header-mobile-nav-li">Contacto</li></Link> {/*Tengo que mirar esto TODO*/}
             </ul>
           </nav>
         </div>
