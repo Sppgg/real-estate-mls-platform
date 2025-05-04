@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./../styles/FooterStyle.css";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "./LanguageSelector";
+import ScrollToTop from "./ScrollToTop";
 
 const socialLinks = [
   {
@@ -243,6 +244,8 @@ const FooterComponent = () => {
           </div>
         </div>
       </div>
+      {/* Botón de Scroll dentro del footer */}
+      <ScrollToTop />
     </footer>
   );
 };
