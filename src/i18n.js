@@ -7,6 +7,12 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   es: {
     translation: {
+      // Traducciones al español
+      "header" : {
+        "home": "Inicio",
+        "about": "Nosotros",
+        "contact": "Contacto",
+      },
       "footer": {
         "contact_title": "Contáctanos",
         "contact_description": "Si tienes alguna consulta, deja tus datos y nos pondremos en contacto contigo.",
@@ -70,11 +76,18 @@ const resources = {
           "Para cualquier consulta adicional sobre nuestra política de cookies, por favor, contáctanos en:",
         link: "info@empresa.com"
       },
+  
       // ... otras claves
     }
   },
   en: {
     translation: {
+      // Traducciones al inglés
+      "header" : { 
+        "home": "Home",
+        "about": "About Us",
+        "contact": "Contact",
+      },
       "footer": {
         "contact_title": "Contact us",
         "contact_description": "If you have any question, please leave your details and we will get in touch soon.",
