@@ -100,7 +100,7 @@ const resources = {
           "email_placeholder": "Your email",
           "phone_placeholder": "Your phone number",
           "message_placeholder": "Your message",
-          "submit": "Send"
+          "submit": "Submit"
         },
         "copyright": "© 2025 Zoddak Real Estate, All rights reserved.",
         "legal": "Legal Notice",
