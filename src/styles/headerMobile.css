@@ -11,7 +11,7 @@
   background-color: var(--color-text-white);
   min-width: 270px;
   border-bottom: 1px solid var(--color-cta);
-  /* background: linear-gradient(to top, #26465331, 2%, white); */
+  background: linear-gradient(to top, #26465331, 2%, white);
   box-shadow: var(--shadow-card);
   
   .header-mobile-container-topbar {
@@ -20,8 +20,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    /* background-color: #ffffff; /*Mirar colores
-    box-shadow: 0 2px 4px  #26465331;Mirar la sombra */
+    background-color: #ffffff; /*Mirar colores*/
+    box-shadow: 0 2px 4px  #26465331; /*Mirar la sombra*/
   }
 
   .button-menu-mobile {
@@ -74,7 +74,7 @@
     left: 0;
     width: 100%;
     height: fit-content;
-    background-color: transparent;
+    background-color: var(--color-text-white);
     z-index: 90;
     transform: translateX(0);
     transition: all 0.3s ease-in;

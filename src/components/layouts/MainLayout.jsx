@@ -2,6 +2,8 @@ import React from 'react';
 import { AssociationProvider, useAssociation } from '../../context/AssociationContext';
 import { PropertiesProvider, useProperties } from '../../context/PropertiesContext';
 import HeaderComponent from '../header/HeaderComponent';
+import FooterComponent from "../FooterComponent";
+import { Outlet } from 'react-router-dom';
 
 //funcion para crear el Layout
 function LayoutContent(){
@@ -13,15 +15,14 @@ function LayoutContent(){
     const propertiesByAssoc = useProperties();
 
   return (
-    //ver si <></> o div (Si no ponemos div hay que dar estilos a App)
-    <>
-    <HeaderComponent/>
-    {/*<Main>
-      <Outlet/>
-    <Main/>*/}
-    {/*FOOTER*/}
-    </>
-  )
+      <>
+        <HeaderComponent />
+        <main>
+          <Outlet /> {/* Aquí se inyectará el contenido de la ruta anidada */}
+        </main>
+        <FooterComponent/>
+      </>
+  );
 }
 
 //Se crea una funcion para proveer al Layout del contexto con el provider

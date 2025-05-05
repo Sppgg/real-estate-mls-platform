@@ -9,6 +9,9 @@ import MainLayout from './components/layouts/MainLayout';
 
 //importaciones pages
 import AssociationSelector from './pages/AssociationSelector';
+import LegalNoticePage from "./pages/LegalNoticePage";
+import CookiesPolicyPage from "./pages/CookiesPolicyPage";
+import DataProtectionPage from "./pages/DataProtectionPage";
 
 //importaciones components
 
@@ -30,9 +33,9 @@ function App() {
           {/* <Route path='properties/:propertId' element={<PropertyDetails/>}/> */}
           {/* <Route path='presentation' element={<PresentationAssociation/>}/> */}
 
-          <Route path="/aviso-legal" element={<LegalNoticePage />} />
-          <Route path="/politica-de-cookies" element={<CookiesPolicyPage />} />
-          <Route path="/proteccion-de-datos" element={<DataProtectionPage />} />
+          <Route path="aviso-legal" element={<LegalNoticePage />} />
+          <Route path="politica-de-cookies" element={<CookiesPolicyPage />} />
+          <Route path="proteccion-de-datos" element={<DataProtectionPage />} />
           
         </Route>  
 

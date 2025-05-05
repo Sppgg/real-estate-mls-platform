@@ -99,7 +99,7 @@ const FooterComponent = () => {
   );
 
   return (
-    <footer className="footer">
+    <footer className="footer" id="footer">
       <div className="footer__container">
         {/* Sección de contacto */}
         <div className="footer__contact">
@@ -221,17 +221,17 @@ const FooterComponent = () => {
           <div className="footer__legal-row">
             <ul className="footer__links">
               <li className="footer__link-item">
-                <Link className="footer__link" to="/aviso-legal">
+                <Link className="footer__link" to="aviso-legal">
                   {t("footer.legal")}
                 </Link>
               </li>
               <li className="footer__link-item">
-                <Link className="footer__link" to="/proteccion-de-datos">
+                <Link className="footer__link" to="proteccion-de-datos">
                   {t("footer.data")}
                 </Link>
               </li>
               <li className="footer__link-item">
-                <Link className="footer__link" to="/politica-de-cookies">
+                <Link className="footer__link" to="politica-de-cookies">
                   {t("footer.cookies")}
                 </Link>
               </li>
