@@ -9,29 +9,25 @@ const socialLinks = [
   {
     id: "facebook",
     url: "#",
-    imgSrc:
-      "https://cdn1.iconfinder.com/data/icons/logotypes/32/square-facebook-64.png",
+    imgSrc: "https://cdn-icons-png.flaticon.com/128/1051/1051360.png",
     alt: "Facebook",
   },
   {
     id: "x",
     url: "#",
-    imgSrc:
-      "https://cdn4.iconfinder.com/data/icons/social-media-black-white-2/1227/X-64.png",
+    imgSrc: "https://cdn-icons-png.flaticon.com/128/14417/14417460.png",
     alt: "X",
   },
   {
     id: "instagram",
     url: "#",
-    imgSrc:
-      "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Instagram-64.png",
+    imgSrc: "https://cdn-icons-png.flaticon.com/128/6422/6422200.png",
     alt: "Instagram",
   },
   {
     id: "linkedin",
     url: "#",
-    imgSrc:
-      "https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-64.png",
+    imgSrc: "https://cdn-icons-png.flaticon.com/128/13670/13670384.png",
     alt: "LinkedIn",
   },
 ];
@@ -118,7 +114,7 @@ const FooterComponent = () => {
               type="text"
               id="name"
               name="name"
-              placeholder="Tu nombre"
+              placeholder={t("footer.form.name_placeholder")}
               value={formData.name}
               onChange={handleChange}
               required
@@ -137,7 +133,7 @@ const FooterComponent = () => {
               type="email"
               id="email"
               name="email"
-              placeholder="Tu email"
+              placeholder={t("footer.form.email_placeholder")}
               value={formData.email}
               onChange={handleChange}
               required
@@ -156,7 +152,7 @@ const FooterComponent = () => {
               type="tel"
               id="phone"
               name="phone"
-              placeholder="Tu teléfono"
+              placeholder={t("footer.form.phone_placeholder")}
               value={formData.phone}
               onChange={handleChange}
               required
@@ -174,7 +170,7 @@ const FooterComponent = () => {
               className="footer__textarea"
               id="message"
               name="message"
-              placeholder="Tu mensaje"
+              placeholder={t("footer.form.message_placeholder")}
               value={formData.message}
               onChange={handleChange}
               // Límite de 500 caracteres
