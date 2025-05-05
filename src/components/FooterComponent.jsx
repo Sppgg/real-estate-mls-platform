@@ -118,7 +118,7 @@ const FooterComponent = () => {
               type="text"
               id="name"
               name="name"
-              placeholder="Tu nombre"
+              placeholder={t("footer.form.name_placeholder")}
               value={formData.name}
               onChange={handleChange}
               required
@@ -137,7 +137,7 @@ const FooterComponent = () => {
               type="email"
               id="email"
               name="email"
-              placeholder="Tu email"
+              placeholder={t("footer.form.email_placeholder")}
               value={formData.email}
               onChange={handleChange}
               required
@@ -156,7 +156,7 @@ const FooterComponent = () => {
               type="tel"
               id="phone"
               name="phone"
-              placeholder="Tu teléfono"
+              placeholder={t("footer.form.phone_placeholder")}
               value={formData.phone}
               onChange={handleChange}
               required
@@ -174,7 +174,7 @@ const FooterComponent = () => {
               className="footer__textarea"
               id="message"
               name="message"
-              placeholder="Tu mensaje"
+              placeholder={t("footer.form.message_placeholder")}
               value={formData.message}
               onChange={handleChange}
               // Límite de 500 caracteres
