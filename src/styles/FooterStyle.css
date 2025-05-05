@@ -5,6 +5,7 @@
   padding: var(--spacing-unit); /* 1rem */
   font-family: var(--font-body);
   box-shadow: var(--shadow-card);
+  margin-top: 100px;
 }
 
 /* Contenedor interno */

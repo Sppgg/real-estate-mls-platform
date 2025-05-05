@@ -1,10 +1,18 @@
-// src/i18n.js
+// src/i18n.js -> página de configuración de i18next para la internacionalización de la aplicación
+// Este archivo contiene las traducciones para los textos de la aplicación en inglés y español.
+
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 const resources = {
   es: {
     translation: {
+      // Traducciones al español
+      "header" : {
+        "home": "Inicio",
+        "about": "Nosotros",
+        "contact": "Contacto",
+      },
       "footer": {
         "contact_title": "Contáctanos",
         "contact_description": "Si tienes alguna consulta, deja tus datos y nos pondremos en contacto contigo.",
@@ -68,11 +76,18 @@ const resources = {
           "Para cualquier consulta adicional sobre nuestra política de cookies, por favor, contáctanos en:",
         link: "info@empresa.com"
       },
+  
       // ... otras claves
     }
   },
   en: {
     translation: {
+      // Traducciones al inglés
+      "header" : { 
+        "home": "Home",
+        "about": "About Us",
+        "contact": "Contact",
+      },
       "footer": {
         "contact_title": "Contact us",
         "contact_description": "If you have any question, please leave your details and we will get in touch soon.",
@@ -85,7 +100,7 @@ const resources = {
           "email_placeholder": "Your email",
           "phone_placeholder": "Your phone number",
           "message_placeholder": "Your message",
-          "submit": "Send"
+          "submit": "Submit"
         },
         "copyright": "© 2025 Zoddak Real Estate, All rights reserved.",
         "legal": "Legal Notice",
