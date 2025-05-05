@@ -1,4 +1,6 @@
-// src/i18n.js
+// src/i18n.js -> página de configuración de i18next para la internacionalización de la aplicación
+// Este archivo contiene las traducciones para los textos de la aplicación en inglés y español.
+
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
