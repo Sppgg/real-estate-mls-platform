@@ -21,6 +21,8 @@ const HeaderMobileComponent = () => {
   //Traer los datos de la asociación seleccionada
   const association = useAssociation();
 
+  if (!association) return null; // Evita renderizar si aún no hay datos
+
   //Toggle menú hamburguesa
   const toggleMenu = () =>{
     setMenuOpen(!menuOpen);
@@ -74,7 +76,7 @@ const HeaderMobileComponent = () => {
 
         {/*Logo de la asociación*/}
         <div  className='header-mobile-logo'>
-          <Link to="/association/:id"><img src={association.image} alt={association.business_name}/></Link>
+          <Link to={`/association/${association._id}`}><img src={association.image} alt={association.business_name}/></Link>
         </div>
 
         {/*Selector de idioma TODO*/}
@@ -94,7 +96,7 @@ const HeaderMobileComponent = () => {
           <nav className="header-mobile-nav">
             <ul>
               {/* Cada ítem cierra el menú al hacer clic */}
-              <Link to="/association/:id"><li onClick={closeMenu} className="header-mobile-nav-li">Inicio</li></Link>
+              <Link to={`/association/${association._id}`}><li onClick={closeMenu} className="header-mobile-nav-li">Inicio</li></Link>
               <Link to="presentation"><li onClick={closeMenu} className="header-mobile-nav-li">Nosotros</li></Link>
               <Link to="#footer" ><li onClick={closeMenu} className="header-mobile-nav-li">Contacto</li></Link> {/*Tengo que mirar esto TODO*/}
             </ul>
