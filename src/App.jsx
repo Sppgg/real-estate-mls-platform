@@ -1,23 +1,48 @@
-import "./App.css";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+//Importación React-Router-Dom
+import { Routes, Route } from 'react-router-dom';
 
-// importación de componentes
-import FooterComponent from "./components/FooterComponent";
-import LegalNoticePage from "./pages/LegalNoticePage";
-import CookiesPolicyPage from "./pages/CookiesPolicyPage";
-import DataProtectionPage from "./pages/DataProtectionPage";
+//importaciones proveedores
+import { AllAssociationsProvider } from './context/AllAssociationsContext';
+
+//importaciones Layout (puede ir en componentes)
+import MainLayout from './components/layouts/MainLayout';
+
+//importaciones pages
+import AssociationSelector from './pages/AssociationSelector';
+
+//importaciones components
+
+
+//Estilado del App
+import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <AllAssociationsProvider>
       <Routes>
-        <Route path="/aviso-legal" element={<LegalNoticePage />} />
-        <Route path="/politica-de-cookies" element={<CookiesPolicyPage />} />
-        <Route path="/proteccion-de-datos" element={<DataProtectionPage />} />
+
+        <Route path="/" element={<AssociationSelector />} />
+
+        {/*Lo de una asociacion bajo la misma ruta lo que no sea relacionado va en una router distinta */}
+        <Route path='/association/:id' element={<MainLayout/>}>
+          {/* <Route index element={<Home/>}/> */}
+          {/* <Route path='properties' element={<Properties/>}/> */}
+          {/* <Route path='properties/:propertId' element={<PropertyDetails/>}/> */}
+          {/* <Route path='presentation' element={<PresentationAssociation/>}/> */}
+
+          <Route path="/aviso-legal" element={<LegalNoticePage />} />
+          <Route path="/politica-de-cookies" element={<CookiesPolicyPage />} />
+          <Route path="/proteccion-de-datos" element={<DataProtectionPage />} />
+          
+        </Route>  
+
+        {/* <Route path='*' element={<NotFound/>}/>   */}
+        
       </Routes>
-      <FooterComponent />
-    </BrowserRouter>
-  );
+
+    </AllAssociationsProvider>
+    
+  )
 }
 
 export default App;
