@@ -9,29 +9,25 @@ const socialLinks = [
   {
     id: "facebook",
     url: "#",
-    imgSrc:
-      "https://cdn1.iconfinder.com/data/icons/logotypes/32/square-facebook-64.png",
+    imgSrc: "https://cdn-icons-png.flaticon.com/128/1051/1051360.png",
     alt: "Facebook",
   },
   {
     id: "x",
     url: "#",
-    imgSrc:
-      "https://cdn4.iconfinder.com/data/icons/social-media-black-white-2/1227/X-64.png",
+    imgSrc: "https://cdn-icons-png.flaticon.com/128/14417/14417460.png",
     alt: "X",
   },
   {
     id: "instagram",
     url: "#",
-    imgSrc:
-      "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Instagram-64.png",
+    imgSrc: "https://cdn-icons-png.flaticon.com/128/6422/6422200.png",
     alt: "Instagram",
   },
   {
     id: "linkedin",
     url: "#",
-    imgSrc:
-      "https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-64.png",
+    imgSrc: "https://cdn-icons-png.flaticon.com/128/13670/13670384.png",
     alt: "LinkedIn",
   },
 ];
