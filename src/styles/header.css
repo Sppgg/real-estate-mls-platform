@@ -1,0 +1,21 @@
+/* Estilos generales para ambos headers */
+
+/* Estilo base para ambos headers */
+.header-laptop,
+.header-mobile {
+  display: none;  /* Los ocultamos por defecto */
+}
+
+/* Mostrar el header de laptop solo en pantallas grandes */
+@media (min-width: 769px) {
+  .header-laptop {
+    display: block;  /* Mostrar header de laptop */
+  }
+}
+
+/* Mostrar el header de móvil solo en pantallas pequeñas */
+@media (max-width: 768px) {
+  .header-mobile {
+    display: block;  /* Mostrar header móvil */
+  }
+}
