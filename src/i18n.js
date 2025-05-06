@@ -18,8 +18,11 @@ const resources = {
     "title": "Filtrar viviendas",
     "type": "Tipo de vivienda",
     "select_type": "Selecciona un tipo",
-    "location": "Ubicación",
-    "location_placeholder": "Buscar zona en la Costa del Sol",
+    "new_construction": "Obra nueva",
+    "area": "Área",
+    "area_placeholder": "Ingresa el área (ej. Marbella)",
+    "subarea": "Subárea",
+    "subarea_placeholder": "Ingresa la subárea (ej. San Pedro de Alcántara)",
     "apply": "Aplicar filtros",
     "types": {
       "Adosado": "Adosado",
