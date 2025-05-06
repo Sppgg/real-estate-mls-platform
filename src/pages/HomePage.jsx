@@ -44,17 +44,8 @@ export default function HomePage() {
 
   return (
     <div className="home-page-container">
-      <section className="carousel-section-home">
-        {/* Aquí puedes renderizar tu carousel si lo tienes */}
-      </section>
+      <section className="carousel-section-home">{/*carousel*/}</section>
       <section className="home-page-filter">
-        <h2 className="home-page-filter-title">{t("filter_house.title")}</h2>
-        <p className="home-page-filter-description">
-          {t(
-            "home.filter_description",
-            "Filtra las propiedades según tus preferencias."
-          )}
-        </p>
         {/* Se pasa la función setFilters para que el componente de filtro notifique los cambios */}
         <PropertyFilterComponent onFilterChange={setFilters} />
         {/* <PropertyList properties={filteredProperties} /> */}

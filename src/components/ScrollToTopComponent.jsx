@@ -10,7 +10,7 @@ const ScrollToTop = () => {
   // Mostrar el botón solo si se ha hecho scroll más allá de 300px
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      if (window.pageYOffset > 300 && screen.width > 2500) {
         setVisible(true);
       } else {
         setVisible(false);

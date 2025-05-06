@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import "../styles/propertyfilterstyle.css";
 
 // Array de tipos de vivienda
 const types = [
@@ -71,8 +72,8 @@ const PropertyFilterComponent = ({ onFilterChange }) => {
     <form className="property-filter" onSubmit={handleSubmit}>
       <h2 className="filter-title">{t("filter_house.title")}</h2>
 
-      {/* Selector de tipo de vivienda */}
-      <div className="filter-type">
+      {/* Campo: Tipo de vivienda */}
+      <div className="filter-field filter-type">
         <label htmlFor="house-type">{t("filter_house.type")}</label>
         <select
           id="house-type"
@@ -89,8 +90,8 @@ const PropertyFilterComponent = ({ onFilterChange }) => {
         </select>
       </div>
 
-      {/* Checkbox para "Obra nueva" */}
-      <div className="filter-new-construction">
+      {/* Campo: Obra nueva */}
+      <div className="filter-field filter-new-construction">
         <label htmlFor="newConstruction">
           <input
             type="checkbox"
@@ -102,8 +103,8 @@ const PropertyFilterComponent = ({ onFilterChange }) => {
         </label>
       </div>
 
-      {/* Campo para área */}
-      <div className="filter-area">
+      {/* Campo: Área */}
+      <div className="filter-field filter-area">
         <label htmlFor="area">{t("filter_house.area")}</label>
         <input
           type="text"
@@ -115,8 +116,8 @@ const PropertyFilterComponent = ({ onFilterChange }) => {
         />
       </div>
 
-      {/* Campo para subárea */}
-      <div className="filter-subarea">
+      {/* Campo: Subárea */}
+      <div className="filter-field filter-subarea">
         <label htmlFor="subarea">{t("filter_house.subarea")}</label>
         <input
           type="text"
@@ -128,9 +129,11 @@ const PropertyFilterComponent = ({ onFilterChange }) => {
         />
       </div>
 
-      <button type="submit" className="filter-apply-button">
-        {t("filter_house.apply")}
-      </button>
+      <div className="filter-field filter-button">
+        <button type="submit" className="filter-apply-button">
+          {t("filter_house.apply")}
+        </button>
+      </div>
     </form>
   );
 };
