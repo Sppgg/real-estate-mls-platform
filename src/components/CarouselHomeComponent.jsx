@@ -1,14 +1,16 @@
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
 import { useProperties } from '../context/PropertiesContext';
-import useIsMobile from '../customHook/useIsMobile';
+import useWindowSize from '../customHook/useWindowSize';
 
 //Estilado del carousel
 import '../styles/carouselHomeComponent.css';
 
 export const CarouselHomeComponent = () => {
   const properties = useProperties();
-  const isMobile = useIsMobile();
+  
+  // Usamos useWindowSize para obtener el tamaño de la ventana
+  const { width } = useWindowSize();  // Obtenemos solo el 'width'
 
   const [carouselProperties, setCarouselProperties] = useState([]);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -20,7 +22,12 @@ export const CarouselHomeComponent = () => {
   const pauseTimeoutRef = useRef(null);
   const userInteracting = useRef(false);
 
-  
+  // Ajustamos el 'step' según el tamaño de la ventana
+  let step = 1;
+  if (width >= 600 && width < 1024) step = 2;  // Tablet: 2 imágenes
+  if (width >= 1024) step = 3;  // Desktop: 3 imágenes
+
+  const totalPages = Math.ceil(carouselProperties.length / step); // Páginas totales
 
   useEffect(() => {
     if (!properties) return;
@@ -28,22 +35,20 @@ export const CarouselHomeComponent = () => {
     const filtered = [...properties]
       .filter((property) => property.pics?.length > 0 && property.last_update)
       .sort((a, b) => new Date(b.last_update) - new Date(a.last_update))
-      .slice(0, 6); // AHORA 6 propiedades
+      .slice(0, 8); // Limita las propiedades
 
     setCarouselProperties(filtered);
   }, [properties]);
 
+  // Cambia la diapositiva siguiente
   const goToNextSlide = () => {
-    const step = isMobile ? 1 : 2;
-    setCurrentSlideIndex((prev) => (prev + step) % carouselProperties.length);
+    setCurrentSlideIndex((prev) => (prev + 1) % totalPages);
     resetAutoplay();
   };
 
+  // Cambia la diapositiva anterior
   const goToPreviusSlide = () => {
-    const step = isMobile ? 1 : 2;
-    setCurrentSlideIndex((prev) =>
-      (prev - step + carouselProperties.length) % carouselProperties.length
-    );
+    setCurrentSlideIndex((prev) => (prev - 1 + totalPages) % totalPages);
     resetAutoplay();
   };
 
@@ -65,13 +70,14 @@ export const CarouselHomeComponent = () => {
     }
   };
 
+  // Inicia el autoplay
   const startAutoplay = () => {
     clearInterval(autoplayRef.current);
     autoplayRef.current = setInterval(() => {
       if (!userInteracting.current && carouselProperties.length > 0) {
         goToNextSlide();
       }
-    }, 6000);
+    }, 4000);
   };
 
   const pauseAutoplayTemporarily = () => {
@@ -101,36 +107,29 @@ export const CarouselHomeComponent = () => {
   if (carouselProperties.length === 0) return null;
 
   return (
-    <div
-      className="carousel-container-component"
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-    >
-      {!isMobile && (
-        <button className="carousel-arrow-letf" onClick={goToPreviusSlide}>
+    <div className="carousel-container-component" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
+      {/* Flecha izquierda */}
+      {width >= 600 && (
+        <button className="carousel-arrow-left" onClick={goToPreviusSlide}>
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
             <path d="M15 18L9 12L15 6" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
       )}
 
+      {/* Contenedor de imágenes */}
       <div className="carousel-image-container">
-        {[...Array(isMobile ? 1 : 2)].map((_, offset) => {
-          const index = (currentSlideIndex + offset) % carouselProperties.length;
+        {[...Array(step)].map((_, offset) => {
+          const index = (currentSlideIndex * step + offset) % carouselProperties.length;
           const property = carouselProperties[index];
           return (
-            <img
-              key={index}
-              src={property.pics[0]}
-              alt={`Propiedad ${index + 1}`}
-              className="carousel-image"
-            />
+            <img key={index} src={property.pics[0]} alt={`Propiedad ${index + 1}`} className="carousel-image"/>
           );
         })}
       </div>
 
-      {!isMobile && (
+      {/* Flecha derecha */}
+      {width >= 600 && (
         <button className="carousel-arrow-right" onClick={goToNextSlide}>
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
             <path d="M9 6L15 12L9 18" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -138,14 +137,15 @@ export const CarouselHomeComponent = () => {
         </button>
       )}
 
-      {!isMobile && (
+      {/* Indicadores de bullets */}
+      {width >= 1024 && (
         <div className="carousel-indicator-group">
-          {carouselProperties.map((_, i) => (
-            <span
-              key={i}
-              className={`carousel-indicator-dot ${i === currentSlideIndex ? 'active' : ''}`}
-              onClick={() => setCurrentSlideIndex(i)}
-            ></span>
+          {Array.from({ length: totalPages }).map((_, i) => (
+            <span key={i} className={`carousel-indicator-dot ${i === currentSlideIndex ? 'active' : ''}`} 
+            onClick={() => {
+              setCurrentSlideIndex(i);
+              resetAutoplay();
+            }}></span>
           ))}
         </div>
       )}
