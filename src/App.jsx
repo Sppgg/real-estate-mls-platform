@@ -8,7 +8,8 @@ import { AllAssociationsProvider } from './context/AllAssociationsContext';
 import MainLayout from './components/layouts/MainLayout';
 
 //importaciones pages
-import AssociationSelector from './pages/AssociationSelector';
+import HomePage from './pages/HomePage';
+import AssociationSelectorPage from './pages/AssociationSelectorPage';
 import LegalNoticePage from "./pages/LegalNoticePage";
 import CookiesPolicyPage from "./pages/CookiesPolicyPage";
 import DataProtectionPage from "./pages/DataProtectionPage";
@@ -24,12 +25,12 @@ function App() {
     <AllAssociationsProvider>
       <Routes>
 
-        <Route path="/" element={<AssociationSelector />} />
+        <Route path="/" element={<AssociationSelectorPage/>} />
 
         {/*Lo de una asociacion bajo la misma ruta lo que no sea relacionado va en una router distinta */}
         <Route path='/association/:id' element={<MainLayout/>}>
-          {/* <Route index element={<Home/>}/> */}
-          {/* <Route path='properties' element={<Properties/>}/> */}
+          <Route index element={<HomePage/>}/>
+          {/* <Route path='properties' element={<PropertiesFilter/>}/> */}
           {/* <Route path='properties/:propertId' element={<PropertyDetails/>}/> */}
           {/* <Route path='presentation' element={<PresentationAssociation/>}/> */}
 
