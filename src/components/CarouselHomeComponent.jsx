@@ -112,7 +112,7 @@ export const CarouselHomeComponent = () => {
       {width >= 600 && (
         <button className="carousel-arrow-left" onClick={goToPreviusSlide}>
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-            <path d="M15 18L9 12L15 6" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M15 18L9 12L15 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
       )}
@@ -132,7 +132,7 @@ export const CarouselHomeComponent = () => {
       {width >= 600 && (
         <button className="carousel-arrow-right" onClick={goToNextSlide}>
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-            <path d="M9 6L15 12L9 18" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M9 6L15 12L9 18" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
       )}

@@ -1,7 +1,9 @@
 import React from 'react'
 import { CarouselHomeComponent } from '../components/CarouselHomeComponent'
 
-//Importar el componente Carousel
+//Importar hoja de estilos de la HomePage
+import '../styles/HomePage.css';
+
 
 export default function HomePage() {
 

@@ -1,0 +1,10 @@
+/*Revisar Estilado de la Section Carousel TODO*/
+.carousel-section-home {
+    position: relative;
+    width: 100%;
+    min-height: 380px; /* Ajusta esto según el alto estimado del carousel */
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    min-width: 350px;
+}
