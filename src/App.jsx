@@ -1,11 +1,11 @@
 //Importación React-Router-Dom
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 
 //importaciones proveedores
-import { AllAssociationsProvider } from './context/AllAssociationsContext';
+import { AllAssociationsProvider } from "./context/AllAssociationsContext";
 
 //importaciones Layout (puede ir en componentes)
-import MainLayout from './components/layouts/MainLayout';
+import MainLayout from "./components/layouts/MainLayout";
 
 //importaciones pages
 import HomePage from './pages/HomePage';
@@ -13,12 +13,12 @@ import AssociationSelectorPage from './pages/AssociationSelectorPage';
 import LegalNoticePage from "./pages/LegalNoticePage";
 import CookiesPolicyPage from "./pages/CookiesPolicyPage";
 import DataProtectionPage from "./pages/DataProtectionPage";
+import HomePage from "./pages/HomePage";
 
 //importaciones components
 
-
 //Estilado del App
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
@@ -37,16 +37,12 @@ function App() {
           <Route path="aviso-legal" element={<LegalNoticePage />} />
           <Route path="politica-de-cookies" element={<CookiesPolicyPage />} />
           <Route path="proteccion-de-datos" element={<DataProtectionPage />} />
-          
-        </Route>  
+        </Route>
 
         {/* <Route path='*' element={<NotFound/>}/>   */}
-        
       </Routes>
-
     </AllAssociationsProvider>
-    
-  )
+  );
 }
 
 export default App;
