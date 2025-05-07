@@ -1,19 +1,21 @@
 import { createContext, useState, useEffect, useContext } from "react";
-import {useParams} from 'react-router-dom';
-import { GetAllAssoc } from "../services/associationData";
+import { useParams } from "react-router-dom";
+// import { GetAllAssoc } from "../services/associationData";
+import { useAllAssociations } from "./AllAssociationsContext";
 
-//creamos el contexto 
+//creamos el contexto
 const AssociationContext = createContext();
 
-//Creamos el provider 
-export function AssociationProvider({children}){
-    //id de la url 
-    const {id} = useParams();
+//Creamos el provider
+export function AssociationProvider({ children }) {
+  //id de la url
+  const { id } = useParams();
+  const associations = useAllAssociations();
 
-    //almacenamos los datos que traemos de la data associationData
-    const [association, setAssociation] = useState(null);
+  //almacenamos los datos que traemos de la data associationData
+  const [association, setAssociation] = useState(null);
 
-    /* Llamada más realista a la API para el futuro
+  /* Llamada más realista a la API para el futuro
     const [loading, setLoading] = useState(true); // opcional: para control de carga
     const [error, setError] = useState(null);     // opcional: para control de error
 
@@ -45,24 +47,24 @@ export function AssociationProvider({children}){
     if (error) return <p>{error}</p>;
     */
 
-    //llamada fake
-    useEffect(() => {
-        const data = GetAllAssoc(); //devuelve el array de assoc
-        const foundAssociation = data.find((item) => item._id === id);
-        setAssociation(foundAssociation);//solo guarda la assoc que coincide con la URL
-    }, [id]);
+  //Llamada de datos desde el contexto de AllAssociationcontext
 
-    if(!association) return <p>Comprueba la asociación</p>
+  useEffect(() => {
+    // const data = GetAllAssoc(); //devuelve el array de assoc
+    const foundAssociation = associations.find((assoc) => assoc._id === id);
+    setAssociation(foundAssociation); //solo guarda la assoc que coincide con la URL
+  }, [id, associations]);
 
-    return(
-        <AssociationContext.Provider value={association}>
-            {children}
-        </AssociationContext.Provider>
+  if (!association) return <p>Comprueba la asociación</p>;
 
-    );
+  return (
+    <AssociationContext.Provider value={association}>
+      {children}
+    </AssociationContext.Provider>
+  );
 }
 
 //Se crea una función para evitar usar el useContext en otros componentes
-export function useAssociation(){
-    return useContext(AssociationContext);
+export function useAssociation() {
+  return useContext(AssociationContext);
 }
