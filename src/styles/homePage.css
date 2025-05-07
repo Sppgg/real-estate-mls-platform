@@ -1,6 +1,6 @@
 /*Revisar Estilado de la Section Carousel TODO*/
 
-.home-pag-container{
+.home-page-container{
     width: 100%;
     height: 100%;
 
@@ -16,4 +16,9 @@
         min-width: 350px;
       
     }
+
+    .home-page-filter{
+       padding: 20px;
+    }
+
 }

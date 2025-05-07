@@ -13,7 +13,6 @@ import AssociationSelectorPage from './pages/AssociationSelectorPage';
 import LegalNoticePage from "./pages/LegalNoticePage";
 import CookiesPolicyPage from "./pages/CookiesPolicyPage";
 import DataProtectionPage from "./pages/DataProtectionPage";
-import HomePage from "./pages/HomePage";
 
 //importaciones components
 
