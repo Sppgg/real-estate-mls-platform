@@ -24,7 +24,10 @@ export function PropertiesProvider({ children }) {
       try {
         setLoading(true);
         setError(null);
-        const data = await fetchWithToken(PROPERTIES_PATH);
+        const fullPath = `${PROPERTIES_PATH}?partner_id=${association._id}`;
+        const data = await fetchWithToken(fullPath);
+        console.log(data);
+
         if (data.success && Array.isArray(data.properties)) {
           setProperties(data.properties);
         } else {
