@@ -185,23 +185,19 @@
     .carousel-container-component .carousel-arrow-left{
       transform: translateY(-40%);
       left:47px;
-
-      svg:hover{
-        stroke: var(--color-principal);
-      }
     }
 
     .carousel-container-component .carousel-arrow-right {
       transform: translateY(-40%);
       right: 47px;
-
-      svg:hover{
-        stroke: var(--color-principal);
-      }
     }
 
     .carousel-container-component .carousel-arrow-left:hover,
     .carousel-container-component .carousel-arrow-right:hover {
       background-color: #fff;
+      
+      svg:hover{
+        stroke: var(--color-principal);
+      }
     }
   }
