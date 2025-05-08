@@ -24,7 +24,7 @@ export function PropertiesProvider({ children }) {
       try {
         setLoading(true);
         setError(null);
-        const fullPath = `${PROPERTIES_PATH}?partner_id=${association._id}`;
+        const fullPath = `${PROPERTIES_PATH}?partner_id=${association._id.$oid}`;
         const data = await fetchWithToken(fullPath);
         console.log(data);
 
@@ -53,7 +53,7 @@ export function PropertiesProvider({ children }) {
   //Se puede hacer aquí la lógica de los filtros
 
   return (
-    <PropertiesContext.Provider value={propertiesByAssoc}>
+    <PropertiesContext.Provider value={properties}>
       {children}
     </PropertiesContext.Provider>
   );

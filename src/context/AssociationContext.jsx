@@ -51,7 +51,9 @@ export function AssociationProvider({ children }) {
 
   useEffect(() => {
     // const data = GetAllAssoc(); //devuelve el array de assoc
-    const foundAssociation = associations.find((assoc) => assoc._id === id);
+    const foundAssociation = associations.find(
+      (assoc) => assoc._id.$oid === id
+    );
     setAssociation(foundAssociation); //solo guarda la assoc que coincide con la URL
   }, [id, associations]);
 
