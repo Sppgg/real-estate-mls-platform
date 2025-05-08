@@ -37,7 +37,7 @@ export default function AssociationSelector() {
         >
           <option value="">-- Elige una asociación --</option>
           {associations.map((assoc) => (
-            <option key={assoc._id} value={assoc._id}>
+            <option key={assoc._id.$oid} value={assoc._id.$oid}>
               {assoc.name}
             </option>
           ))}
