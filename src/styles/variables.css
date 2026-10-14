@@ -23,7 +23,7 @@
 --color-text-muted: #6E6E6E;   /* Texto secundario o descripciones */
 
 /*Shadows*/ 
---shadow-card: 0 2px 6px rgba(0, 0, 0, 0.06);
+--shadow-card: 0 2px 6px rgba(0, 0, 0, 0.281);
 --shadow-hover: 0 4px 12px rgba(0, 180, 140, 0.2);
 
 /*Spacing & Border Radius*/ 
