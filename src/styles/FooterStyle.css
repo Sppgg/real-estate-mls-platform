@@ -1,0 +1,323 @@
+/* Contenedor principal del footer */
+.footer {
+  background-color: var(--color-principal);
+  color: var(--color-surface);
+  padding: var(--spacing-unit); /* 1rem */
+  font-family: var(--font-body);
+  box-shadow: var(--shadow-card);
+  margin-top: 100px;
+}
+
+/* Contenedor interno */
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-unit);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-unit);
+}
+
+/* Sección de contacto */
+.footer__contact {
+  text-align: center;
+}
+
+.footer__heading {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-surface);
+}
+
+.footer__description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--color-surface);
+}
+
+/* Formulario de contacto – tamaño compacto */
+.footer__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.footer__form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__label {
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--color-surface);
+}
+
+.footer__input,
+.footer__textarea {
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+}
+
+.footer__textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.footer__submit {
+  background-color: var(--color-cta);
+  color: var(--color-surface);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.footer__submit:hover {
+  background-color: var(--color-accent);
+}
+
+/* Errores y feedback */
+.footer__error {
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.footer__success {
+  color: var(--color-cta);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Sección de redes sociales – contenedor compacto */
+.footer__social {
+  margin-top: 1rem;
+}
+
+.footer__social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+}
+
+.footer__social-item {
+  margin: 0;
+}
+
+.footer__social-link {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.footer__social-link img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+.footer__social-link:hover {
+  transform: scale(1.1);
+}
+
+/* Sección inferior: Información legal y selector de idioma */
+.footer__bottom {
+  margin-top: var(--spacing-unit);
+  background-color: var(--color-surface);
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-unit);
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__legal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__legal-row {
+  width: 100%;
+  text-align: center;
+  margin: 0.25rem 0;
+}
+
+.footer__copyright {
+  color: var(--color-text);
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Lista de enlaces legales */
+.footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.75rem;
+  white-space: nowrap; /* Evito salto de línea en el contenedor */
+}
+
+.footer__link-item {
+  margin: 0;
+}
+
+.footer__link {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: text-decoration 0.3s ease;
+  white-space: nowrap; /* Evito salto de línea en cada enlace */
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+/* Selector de idioma */
+.footer__language-button {
+  background: none;
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.footer__language-icon {
+  margin-left: 0.25rem;
+}
+
+/* Ajustes para pantallas móviles: aumentar espacios */
+@media (max-width: 767px) {
+  .footer__form {
+    max-width: 90%;
+  }
+  .footer__social {
+    margin-top: 1.5rem; /*espacio entre formulario y redes sociales */
+  }
+  .footer__copyright {
+    white-space: normal; /* Permite que el texto haga wrap en móviles */
+    text-align: center;
+    padding: 0 1rem; /* Agrega espacio para que el texto no se pegue a los bordes */
+    font-size: 0.85rem; /* Ajusta el tamaño de fuente*/
+  }
+
+  .footer__links,
+  .footer__legal {
+    white-space: normal;
+  }
+}
+
+/* Responsive: ajustes para tablets */
+@media (min-width: 768px) {
+  .footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer__contact {
+    flex: 1;
+    text-align: left;
+  }
+
+  .footer__form {
+    flex: 1;
+    max-width: 250px;
+    align-self: flex-end;
+  }
+
+  .footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+  }
+
+  .footer__legal {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer__legal-row {
+    text-align: left;
+    margin: 0;
+  }
+
+  .footer__links {
+    justify-content: flex-start;
+  }
+}
+
+/* Media Query para pantallas de escritorio amplias (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .footer {
+    padding: calc(var(--spacing-unit) * 1.5);
+  }
+
+  .footer__container {
+    padding: 0 calc(var(--spacing-unit) * 1.5);
+  }
+
+  .footer__heading {
+    font-size: 1.75rem;
+  }
+
+  .footer__description {
+    font-size: 1.1rem;
+  }
+
+  .footer__form {
+    max-width: 300px;
+  }
+
+  .footer__input,
+  .footer__textarea {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .footer__submit {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .footer__social-list {
+    gap: 1rem;
+    max-width: none;
+  }
+
+  .footer__links {
+    gap: 1rem;
+  }
+}
