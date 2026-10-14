@@ -1,4 +1,4 @@
-# 🏡 Portal Inmobiliario
+# 🏡 Real Estate MLS Platform
 
 [![React](https://img.shields.io/badge/React-19.0-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-6.3-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -6,7 +6,7 @@
 [![i18next](https://img.shields.io/badge/i18n-i18next_v25-26A69A?style=flat-square&logo=i18next&logoColor=white)](https://www.i18next.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
-**Portal Inmobiliario** es una aplicación web moderna, interactiva y de alto rendimiento diseñada para la exploración, filtrado y gestión de catálogos inmobiliarios exclusivos. Diseñada para inmobiliarias y redes de asociaciones (MLS), ofrece una experiencia fluida e intuitiva tanto para compradores como para agentes inmobiliarios.
+**Real Estate MLS Platform** es una aplicación web moderna, interactiva y de alto rendimiento diseñada para la exploración, filtrado y gestión de catálogos inmobiliarios exclusivos. Diseñada para inmobiliarias y redes de asociaciones (MLS), ofrece una experiencia fluida e intuitiva tanto para compradores como para agentes inmobiliarios.
 
 ---
 
@@ -55,7 +55,7 @@
 ## 📁 Estructura del Proyecto
 
 ```text
-Portal-Inmobiliario/
+real-estate-mls-platform/
 ├── public/                     # Archivos estáticos públicos (logos, favicon, imágenes)
 │   ├── favicon.png
 │   ├── logocostadelsol.png
@@ -128,8 +128,8 @@ Portal-Inmobiliario/
 
 ### Paso 1: Clonar el repositorio
 ```bash
-git clone https://github.com/tu-usuario/Portal-Inmobiliario.git
-cd Portal-Inmobiliario
+git clone https://github.com/Sppgg/real-estate-mls-platform.git
+cd real-estate-mls-platform
 ```
 
 ### Paso 2: Instalar las dependencias
@@ -196,4 +196,4 @@ Este proyecto está bajo la Licencia **MIT**. Consulta el archivo [LICENSE](LICE
 
 ---
 
-Desarrollado con ❤️ para **Portal Inmobiliario**.
+Desarrollado con ❤️ para **Real Estate MLS Platform**.
