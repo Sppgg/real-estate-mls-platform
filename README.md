@@ -4,6 +4,7 @@
 [![Vite](https://img.shields.io/badge/Vite-6.3-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![React Router](https://img.shields.io/badge/React_Router-v7.5-CA4245?style=flat-square&logo=react-router&logoColor=white)](https://reactrouter.com/)
 [![i18next](https://img.shields.io/badge/i18n-i18next_v25-26A69A?style=flat-square&logo=i18next&logoColor=white)](https://www.i18next.com/)
+[![CI](https://github.com/Sppgg/real-estate-mls-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/Sppgg/real-estate-mls-platform/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
 **Real Estate MLS Platform** es una aplicación web moderna, interactiva y de alto rendimiento diseñada para la exploración, filtrado y gestión de catálogos inmobiliarios exclusivos. Diseñada para inmobiliarias y redes de asociaciones (MLS), ofrece una experiencia fluida e intuitiva tanto para compradores como para agentes inmobiliarios.
