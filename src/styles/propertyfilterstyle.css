@@ -1,14 +1,24 @@
-/* Estilos base (mobile-first) */
+/* Estilos base del Filtro de Propiedades */
 .property-filter {
   background-color: var(--color-surface);
-  padding: calc(var(--spacing-unit) * 2);
+  padding: 1.5rem;
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-card);
-  max-width: 600px;
-  margin: calc(var(--spacing-unit) * 2) auto; /* Centrado horizontal */
-  display: block;
+  max-width: 1050px;
+  margin: 1.5rem auto;
   font-family: var(--font-body);
+}
+
+.filter-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .property-filter .filter-title {
@@ -16,169 +26,164 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-principal);
-  margin-bottom: calc(var(--spacing-unit) * 1.25);
-  text-align: center;
+  margin: 0;
+  line-height: 1.2;
 }
 
-/* Cada campo: etiqueta + control */
+.property-filter .filter-subtitle {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+.filter-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.filter-live-count {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-principal);
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--border-radius-sm);
+}
+
+.filter-reset-btn {
+  background: none;
+  border: 1px solid var(--color-border);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--border-radius-sm);
+  color: var(--color-accent);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-reset-btn:hover {
+  background-color: #fdf2f0;
+  border-color: var(--color-accent);
+}
+
+/* Fila de multiselectores para tipos y ubicaciones */
+.filter-multiselect-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .filter-multiselect-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .property-filter .filter-field {
-  margin-bottom: var(--spacing-unit);
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
 .property-filter label {
-  display: block;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-text);
-  margin-bottom: calc(var(--spacing-unit) / 3);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 .property-filter select,
-.property-filter input[type="text"] {
+.property-filter input[type="text"],
+.property-filter input[type="number"] {
   width: 100%;
-  padding: calc(var(--spacing-unit) / 1.5);
+  padding: 0.65rem 0.8rem;
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-md);
-  font-size: 1rem;
-  transition: border-color var(--transition-speed),
-    box-shadow var(--transition-speed);
+  font-size: 0.95rem;
   background-color: var(--color-surface);
   font-family: var(--font-body);
+  color: var(--color-text);
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .property-filter select:focus,
-.property-filter input[type="text"]:focus {
+.property-filter input[type="text"]:focus,
+.property-filter input[type="number"]:focus {
   outline: none;
   border-color: var(--color-principal);
-  box-shadow: 0 0 4px var(--color-principal);
+  box-shadow: 0 0 0 2px rgba(38, 70, 83, 0.15);
 }
 
-/* Checkbox: "Obra nueva" */
-.property-filter .filter-new-construction label {
-  display: flex;
+/* Fila secundaria: Búsqueda libre y Obra nueva */
+.filter-primary-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
   align-items: center;
-  font-size: 0.9rem;
-}
-.property-filter .filter-new-construction input[type="checkbox"] {
-  margin-right: calc(var(--spacing-unit) / 2);
-  width: 1.2rem;
-  height: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-/* Botón de aplicar filtros */
-.property-filter .filter-apply-button {
-  background-color: var(--color-cta);
-  color: var(--color-text-white);
-  padding: calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 1.5);
-  border: none;
-  border-radius: var(--border-radius-md);
-  font-size: 1rem;
-  font-weight: 700;
+@media (min-width: 640px) {
+  .filter-primary-grid {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   cursor: pointer;
-  transition: background-color var(--transition-speed),
-    transform var(--transition-speed);
-  width: 100%;
-  margin-top: var(--spacing-unit);
-  font-family: var(--font-body);
-}
-.property-filter .filter-apply-button:hover {
-  background-color: var(--color-secondary);
-  transform: translateY(-2px);
+  font-weight: 500;
+  user-select: none;
 }
 
-/* --- Media queries para Tablets (a partir de 768px) --- */
+.checkbox-label input[type="checkbox"] {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: var(--color-principal);
+  cursor: pointer;
+}
+
+/* Toggle filtros avanzados */
+.filter-advanced-toggle-row {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.filter-advanced-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--color-cta);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.35rem 0;
+  text-decoration: underline;
+}
+
+.filter-advanced-toggle-btn:hover {
+  color: #1f7267;
+}
+
+.filter-advanced-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #fafbfc;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  margin-top: 0.75rem;
+}
+
 @media (min-width: 768px) {
-  .property-filter {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    gap: var(--spacing-unit);
-    max-width: 700px;
-    padding: calc(var(--spacing-unit) * 2.5);
-    margin-top: 100px;
-  }
-  .property-filter .filter-field {
-    flex: 1;
-    min-width: 150px;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-  .property-filter .filter-button {
-    flex: 0 0 auto;
-    align-self: flex-end;
-    width: auto;
-  }
-}
-
-/* --- Media queries para Desktop (a partir de 1024px) --- */
-
-@media (min-width: 1024px) {
-  .property-filter {
-    max-width: 900px;
-    padding: calc(var(--spacing-unit) * 3);
-    display: grid;
+  .filter-advanced-grid {
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: var(--spacing-unit);
-    align-items: start;
-    justify-items: center;
-    margin: 0 auto; /* centramos el grid en la pantalla */
-    margin-top: 100px;
-  }
-
-  /* El título ocupa toda la fila */
-  .property-filter .filter-title {
-    grid-column: 1 / -1;
-    margin-bottom: var(--spacing-unit);
-    text-align: center;
-  }
-
-  /* Grid: asignamos columnas a cada fila */
-  .property-filter .filter-type {
-    grid-column: 1 / 3;
-    width: 100%;
-  }
-  .property-filter .filter-new-construction {
-    grid-column: 3 / 5;
-    width: 100%;
-  }
-  .property-filter .filter-area {
-    grid-column: 1 / 3;
-    width: 100%;
-  }
-  .property-filter .filter-subarea {
-    grid-column: 3 / 5;
-    width: 100%;
-  }
-
-  /* El botón: centrado en la última fila */
-  .property-filter .filter-button {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: 220px;
-    margin-top: calc(var(--spacing-unit) * 1.5);
-  }
-
-  /* Aseguramos que los labels se queden alineados a la izquierda dentro de cada campo */
-  .property-filter .filter-field label {
-    text-align: left;
-    width: 100%;
-  }
-
-  /* Ajustes de tipografía para desktop */
-  .property-filter label {
-    font-size: 0.85rem;
-  }
-
-  .property-filter select,
-  .property-filter input[type="text"] {
-    font-size: 1.05rem;
-    padding: calc(var(--spacing-unit) / 1.3);
-  }
-
-  .property-filter .filter-apply-button {
-    font-size: 1.125rem;
-    padding: calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 2.5);
   }
 }

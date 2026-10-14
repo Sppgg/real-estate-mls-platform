@@ -1,0 +1,8 @@
+{
+  "name": "Portal Inmobiliario",
+  "description": "Elizabeth González and Sara del Pozo Real Estate - Catalogo inmobiliario y seleccion de propiedades",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

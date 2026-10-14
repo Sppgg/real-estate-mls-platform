@@ -1,0 +1,245 @@
+/* Estilos de la página Sobre Nosotros (AboutUsPage) */
+.about-page-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  font-family: var(--font-body);
+  padding-bottom: 4rem;
+}
+
+/* Cabecera */
+.about-hero {
+  background-color: var(--color-principal);
+  color: #ffffff;
+  padding: 3.5rem 1.5rem 2.5rem;
+  text-align: center;
+}
+
+.about-hero__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-hero__title {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  margin: 0 0 0.75rem;
+  font-weight: 700;
+}
+
+.about-hero__subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Contenido Principal */
+.about-content-wrapper {
+  max-width: 1050px;
+  margin: 2rem auto 0;
+  padding: 0 1rem;
+}
+
+/* Tarjeta de la asociación */
+.about-assoc-card {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .about-assoc-card {
+    flex-direction: row;
+    align-items: center;
+    padding: 2.5rem;
+    gap: 2rem;
+  }
+}
+
+.about-assoc-card__logo-wrapper {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.about-assoc-card__logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-assoc-card__details {
+  flex: 1;
+}
+
+.about-assoc-card__name {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--color-principal);
+  margin: 0 0 0.5rem;
+}
+
+.about-assoc-card__bio {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.about-assoc-card__cif {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* Resumen del catálogo */
+.about-summary-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.about-summary-label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.about-summary-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-principal);
+}
+
+/* Dos columnas: Misión y Valores */
+.about-two-col-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .about-two-col-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-card-box {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card);
+}
+
+.about-card-box__title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--color-principal);
+  margin-top: 0;
+  margin-bottom: 0.85rem;
+}
+
+.about-card-box__text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.about-values-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.about-value-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  color: var(--color-text);
+}
+
+.about-value-bullet {
+  color: var(--color-cta);
+  font-weight: bold;
+}
+
+/* Ficha de Contacto Oficial */
+.about-contact-sheet {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+}
+
+.about-contact-sheet__title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--color-principal);
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.about-contact-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.about-contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.about-contact-item__label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.about-contact-item__value {
+  font-size: 0.98rem;
+  color: var(--color-principal);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.about-contact-item__value:hover {
+  color: var(--color-cta);
+}

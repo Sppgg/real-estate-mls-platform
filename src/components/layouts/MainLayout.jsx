@@ -1,32 +1,46 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { AssociationProvider } from '../../context/AssociationContext';
 import { PropertiesProvider } from '../../context/PropertiesContext';
 import HeaderComponent from '../header/HeaderComponent';
 import FooterComponent from "../FooterComponent";
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 
-//funcion para crear el Layout
-function LayoutContent(){
+// Componente para restaurar la posición de scroll al cambiar de página
+function ScrollToTopOnNavigate() {
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+  }, [pathname]);
+
+  return null;
+}
+
+// Función para renderizar el Layout
+function LayoutContent() {
   return (
-      <>
-        <HeaderComponent />
-        <main>
-          <Outlet /> {/* Aquí se inyectará el contenido de la ruta anidada */}
-        </main>
-        <FooterComponent/>
-      </>
+    <>
+      <ScrollToTopOnNavigate />
+      <HeaderComponent />
+      <main>
+        <Outlet />
+      </main>
+      <FooterComponent />
+    </>
   );
 }
 
-//Se crea una funcion para proveer al Layout del contexto con el provider
-
+// Proveedor de contextos para la asociación y sus propiedades
 export default function MainLayout() {
   return (
     <AssociationProvider>
       <PropertiesProvider>
-        <LayoutContent/>
+        <LayoutContent />
       </PropertiesProvider>
     </AssociationProvider>
-  )
+  );
 }

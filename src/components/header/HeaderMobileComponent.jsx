@@ -1,49 +1,39 @@
-import React from "react";
-import { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import useIsMobile from "../../customHook/useIsMobile";
 import { useAssociation } from "../../context/AssociationContext";
-import { Link } from "react-router-dom";
+import { useFavorites } from "../../context/FavoritesContext";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import LanguajeSelector from "../LanguageSelectorComponent";
 import BrandLogo from "../BrandLogo";
 import { useTranslation } from "react-i18next";
-
-//importacion del css (debo crearlo) y del componente de seleccion de idiomas
 import "../../styles/headerMobile.css";
 
 const HeaderMobileComponent = () => {
-  //useTranslation para la traducción de los textos
   const { t } = useTranslation();
-  //useState para almacenar si el menu está abierto o cerrado
   const [menuOpen, setMenuOpen] = useState(false);
-  //useRef para detectar clics fuera de el
   const menuRef = useRef();
-  //useRef para detectar clics en el botón
   const buttonRef = useRef();
-  //isMobile para saber en que pantalla estamos y cerrar el menu
   const isMobile = useIsMobile();
-  //Traer los datos de la asociación seleccionada
   const association = useAssociation();
+  const { favoritesCount } = useFavorites();
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  //Toggle menú hamburguesa
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  //Función para cerrar el menú
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
-  //Cierra el menú si cambia a modo escritorio
   useEffect(() => {
     if (!isMobile && menuOpen) {
       closeMenu();
     }
   }, [isMobile, menuOpen]);
 
-  //Cierre del menú cuando hace click fuera del menú
   useEffect(() => {
-    //función para cerrar el menu
     const handleClickOutside = (e) => {
       if (
         menuRef.current &&
@@ -60,15 +50,36 @@ const HeaderMobileComponent = () => {
 
   if (!association) return null;
 
+  const homePath = `/association/${association._id}`;
+
+  const handlePropertiesClick = (e) => {
+    e.preventDefault();
+    closeMenu();
+    if (location.pathname === homePath) {
+      const el = document.getElementById("property-catalog-section");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      navigate(homePath);
+      setTimeout(() => {
+        const el = document.getElementById("property-catalog-section");
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 150);
+    }
+  };
+
   return (
     <header className="header-mobile">
       <div className="header-mobile-container-topbar">
-        {/*Botón del menú*/}
-
+        {/* Botón del menú hamburguesa */}
         <button
           className="button-menu-mobile"
           ref={buttonRef}
           onClick={toggleMenu}
+          aria-label="Abrir menú de navegación"
         >
           {menuOpen ? (
             <svg
@@ -102,39 +113,83 @@ const HeaderMobileComponent = () => {
         </button>
 
         <div className="header-mobile-logo">
-          <Link to={`/association/${association._id}`}>
+          <Link to={homePath} onClick={closeMenu}>
             <BrandLogo compact />
           </Link>
         </div>
 
-        {/*Selector de idioma */}
-        <div className="header-language-selector">
-          <LanguajeSelector />
+        {/* Favoritos y Selector de idioma */}
+        <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
+          <Link
+            to={`${homePath}/favorites`}
+            className="header-mobile-fav-btn"
+            aria-label={t("header.favorites", "Mis Favoritos")}
+            title={t("header.favorites", "Mis Favoritos")}
+            onClick={closeMenu}
+          >
+            <svg viewBox="0 0 24 24" className="header-mobile-fav-heart">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+            {favoritesCount > 0 && (
+              <span className="header-mobile-fav-count">{favoritesCount}</span>
+            )}
+          </Link>
+
+          <div className="header-language-selector">
+            <LanguajeSelector />
+          </div>
         </div>
       </div>
 
-      {/* Menú lateral si está Open se visualiza*/}
+      {/* Menú lateral / desplegable móvil */}
       {menuOpen && (
         <div ref={menuRef} className="header-mobile-container-menu">
           <nav className="header-mobile-nav">
             <ul>
-              {/* Cada ítem cierra el menú al hacer clic */}
-              <Link to={`/association/${association._id}`}>
-                <li onClick={closeMenu} className="header-mobile-nav-li">
-                  {t("header.home")}
+              <Link to={homePath} onClick={closeMenu}>
+                <li className="header-mobile-nav-li">{t("header.home")}</li>
+              </Link>
+              <a href="#property-catalog-section" onClick={handlePropertiesClick}>
+                <li className="header-mobile-nav-li">{t("header.properties")}</li>
+              </a>
+              <Link to={`${homePath}/presentation`} onClick={closeMenu}>
+                <li className="header-mobile-nav-li">{t("header.about")}</li>
+              </Link>
+              <Link to={`${homePath}/contact`} onClick={closeMenu}>
+                <li className="header-mobile-nav-li">{t("header.contact")}</li>
+              </Link>
+              {/* Mis favoritos al final de la lista del header */}
+              <Link to={`${homePath}/favorites`} onClick={closeMenu}>
+                <li className="header-mobile-nav-li header-mobile-fav-item">
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
+                    <svg style={{ width: "18px", height: "18px", fill: "#dc2626" }} viewBox="0 0 24 24">
+                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                    {t("header.favorites", "Mis Favoritos")}
+                    {favoritesCount > 0 && (
+                      <span className="header-nav-fav-badge">{favoritesCount}</span>
+                    )}
+                  </span>
                 </li>
               </Link>
-              <Link to="presentation">
-                <li onClick={closeMenu} className="header-mobile-nav-li">
-                  {t("header.about")}
-                </li>
-              </Link>
-              <Link to="#footer">
-                <li onClick={closeMenu} className="header-mobile-nav-li">
-                  {t("header.contact")}{" "}
-                </li>
-              </Link>{" "}
-              {/*Tengo que mirar esto TODO*/}
+              <li style={{ paddingTop: "1rem" }}>
+                <Link
+                  to="/"
+                  onClick={closeMenu}
+                  style={{
+                    display: "inline-block",
+                    padding: "0.5rem 1rem",
+                    backgroundColor: "#f0f4f5",
+                    borderRadius: "4px",
+                    fontSize: "0.95rem",
+                    color: "var(--color-principal)",
+                    fontWeight: "600",
+                    border: "1px solid var(--color-border)",
+                  }}
+                >
+                  {t("header.switch_association")}
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

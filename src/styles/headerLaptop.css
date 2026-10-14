@@ -1,70 +1,367 @@
-/*Estilos para el header de tablet y ordenador*/
+/* Estilos para el header de tablet y ordenador */
 
-.header-laptop{
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 99;
-    border-bottom: 1px solid var(--color-cta);
-    /* background: linear-gradient(to top, #26465331, 15%, white);  */
-    background-color: white;
-    box-shadow: var(--shadow-card);
+.header-laptop {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  border-bottom: 1px solid var(--color-cta);
+  background-color: white;
+  box-shadow: var(--shadow-card);
+}
 
-    .header-laptop-container{
-        width: 100%;
-        max-width: 1400px;
-        height: 80px;
-        padding: 0 40px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        /* background-color: #ffffff; /*Mirar colores
-        box-shadow: 0 2px 4px  #26465331;Mirar la sombra */
- 
-        .nav-header-laptop ul{
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+.header-laptop-container {
+  width: 100%;
+  max-width: 1400px;
+  height: 80px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
 
-        .nav-header-laptop li {
-            position: relative;
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: var(--color-principal);
-            cursor: pointer;
-            padding: 0.5rem 0;
-            transition: color 0.3s ease;
-            font-family: var(--font-body);
-            /* font-family: var(--font-heading); */
-            
-        }
-          
-        .nav-header-laptop li::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0%;
-            height: 2px;
-            background-color: var(--color-principal);
-            transition: width 0.3s ease;
-        }
-          
-        .nav-header-laptop li:hover::after {
-            width: 100%;
-        }
+/* Barra de navegación horizontal de escritorio */
+.nav-header-laptop ul {
+  display: flex;
+  gap: 1.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
 
-        /* .header-language-selector{
-           font-size: 0.95rem;
-           color: var(--color-principal);
-        } */
+.nav-header-laptop li {
+  position: relative;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--color-principal);
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  font-family: var(--font-body);
+}
 
-    } 
+.nav-header-laptop li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-principal);
+  transition: width 0.3s ease;
+}
 
-} 
+.nav-header-laptop li:hover::after,
+.nav-header-laptop li.is-active::after {
+  width: 100%;
+}
+
+.header-nav-fav-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.header-nav-heart-icon {
+  width: 17px;
+  height: 17px;
+  fill: #dc2626;
+  transition: transform 0.2s ease;
+}
+
+.header-laptop-nav-fav:hover .header-nav-heart-icon {
+  transform: scale(1.2);
+}
+
+.header-nav-fav-badge {
+  background-color: #dc2626;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  min-width: 18px;
+  text-align: center;
+  line-height: 1.2;
+  box-shadow: 0 1px 3px rgba(220, 38, 38, 0.4);
+}
+
+/* Acciones a la derecha en el header */
+.header-laptop-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-switch-assoc-btn {
+  font-size: 0.85rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-border);
+  color: var(--color-principal);
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.header-switch-assoc-btn:hover {
+  background-color: #f5f5f5;
+  border-color: var(--color-principal);
+}
+
+/* Botón Menú Hamburguesa: Oculto por defecto en Desktop */
+.header-laptop-hamburger-btn {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-cta);
+  background-color: #ffffff;
+  color: var(--color-principal);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.header-laptop-hamburger-btn:hover,
+.header-laptop-hamburger-btn.is-active {
+  background-color: var(--color-cta);
+  color: #ffffff;
+}
+
+.hamburger-svg-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.hamburger-label-text {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.hamburger-fav-dot {
+  background-color: #dc2626;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Drawer / Menú Hamburguesa Desplegable para Tablet y Desktop */
+.header-laptop-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  animation: drawerFadeIn 0.2s ease-out;
+}
+
+.header-laptop-drawer {
+  width: 100%;
+  max-width: 380px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  animation: drawerSlideIn 0.25s ease-out;
+  overflow-y: auto;
+}
+
+.drawer-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fcfcfc;
+}
+
+.drawer-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-principal);
+}
+
+.drawer-close-btn {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  transition: all 0.2s ease;
+}
+
+.drawer-close-btn:hover {
+  background-color: #f5f5f5;
+  border-color: var(--color-principal);
+}
+
+.drawer-nav {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.drawer-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.drawer-nav-item {
+  padding: 0.85rem 1rem;
+  border-radius: var(--border-radius-sm);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-principal);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drawer-nav-item:hover {
+  background-color: #f4f6f7;
+  color: var(--color-cta);
+  padding-left: 1.25rem;
+}
+
+.drawer-nav-item.is-active {
+  background-color: #eaf5f4;
+  color: var(--color-cta);
+  border-left: 3px solid var(--color-cta);
+}
+
+/* Opción Mis Favoritos dentro del Drawer */
+.drawer-nav-fav-item {
+  margin-top: 0.75rem;
+  border-top: 1px dashed var(--color-border);
+  padding-top: 1rem;
+  background-color: #fef2f2;
+}
+
+.drawer-nav-fav-item:hover {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.drawer-fav-label {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #dc2626;
+}
+
+.drawer-fav-heart {
+  width: 20px;
+  height: 20px;
+  fill: #dc2626;
+  flex-shrink: 0;
+}
+
+.drawer-fav-badge {
+  background-color: #dc2626;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  line-height: 1.2;
+}
+
+.drawer-footer {
+  padding: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  background-color: #fafafa;
+}
+
+.drawer-switch-assoc-btn {
+  display: block;
+  text-align: center;
+  padding: 0.65rem 1rem;
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-principal);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.drawer-switch-assoc-btn:hover {
+  background-color: var(--color-principal);
+  color: #ffffff;
+}
+
+@keyframes drawerFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes drawerSlideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+/* En tablets (ancho entre 769px y 1024px), el menú hamburguesa es el protagonista */
+@media (max-width: 1024px) {
+  .header-laptop-hamburger-btn {
+    display: inline-flex !important;
+  }
+
+  .nav-header-laptop {
+    display: none;
+  }
+
+  .header-switch-assoc-btn {
+    display: none;
+  }
+
+  .header-laptop-container {
+    padding: 0 20px;
+  }
+}
+
+/* En Desktop (ancho superior a 1024px), eliminar completamente el menú hamburguesa */
+@media (min-width: 1025px) {
+  .header-laptop-hamburger-btn {
+    display: none !important;
+  }
+
+  .header-laptop-drawer-overlay {
+    display: none !important;
+  }
+}
