@@ -128,6 +128,7 @@ const resources = {
         "photo_count": "{{count}} fotos",
         "price_on_request": "Consultar precio",
         "view_grid": "Cuadrícula",
+        "view_list": "Lista",
         "view_map": "Mapa interactivo",
         "show_map": "Ver en mapa"
       },
@@ -392,6 +393,7 @@ const resources = {
         "photo_count": "{{count}} photos",
         "price_on_request": "Price on request",
         "view_grid": "Grid view",
+        "view_list": "List view",
         "view_map": "Interactive map",
         "show_map": "View on map"
       },

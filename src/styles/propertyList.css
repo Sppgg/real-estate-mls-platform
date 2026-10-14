@@ -78,6 +78,13 @@
   }
 }
 
+/* Vista en lista (List View) */
+.property-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 /* Estado vacío */
 .catalog-empty-state {
   text-align: center;

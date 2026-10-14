@@ -8,7 +8,7 @@ import "../styles/propertyCard.css";
 // Fallback image in case external demo image fails to load
 const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80";
 
-export default function PropertyCard({ property, onSelect }) {
+export default function PropertyCard({ property, onSelect, layout = "grid" }) {
   const { t, i18n } = useTranslation();
   const { isFavorite, toggleFavorite } = useFavorites();
   const navigate = useNavigate();
@@ -66,7 +66,7 @@ export default function PropertyCard({ property, onSelect }) {
 
   return (
     <article
-      className="property-card"
+      className={`property-card ${layout === "list" ? "property-card--list" : ""}`}
       onClick={handleCardClick}
       tabIndex={0}
       role="button"

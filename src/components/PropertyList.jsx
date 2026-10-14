@@ -61,7 +61,7 @@ export default function PropertyList({ properties = [], onResetFilters }) {
 
         {sortedProperties.length > 0 && (
           <div className="catalog-controls">
-            {/* Selector de modo de vista: Cuadrícula / Mapa */}
+            {/* Selector de modo de vista: Cuadrícula / Lista / Mapa */}
             <div className="catalog-view-switcher" role="group" aria-label="Modo de vista">
               <button
                 type="button"
@@ -76,6 +76,22 @@ export default function PropertyList({ properties = [], onResetFilters }) {
                   <rect x="3" y="14" width="7" height="7" rx="1" />
                 </svg>
                 <span>{t("catalog.view_grid", "Cuadrícula")}</span>
+              </button>
+              <button
+                type="button"
+                className={`catalog-view-btn ${viewMode === "list" ? "is-active" : ""}`}
+                onClick={() => setViewMode("list")}
+                title={t("catalog.view_list", "Lista")}
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="8" y1="6" x2="21" y2="6" />
+                  <line x1="8" y1="12" x2="21" y2="12" />
+                  <line x1="8" y1="18" x2="21" y2="18" />
+                  <line x1="3" y1="6" x2="3.01" y2="6" strokeWidth="3" />
+                  <line x1="3" y1="12" x2="3.01" y2="12" strokeWidth="3" />
+                  <line x1="3" y1="18" x2="3.01" y2="18" strokeWidth="3" />
+                </svg>
+                <span>{t("catalog.view_list", "Lista")}</span>
               </button>
               <button
                 type="button"
@@ -134,6 +150,18 @@ export default function PropertyList({ properties = [], onResetFilters }) {
           properties={sortedProperties}
           onSelectProperty={(prop) => setSelectedProperty(prop)}
         />
+      ) : viewMode === "list" ? (
+        /* Vista en lista horizontal de tarjetas */
+        <div className="property-cards-list">
+          {paginatedProperties.map((property) => (
+            <PropertyCard
+              key={property._id}
+              property={property}
+              layout="list"
+              onSelect={(prop) => setSelectedProperty(prop)}
+            />
+          ))}
+        </div>
       ) : (
         /* Vista estándar en cuadrícula de tarjetas */
         <div className="property-cards-grid">
@@ -141,14 +169,15 @@ export default function PropertyList({ properties = [], onResetFilters }) {
             <PropertyCard
               key={property._id}
               property={property}
+              layout="grid"
               onSelect={(prop) => setSelectedProperty(prop)}
             />
           ))}
         </div>
       )}
 
-      {/* Paginación solo en vista cuadrícula */}
-      {viewMode === "grid" && totalPages > 1 && (
+      {/* Paginación en vista cuadrícula y lista */}
+      {viewMode !== "map" && totalPages > 1 && (
         <div className="catalog-pagination">
           <button
             type="button"

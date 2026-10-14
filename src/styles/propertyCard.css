@@ -247,3 +247,59 @@
   background-color: var(--color-cta);
   color: var(--color-text-white);
 }
+
+/* Modificador de tarjeta en vista de lista horizontal */
+@media (min-width: 720px) {
+  .property-card--list {
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 240px;
+  }
+
+  .property-card--list .property-card__image-wrapper {
+    flex: 0 0 320px;
+    width: 320px;
+    max-width: 320px;
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 240px;
+  }
+
+  .property-card--list .property-card__image {
+    height: 100%;
+    position: absolute;
+    inset: 0;
+  }
+
+  .property-card--list .property-card__content {
+    flex: 1;
+    padding: 1.5rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .property-card--list .property-card__title {
+    -webkit-line-clamp: 2;
+    min-height: auto;
+    font-size: 1.25rem;
+  }
+
+  .property-card--list .property-card__specs {
+    margin-top: 0.5rem;
+    padding: 0.6rem 0;
+  }
+
+  .property-card--list .property-card__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+  }
+
+  .property-card--list .property-card__action-btn {
+    width: auto;
+    min-width: 180px;
+    padding: 0.65rem 1.5rem;
+  }
+}
